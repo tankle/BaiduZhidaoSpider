@@ -41,6 +41,29 @@ public class TestBaidu {
 	}
 	
 	@Test
+	public void testDownLoadTerm(){
+		List<String> keywords = baidu.getKeywords();
+		
+		for(String keyword : keywords){
+			baidu.parsePage(keyword);	
+			
+			baidu.downLoadTerm();
+		}
+	}
+	
+	
+	@Test
+	public void testParseQAPage(){
+		List<String> keywords = baidu.getKeywords();
+		
+		for(String keyword : keywords){
+			baidu.parsePage(keyword);	
+			
+			baidu.parseQAPage();
+		}
+	}
+	
+	@Test
 	public void testAll(){
 		List<String> keywords = baidu.getKeywords();
 		

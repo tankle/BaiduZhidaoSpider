@@ -51,7 +51,28 @@ public class Baidu {
 	 */
 	public List<String> keywords = new ArrayList<String>();
 	
+	/**
+	 * 对每个问答对网页进行解析
+	 */
+	public void parseQAPage(){
+		
+		bdu.qaList.clear();
+		
+		for(int i=0; i<bdu.termList.size(); i++){
+			int id = bdu.termList.get(i).getId();
+			
+			String fileName = getFileName(id+"", "qapair");
+			
+			String content = FileUtil.readFileByLines(fileName);
+			
+			bdu.parseTerm(content);
+			
+		}
+	}
 	
+	/**
+	 * 下载每个我问答对网页
+	 */
 	public void downLoadTerm(){
 
 		 for(int i=0; i < bdu.termList.size(); i++){
@@ -65,7 +86,18 @@ public class Baidu {
 				NetUtil netutil = NetUtil.getInstance();
 				
 				content = netutil.getHtml(url);
-	
+				
+				String fileName = getFileName(term.getId()+"", "qapair");
+				System.out.println("FileName -->" + fileName);
+				FileUtil.writeFile(fileName, content, true);
+				
+				try {
+					Thread.sleep(2 * 1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			} 
@@ -158,9 +190,9 @@ public class Baidu {
 			bdu.getItemList(content);
 		}
 		
-		fileName = getFileName(keyword);
+		fileName = getFileName(keyword,"term");
 		System.out.println("fileName--->" + fileName);
-		saveTermList(keyword, bdu.termList);
+		saveTermList(fileName, bdu.termList);
 	}
 	
 	/**
@@ -168,9 +200,9 @@ public class Baidu {
 	 * @param keyword
 	 * @return
 	 */
-	private String getFileName(String keyword) {
-		String fileName = "resource" + File.separator +"qapair" + File.separator+ 
-				keyword +".html";
+	private String getFileName(String keyword, String folder) {
+		String fileName = "resource" + File.separator + folder + File.separator+ 
+				keyword +".txt";
 		return fileName;
 	}
 
