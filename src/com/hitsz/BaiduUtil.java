@@ -6,106 +6,50 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.crypto.Data;
+
 import com.hitsz.dao.QA;
 import com.hitsz.dao.Term;
+import com.hitsz.util.Constants;
+import com.hitsz.util.NetUtil;
 
 /**
  * 
- * @author Jack_Tan
+ * @author JasonTan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-7 下午7:30:49 
  *
  */
 public class BaiduUtil {
-	public final static  String URLHEAD = "http://zhidao.baidu.com";
-
-	static final String ENCODING = "gbk";
-
-	static final int LIMIT = 20;
+	
 	
 	List<Term> termList = new ArrayList<Term>();
 	List<QA>	qaList = new ArrayList<QA>();
+	
+	public static int count = 0;
+	
 	/**
 	 * 百度知道搜索结果的每个item开始标记
 	 */
 	final String itemBegin = "<dl class=\"result-item\">";
 	final String itemEnd = "</dd></dl>";
 	
-	
-	/**
-	 * 使用默认编码gbk
-	 * @param htmlurl 问题的url
-	 * @return
-	 * @throws IOException 
-	 */
-	String getHtml(String htmlurl) throws IOException{
-		return getHtml(htmlurl,ENCODING);
-	}
-	
-	/**
-	 * 读取网页的内容
-	 * @param htmlurl	
-	 * @param encoding	网页编码
-	 * @return
-	 * @throws IOException 
-	 */
-	String getHtml(String htmlurl,String encoding) throws IOException{
-		URL url;
-        String temp = null;
-        StringBuffer sb = new StringBuffer();
-        try {
-            url = new URL(htmlurl);
-            BufferedReader in = new BufferedReader(new InputStreamReader(url
-                    .openStream(), encoding));// 读取网页全部内容
-            while ((temp = in.readLine()) != null) {
-                sb.append(temp+"\r\n");
-            }
-            in.close();
-        }catch(MalformedURLException me){
-            System.out.println("你输入的URL格式有问题！请仔细输入");
-            me.getMessage();
-           throw me;
-        }catch (IOException e) {
-            e.printStackTrace();
-            throw e;
-        }
-        return sb.toString();
-	}
-	
-//	String getTitle(String content){
-////		 String regex;
-////	        String title = "";
-////	        List<String> list = new ArrayList<String>();
-////	        regex = "<title>.*?</title>";
-////	        Pattern pa = Pattern.compile(regex, Pattern.CANON_EQ);
-////	        Matcher ma = pa.matcher(s);
-////	        while (ma.find()) {
-////	            list.add(ma.group());
-////	        }
-////	        for (int i = 0; i < list.size(); i++) {
-////	            title = title + list.get(i);
-////	        }
-//		
-////		int start = 0;
-////		int end = 0;
-////		start = content.indexOf(itemBegin);
-////		end = content.indexOf(itemEnd, start);
-////		
-////		while(validate(start, end)){
-////			
-////		}
-//		
-//	    return null;//outTag(title);
-//	}
-
 	/**
 	 * 获取所有的item，并返回一个list
 	 * @param content
 	 * @return
 	 */
-	public List<Term> getItem(String content){
+	public List<Term> getItemList(String content){
+		
+		String date = "";
+		
+		date = content.substring(4, Calendar.getInstance().getTime().
+				toLocaleString().length());
 		
 		int start = 0;
 		int end = 0;
@@ -114,15 +58,16 @@ public class BaiduUtil {
 		
 		while(validate(start, end)){
 			String tmp = content.substring(start,end);
-			/**
-			 * 至获取LIMIT个item
-			 */
-			if(termList.size() <= LIMIT){
-				Term term = getOneTerm(tmp);
-				termList.add(term);
-			}
-			else
-				break;
+
+			Term term = getOneTerm(tmp);
+			
+			term.setRankid(count++);
+			term.setDowndate(date);
+			
+//			System.out.println(term);
+			
+			termList.add(term);
+			
 			start = content.indexOf(itemBegin, end) ;
 			end = content.indexOf(itemEnd, start);
 		}
@@ -153,15 +98,20 @@ public class BaiduUtil {
 		int start, end;
 		start = end = 0;
 		
+		/**
+		 * 获取url
+		 */
 		url = getUrl(item);
 		url = url.substring(0,url.length()-1);
 		
-//		System.out.println("url -->"+ url);
-		
+		/**
+		 * 获取id
+		 */
 		id = getId(url);
 		
-//		System.out.println("id -->"+id);
-		
+		/**
+		 * 获取title
+		 */
 		start = item.indexOf(titleHead);
 		end = item.indexOf(titleEnd, start);
 		
@@ -176,8 +126,9 @@ public class BaiduUtil {
 		//替换一些标记字符，如<em></em>
 		title = replaceMark(title);
 		
-//		System.out.println("title -->"+ title);
-		
+		/**
+		 * 获取answer
+		 */
 		start = item.indexOf(ansHead);
 		end = item.indexOf(ansEnd,start);
 		/**
@@ -187,19 +138,22 @@ public class BaiduUtil {
 		 * 				<dd class="result-cate">  
 		 * 匹配头为“答”
 		 */
-		answer = item.substring(start + ansHead.length() + ansMid.length(),end);
-		answer = replaceMark(answer);
-		
-//		System.out.println("answer -->"+ answer);
-		
-		
+		start = start + ansHead.length() + ansMid.length();
+		if(validate(start, end) && end < item.length()){
+			answer = item.substring(start,end);
+			answer = replaceMark(answer);
+		}
+	
+		/**
+		 * 获取时间
+		 */
 		date = getDate(item);
 		
-//		System.out.println("date -->"+ date);
-//						
-//		System.out.println("\n");
 		
 		Term term = new Term(id, url, title, answer, date);
+		
+//		System.out.println(term.toString());
+//		System.out.println("\n");
 		
 		return term;
 	}
@@ -272,37 +226,6 @@ public class BaiduUtil {
 		
 		return Integer.parseInt(id);
 	}
-	
-//	public List<String> getItem(String content){
-//		
-//		int start = 0;
-//		int end = 0;
-//		start = content.indexOf(itemBegin);
-//		end = content.indexOf(itemEnd, start);
-//		
-//		while(validate(start, end)){
-//			String tmp = content.substring(start,end);
-//			/**
-//			 * 至获取LIMIT个item
-//			 */
-//			if(list.size() <= LIMIT)
-//				list.add(tmp);
-//			else
-//				break;
-//			start = content.indexOf(itemBegin, end) ;
-//			end = content.indexOf(itemEnd, start);
-//		}
-//		
-//  //    System.out.println("size: "+ list.size()+"\n"+list.toString());
-//      
-////		for (int i = 0; i < list.size(); i++) {
-////      		System.out.println("The "+i+"th(s) item is : \n" + list.get(i)+"\n");
-////      	}
-//        return list;
-//	}
-	
-
-
 
 	/**
 	 * 判断得到的下标是不是合法的
@@ -322,18 +245,8 @@ public class BaiduUtil {
 	/**
 	 * 对list中的每个term进行解析
 	 */
-	public void parseTerm() {
-		 String title = null;
-		 String question = null;
-		 String category = null;
-		 String qId = null;
-		 String qDate = null;
-		 String answer = null;
-		 String aDate = null;
-		 String aId = null;
-		 String aLevel = null;
-		 String aExpert = null;
-		 
+	public void parseTermList() {
+	 
 		 for(int i=0; i < termList.size(); i++){
 			 
 			 String url = termList.get(i).getUrl();
@@ -342,42 +255,27 @@ public class BaiduUtil {
 			 
 			 String content = null;
 			try {
-				content = getHtml(url);
+				NetUtil netutil =NetUtil.getInstance();
+				
+				content = netutil.getHtml(url);
+	
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			 if(null == content)
 				 continue;
-			 title = getTitle(content);
 			 
-			 question = getQuestion(content);
-			 
-			 category = getCategory(content);
-			 
-			 qId = getQId(content);
-			 
-			 qDate = getQDate(content);
-			 
-			 answer = getAnswer(content);
-			 
-			 aDate = getADate(content);
-			 
-			 aId = getAID(content);
-			 
-			 aLevel = getLevel(content);
-			 
-			 aExpert = getExpert(content);
-			 
-			 QA qa = new QA(title, question, category, qId,
-					 qDate, answer, aDate, aId, aLevel, aExpert);
-			 
-			 qaList.add(qa);
-		 }
-		 
+			 parseTerm(content);
+			 	 
+		 }		 
 	}
 
-	public void Test(String content){
+
+	/**
+	 * 
+	 * @param content
+	 */
+	public void parseTerm(String content) {
 		
 		 String title = null;
 		 String question = null;
@@ -409,10 +307,19 @@ public class BaiduUtil {
 		 aLevel = getLevel(content);
 		 
 		 aExpert = getExpert(content);
+		 
+		 QA qa = new QA(title, question, category, qId,
+				 qDate, answer, aDate, aId, aLevel, aExpert);
+		 
+		 qaList.add(qa);		
 	}
-	
-	
-	private String getExpert(String content) {
+
+	/**
+	 * 
+	 * @param content
+	 * @return
+	 */
+	public String getExpert(String content) {
 		//擅长
 		//</p>
 		//>田径</a>
@@ -448,12 +355,12 @@ public class BaiduUtil {
 		return expert;
 	}
 
-	private String getLevel(String content) {
+	public String getLevel(String content) {
 		
 		return null;
 	}
 
-	private String getAID(String content) {
+	public String getAID(String content) {
 		//user-name
 		String uname = null;
 		String answerHead = "qb-username";
@@ -467,7 +374,7 @@ public class BaiduUtil {
 		return uname;
 	}
 
-	private String getADate(String content) {
+	public String getADate(String content) {
 		
 		String aDate = null;
 		
@@ -492,7 +399,7 @@ public class BaiduUtil {
 		return aDate;
 	}
 
-	private String getSubStr(String headStr, String endStr, String midStr,String content){
+	public String getSubStr(String headStr, String endStr, String midStr,String content){
 		String str = null;
 		int start , end;	
 		
@@ -509,7 +416,7 @@ public class BaiduUtil {
 	}
 	
 	
-	private String getAnswer(String content) {
+	public String getAnswer(String content) {
 		//aContent
 		String answer = null;
 		String answerHead = "aContent";
@@ -525,7 +432,7 @@ public class BaiduUtil {
 		return answer;
 	}
 
-	private String getQDate(String content) {
+	public String getQDate(String content) {
 		
 		String date = null;
 		String dateHead = "ask-time";
@@ -548,7 +455,7 @@ public class BaiduUtil {
 		return date;
 	}
 
-	private String getQId(String content) {
+	public String getQId(String content) {
 		
 		String name = null;
 		String nameHead = "user-name";
@@ -562,7 +469,7 @@ public class BaiduUtil {
 		return name;
 	}
 
-	private String getCategory(String content) {
+	public String getCategory(String content) {
 		String category = null;
 		String caHead = "分类";
 		String caEnd = "</a>";
@@ -574,7 +481,7 @@ public class BaiduUtil {
 		return category;
 	}
 
-	private String getQuestion(String content) {
+	public String getQuestion(String content) {
 
 		String question = null;
 		String questionHead = "accuse=\"qContent\">";
@@ -588,7 +495,7 @@ public class BaiduUtil {
 	}
 	
 
-	private String getTitle(String content) {
+	public String getTitle(String content) {
 		String title = null;
 		String titleHead = "class=\"ask-title\">";
 		String titleEnd = "</span>";

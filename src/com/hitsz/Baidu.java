@@ -6,125 +6,209 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.junit.experimental.theories.Theories;
+
+import com.hitsz.dao.Term;
+import com.hitsz.util.Constants;
+import com.hitsz.util.DBUtil;
+import com.hitsz.util.FileUtil;
 import com.hitsz.util.NetUtil;
 
 /**
  * 
- * @author Jack_Tan
- * 
+ * @author JasonTan
+ * E-mail: tankle120@gmail.com
+ * Create onï¼š2013-5-6 ä¸‹åˆ10:16:52 
+ *
  */
 public class Baidu {
 
-	private static String keywords = "¹ÉÊĞĞĞÇé";
-	private static String str1 = "/search?word=";
-	private static String str2 = "&lm=0&rn=10&sort=0&ie=gbk&pn=";
+//	private static String keywords = "è‚¡å¸‚è¡Œæƒ…";
+	private static String URL_MID_STR1 = "/search?word=";
+	private static String URL_MID_STR2 = "&nocluster&lm=0&rn=10&sort=0&ie=gbk&pn=";
+	
 	private static BaiduUtil bdu = new BaiduUtil();
+	
 	static String baiduFile = "resource" + File.separator + "data.txt";
 	static String answerFile = "resource" + File.separator + "answer.txt";
 
-	public static void main(String[] args) {
+	/**
+	 * é—®å¥list
+	 */
+	public List<String> keywords = new ArrayList<String>();
+	
+	
+	public void downLoadTerm(){
 
-		 Test1();
-		// Test2();
-		//Test3();
+		 for(int i=0; i < bdu.termList.size(); i++){
+			 Term term = bdu.termList.get(i);
+			 String url = term.getUrl();
+			 if(null == url)
+				 continue;
+			 
+			 String content = null;
+			 try {
+				NetUtil netutil = NetUtil.getInstance();
+				
+				content = netutil.getHtml(url);
+	
+			} catch (IOException e) {
+				e.printStackTrace();
+			} 
+		 }		 
 
 	}
 
-	public static String readFileByLines(String fileName) {
-		File file = new File(fileName);
-		String str = null;
-		BufferedReader reader = null;
-		try {
-			System.out.println("ÒÔĞĞÎªµ¥Î»¶ÁÈ¡ÎÄ¼şÄÚÈİ£¬Ò»´Î¶ÁÒ»ÕûĞĞ£º");
-			reader = new BufferedReader(new FileReader(file));
-			String tempString = null;
-			int line = 1;
-			// Ò»´Î¶ÁÈëÒ»ĞĞ£¬Ö±µ½¶ÁÈënullÎªÎÄ¼ş½áÊø
-			while ((tempString = reader.readLine()) != null) {
-				str += tempString;
-				// ÏÔÊ¾ĞĞºÅ
-				System.out.println("line " + line + ": " + tempString);
-				line++;
-			}
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (reader != null) {
-				try {
-					reader.close();
-				} catch (IOException e1) {
-				}
-			}
-		}
-		return str;
-	}
-
-	private static void Test3() {
-		String content = readFileByLines("resource" + File.separator + "test.txt");
-		
-		bdu.Test(content);
-	}
-
-	private static void Test2() {
-		String url = " <dt class=\"result-title\" alog-alias=\"result-title-0\">"
-				+ "<a href=\"http://zhidao.baidu.com/question/541916153.html \""
-				+ "target=\"_blank"
-				+ "log=\"si:1\">ÏÖÔÚ¹ÉÆ±<em>ĞĞÇé</em>ÔõÑù?</a>  </dt>"
-				+ "<dd class=\"result-info\">"
-				+ "<p><span class=\"answer-flag\">´ğ<b>:</b></span>"
-				+ "<em>ĞĞÇé</em><dd class=\"result-cate\">  "
-				+ " <span alog-group=\"result-userinfo\""
-				+ ">    2011-08-20    <span class="
-				+ "\"reply-uname\">»Ø´ğÕß<b>:&nbsp;</b> ";
-
-		String regex = "[a-zA-Z]+://[^\\s]*";
-		;
-		Pattern pa = Pattern.compile(regex);
-		Matcher ma = pa.matcher(url);
-
-		String id = null;
-
-		if (ma.find()) {
-			id = ma.group();
-		}
-		System.out.println(id);
-	}
-
-	private static void Test1() {
+	/**
+	 * ç°åœ¨é—®å¥keywordçš„10ä¸ªç½‘é¡µ
+	 * 
+	 * @param keyword
+	 */
+	public void downLoadPages(final String keyword) {
 		/*
-		 * ÉèÖÃ´úÀí
+		 * è®¾ç½®ä»£ç†
 		 */
-		NetUtil.setProxy();
-
-		int num = 0;
-		// http://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word=¹ÉÊĞĞĞÇé&f=sug
-
-		/**
-		 * ÏÂÔØLIMITÌõÎÊ¾ä¼ìË÷½á¹ûitem
-		 */
-		while (num < BaiduUtil.LIMIT) {
-			getHtml(num);
-			num += 10;
-		}
-
-		outList();
-
-		saveList(baiduFile,bdu.termList);
-
-		bdu.parseTerm();
+		if(Constants.ISPROXY)
+			NetUtil.setProxy();
+	
+//		new Thread(){
+//	
+//			@Override
+//			public void run() {			
+				int num  = 0;
+				
+				while(num < Constants.LIMITS){
+					
+					String content = getHtml(keyword,num * 10);
+					
+//					if(null == content){
+//						try {
+//							sleep(3 * 60 * 1000);
+//						} catch (InterruptedException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//						continue;
+//					}
+					
+					saveContent(keyword, num * 10,content);
+					
+					num++;
+					
+					/**
+					 * 
+					 */
+					try {
+						Thread.sleep(3 * 1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				
+//			}
+			
+//		}.start();
 		
-		outQAList();
-
-		saveList(answerFile, bdu.qaList);
+		
+//
+//		outList();
+//
+//		saveList(baiduFile,bdu.termList);
+//
+//		bdu.parseTerm();
+//		
+//		outQAList();
+//
+//		saveList(answerFile, bdu.qaList);
+	}
+	
+	
+	/**
+	 * è§£ækeywordå¯¹åº”çš„ç¬¬numä¸ªç½‘é¡µ
+	 * 
+	 * @param keyword
+	 * @param num
+	 */
+	public void parsePage(String keyword){
+		
+		BaiduUtil.count = 0;
+		String fileName = null;
+		bdu.termList.clear();
+		
+		
+		for(int i=0; i<10; i++){
+			fileName = getFileName(keyword, i * 10);
+			
+			String content = FileUtil.readFileByLines(fileName);
+			
+			bdu.getItemList(content);
+		}
+		
+		fileName = getFileName(keyword);
+		System.out.println("fileName--->" + fileName);
+		saveTermList(keyword, bdu.termList);
+	}
+	
+	/**
+	 * 
+	 * @param keyword
+	 * @return
+	 */
+	private String getFileName(String keyword) {
+		String fileName = "resource" + File.separator +"qapair" + File.separator+ 
+				keyword +".html";
+		return fileName;
 	}
 
-	private static void outQAList() {
-		for (int i = 0; i < bdu.termList.size(); i++) {
+	/**
+	 *  ä¿å­˜æ–‡ä»¶çš„æ ¼å¼ï¼š keywords---i page(s).html
+	 * @param keywords2
+	 * @param i
+	 * @param content
+	 */
+	protected  void saveContent(String keyword, int i, String content) {
+		
+		String fileName = getFileName(keyword,i);
+		
+		System.out.println("Save the html's content. The filename is -->" + fileName);
+		
+		content = Calendar.getInstance().getTime().toLocaleString() +"\r\n" + content;
+		
+		FileUtil.writeFile(fileName, content, false);
+	}
+
+	/**
+	 * æ ¹æ®keywordå’Œiç”Ÿæˆä¸€ä¸ªæ–‡ä»¶å
+	 * 
+	 * @param keyword
+	 * @param i
+	 * @return
+	 */
+	private String getFileName(String keyword, int i) {
+		String fileName = "resource" + File.separator +"baidu" + File.separator+ 
+				keyword + "--->" + i +" page(s).html";
+		return fileName;
+	}
+
+	/**
+	 * 
+	 */
+	private  void outQAList() {
+		for (int i = 0; i < bdu.qaList.size(); i++) {
 			String content = "The " + i + "th(s) qa is : \n"
 					+ bdu.qaList.toString() + "\n";
 			System.out.println(content);
@@ -132,9 +216,11 @@ public class Baidu {
 	}
 
 	/**
-	 * ±£´æ°Ù¶È¼ìË÷µÄµÃµ½µÄlistµ½ÎÄ¼şÖĞ
+	 * 
+	 * @param fileName
+	 * @param list
 	 */
-	private static void saveList(String fileName , List list) {
+	private  void saveTermList(String fileName , List<Term> list) {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(fileName, true);
@@ -142,6 +228,7 @@ public class Baidu {
 			for (int i = 0; i < list.size(); i++) {
 				String content = "\nThe " + i + "th(s) item is : \n"
 						+ list.get(i).toString() + "\n";
+			//	System.out.println("Writing ..." + content);
 				fw.write(content);
 			}
 		} catch (IOException e) {
@@ -154,43 +241,123 @@ public class Baidu {
 		}
 	}
 
+//	/**
+//	 * 
+//	 */
+//	private  void outList() {
+//
+//		for (int i = 0; i < bdu.termList.size(); i++) {
+//			String content = "The " + i + "th(s) item is : \n"
+//					+ bdu.termList.get(i).toString() + "\n";
+//			System.out.println(content);
+//		}
+//
+//	}
+
 	/**
-	 * ²âÊÔ£¬ÓÃÀ´Êä³ö»ñµÃµÄËùÓĞµÄ»Ø´ğlist
-	 */
-	private static void outList() {
-
-		for (int i = 0; i < bdu.termList.size(); i++) {
-			String content = "The " + i + "th(s) item is : \n"
-					+ bdu.termList.get(i).toString() + "\n";
-			System.out.println(content);
-		}
-
-	}
-
-	/**
-	 * 
+	 * æ ¹æ®å…³é”®å­—å’Œç½‘é¡µç¬¬å‡ é¡µæ¥ä¸‹è½½å¯¹åº”çš„ç½‘é¡µå†…å®¹
+	 * @param keyword 
 	 * @param num
 	 */
-	private static void getHtml(int num) {
+	private String getHtml(String keyword, int num) {
 
-		String url = BaiduUtil.URLHEAD + str1 + keywords + str2 + num;
+		/**
+		 * å¯¹keywordè¿›è¡Œç¼–ç 
+		 */
+		try {
+			keyword  = URLEncoder.encode(keyword,Constants.ENCODING);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		final String url = Constants.URLHEAD_BAIDU + URL_MID_STR1 + keyword + URL_MID_STR2 + num;
 
-		System.out.println(url);
+		System.out.println("The url is "+url);
 
 		String content = null;
+		
 		try {
-			content = bdu.getHtml(url);
+			NetUtil netutil = NetUtil.getInstance();
+			
+			content = netutil.getHtml(url);
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		// System.out.println(content);
 		if(null == content){
 			System.out.println("Get the Html content Error!!!");
-			return;
+			return null;
 		}
-		bdu.getItem(content);
+		
+		return content;
+	}
+	
+	
+	/**
+	 * 
+	 * @param keywords
+	 */
+	public void setKeywords(List<String> keywords) {
+		this.keywords = keywords;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public List<String> getKeywords(){
+		
+		getKeywordsList();
+		
+		return this.keywords;
+	}
+	
+	/**
+	 * ä»æ•°æ®åº“ä¸­è¯»å–æ‰€æœ‰é—®å¥
+	 */
+	private void getKeywordsList() {
+		
+		Connection conn = DBUtil.getDBConnection();	
+		Statement stmt = DBUtil.getStatment(conn);
+
+		String sql = "select * from query";
+		
+		ResultSet rs = null;
+		
+		try {
+			rs = stmt.executeQuery(sql);
+						
+			while(rs.next()){
+				String query = rs.getString("query");
+
+				keywords.add(query);
+				
+				System.out.println("id is " + rs.getString("id") + " queryid is "+
+						rs.getString(2) + " query is " + rs.getString("query"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				if(rs != null){
+					rs.close();
+					rs = null;
+				}
+				if(stmt != null){			
+					stmt.close();
+					stmt = null;
+				}				
+				if(null != conn){
+					conn.close();
+					conn = null;
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

@@ -9,27 +9,37 @@ public class Term implements Serializable{
 	private static final long serialVersionUID = 7868017331860962546L;
 
 	/**
-	 * ���
+	 * 网页排序id
+	 */
+	private int rankid;
+	
+	/**
+	 * 网页下载时间
+	 */
+	private String downdate;
+	
+	/**
+	 * 序号
 	 */
 	private int id;
-	
 	/**
-	 * ��ַ
+	 * 网址
 	 */
 	private String url;
-	
 	/**
-	 * ����
+	 * 标题
 	 */
+
 	private String title;
 	
 	/**
-	 * �ʾ��
+	 * 问句答案
+	 *
 	 */
 	private String answer;
 	
 	/**
-	 * ʱ��
+	 * 问句提问时间
 	 */
 	private String date;
 	
@@ -37,6 +47,8 @@ public class Term implements Serializable{
 	@Override
 	public String toString() {
 		return "Term [id=" + id + "\r\n"+
+				"rankid="+rankid+"\r\n"+
+				"downdate=" + downdate +"\r\n"+
 				"url=" + url +"\r\n"+
 				"title=" + title+ "\r\n"
 				+ "answer=" + answer +"\r\n" 
@@ -50,6 +62,22 @@ public class Term implements Serializable{
 		this.title = title;
 		this.answer = answer;
 		this.date = date;
+	}
+
+	public String getDowndate() {
+		return downdate;
+	}
+
+	public void setDowndate(String downdate) {
+		this.downdate = downdate;
+	}
+
+	public int getRankid() {
+		return rankid;
+	}
+
+	public void setRankid(int rankid) {
+		this.rankid = rankid;
 	}
 
 	public int getId() {

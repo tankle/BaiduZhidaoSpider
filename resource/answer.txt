@@ -679,3 +679,668 @@ aId=������ʫ,
 aLevel=null, 
 aExpert= ��Ʊ ��� ����]
 
+
+The 0th(s) item is : 
+QA [title=现在股票行情怎样?, 
+question=null, 
+category=股票, 
+qId=易财网白羽, 
+qDate=2013-04-17 12:10, 
+answer=股票行情会在2250点左右徘徊一段时间，当二季度经济形势明朗时，会往高点攀升，到时请密切注意国家的宏观政策导向，和各项经济指标。你关注的企业的可重点关注企业效益、发展战略、企业产品市场表现等。请, 
+aDate= 2013-04-17 13:03, 
+aId=hcl3723, 
+aLevel=null, 
+aExpert= 职业培训 企业管理]
+
+
+The 1th(s) item is : 
+QA [title=股票行情主要看什么, 
+question=null, 
+category=股票, 
+qId=zenll999, 
+qDate=2012-12-10 23:15, 
+answer=1 量价配合关系：即价升量增概率向上，价升量减上升的概率较小。
+2大盘趋势：上涨的数量远远大于下跌的数量，大面积股票涨停。上涨的概率大大增加。
+3冲破近期连续的3-4个最高点（关键阻力位），放量向上说明近期见底，很可能有一段向上的机会。
+建议60分钟均线改成144  168  186   如果三线相交金叉，短线上升基本确立。, 
+aDate= 2012-12-10 23:49, 
+aId=yfd192525, 
+aLevel=null, 
+aExpert= 生活 儿科 保健养生 股票]
+
+
+The 2th(s) item is : 
+QA [title=怎么看股市行情图？, 
+question=null, 
+category=股票, 
+qId=wangchenyijie, 
+qDate=2006-10-25 16:56, 
+answer=－、K线图特点 
+K线图这种图表源处于日本，被当时日本米市的商人用来记录米市的行情与价格波动，后因其细腻独到的标画方式而被引入到股市及期货市场。目前，这种图表分析法在我国以至整个东南亚地区均尤为流行。由于用这种方法绘制出来的图表形状颇似一根根蜡烛，加上这些蜡烛有黑白之分，因而也叫阴阳线图表。通过K线图，我们能够把每日或某一周期的市况表现完全记录下来， 
+股价经过一段时间的盘档后，在图上即形成一种特殊区域或形态，不同的形态显示出不同意义。我们可以从这些形态的变化中摸索出一些有规律的东西出来。K线图形态可分为反转形态、整理形态及缺口和趋向线等。 
+1、绘制方法 
+首先我们找到该日或某一周期的最高和最低价，垂直地连成一条直线；然后再找出当日或某一周期的开市和收市价，把这二个价位连接成一条狭长的长方柱体。假如当日或某一周期的收市价较开市价为高（即低开高收），我们便以红色来表示，或是在柱体上留白，这种柱体就称之为&quot;阳线&quot;。如果当日或某一周期的收市价较开市价为低（即高开低收），我们则以蓝色表示，又或是在住柱上涂黑色，这柱体就是&quot;阴线&quot;了。 
+2、优点 
+能够全面透彻地观察到市场的真正变化。我们从K线图中，既可看到股价（或大市）的趋势，也同时可以了解到每日市况的波动情形。 
+3、缺点 
+（1）绘制方法十分繁复，是众多走势图中最难制作的一种。 
+（2）阴线与阳线的变化繁多，对初学者来说，在掌握分析方面会有相当的困难，不及柱线图那样简单易明。 
+二、分析意义 
+由于&quot;阴阳线&quot;变化繁多，&quot;阴线&quot;与&quot;阳线&quot;里包涵着许多大小不同的变化，因此其分析的意义，有特别提出一谈的必要。 
+在讨论&quot;阴阳线&quot;的分析意义之前，先让我们知道阳线每一个部分的名称。 
+我们以阳线为例，最高与收市价之间的部分称之为&quot;上影&quot;，开市价与收市价之间称为&quot;实体&quot;，开市价与最低价之间就称作&quot;下影&quot;。 
+1、长红线或大阳线 
+此种图表示最高价与收盘价相同，最低价与开盘价一样。上下没有影线。从一开盘，买方就积极进攻，中间也可能出现买方与卖方的斗争，但买方发挥最大力量，一直到收盘。买方始终占优势，使价格一路上扬，直至收盘。表示强烈的涨势，股市呈现高潮，买方疯狂涌进，不限价买进。握有股票者，因看到买气的旺盛，不愿抛售，出现供不应求的状况。 
+2、长黑线或大阴线 
+此种图表示最高价与开盘价相同，最低价与收盘价一样。上下没有影线。从一开始，卖方就占优势。股市处于低潮。握有股票者不限价疯狂抛出，造成恐慌心理。市场呈一面倒，直到收盘、价格始终下跌，表示强烈的跌势。 
+3、先跌后涨型 
+这是一种带下影线的红实体。最高价与收盘价相同，开盘后，卖气较足，价格下跌。但在低价位上得到买方的支撑，卖方受挫，价格向上推过开盘价，一路上扬，直至收盘，收在最高价上。总体来讲，出现先跌后涨型，买方力量较大，但实体部分与下影线长短不同，买方与卖方力量对比不同。 
+实体部分比下影线长。价位下跌不多，即受到买方支撑，价格上推。破了开盘价之后，还大幅度推进，买方实力很大。 
+实体部分与下影线相等，买卖双方交战激烈，但大体上，买方占主导地位，对买方有利。 
+实体部分比下影线短。买卖双方在低价位上发生激战。遇买方支撑逐步将价位上推。但从图中可发现，上面实体部分较小，说明买方所占据的优势不太大，如卖方次日全力反攻，则买方的实体很容易被攻占。 
+4、下跌抵抗型 
+这是一种带下影线的黑实体，开盘价是最高价。一开盘卖方力量就特别大，价位一种下跌，但在低价位上遇到买方的支撑。后市可能会反弹。实体部分与下影线的长短不同也可分为三种情况： 
+（1）实体部分比影线长 卖压比较大，一开盘，大幅度下压，在低点遇到买方抵抗，买方与卖方发生激战，影线部分较短，说明买方把价位上推不多，从总体上看，卖方占了比较大的优势。 
+（2）实体部分与影线同长 表示卖方把价位下压后，买方的抵抗也在增加，但可以看出，卖方仍占优势。 
+（3）实体部分比影线短 卖方把价位一路压低，在低价位上，遇到买方顽强抵抗并组织反击，逐渐把价位上推，最后虽以黑棒收盘，但可以看出卖方只占极少的优势。后市很可能买方会全力反攻，把小黑实体全部吃掉。 
+5、上升阻力 
+这是一种带上影线的红实体。开盘价即最低价。一开盘买方强盛，价位一路上推，但在高价位遇卖方压力，使股价上升受阻。卖方与买方交战结果为买方略胜一筹。具体情况仍应观察实体与影线的长短。 
+红实体比影线长，表示买方在高价位是遇到阻力，部分多头获利回吐。但买方仍是市场的主导力量，后市继续看涨。 
+实体与影线同长，买方把价位上推，但卖方压力也在增加。二者交战结果，卖方把价位压回一半，买方虽占优势。但显然不如其优势大。 
+实体比影线短。在高价位遇卖方的压力、卖方全面反击，买方受到严重考验。大多短线投资者纷纷获利回吐，在当日交战结束后，卖方已收回大部分失地。买方一块小小的堡垒（实体部分）将很快被消灭，这种K线如出现在高价区，则后市看跌。 
+6、先涨后跌型 
+这是一种带上影线的黑实体。收盘价即是最低价。一开盘，买方与卖方进行交战。买方占上风，价格一路上升。但在高价位遇卖压阻力，卖方组织力量反攻，买方节节败退，最后在最低价收盘，卖方占优势，并充分发挥力量，使买方陷入&quot;套牢&quot;的困境。 
+具体情况仍有以下三种： 
+（1）黑实体比影线长 表示买方把价位上推不多，立即遇到卖方强有力的反击，把价位压破开盘价后乘胜追击，再把价位下推很大的一段。卖方力量特别强大，局势对卖方有利。 
+（2）黑实体与影线相等买方把价位上推；但卖方力量更强，占据主动地位。卖方具有优势。 
+（3）黑实体比影线短 卖方虽将价格下压，但优势较少，明日入市，买方力量可能再次反攻，黑实体很可能被攻占。 
+7、反转试探型 
+这是一种上下都带影线的红实体。开盘后价位下跌，遇买方支撑，双方争斗之后，买方增强，价格一路上推，临收盘前，部分买者获利回吐，在最高价之下收盘。这是一种反转信号。如在大涨之后出现，表示高档震荡，如成交量大增，后市可能会下跌。如在大跌后出现，后市可能会反弹。这里上下影线及实体的不同又可分为多种情况： 
+（1）上影线长于下影线之红实体：又分为：影线部分长于红实体表示买方力量受挫折。红实体长于影线部分表示买方虽受挫折，但仍占优势。 
+（2）下影线长于上影线之红实体：亦可分为：红实体长于影线部分表示买方虽受挫折，仍居于主动地位。影线部分长于红实体表示买方尚需接受考验。 
+8、弹升试探型 
+这是一种上下都带影线的黑实体，在交易过程中，股价在开盘后，有时会力争上游，随着卖方力量的增加，买方不愿追逐高价，卖方渐居主动，股价逆转，在开盘价下交易，股价下跌。在低价位遇买方支撑，买气转强，不至于以最低价收盘。有时股价在上半场以低于开盘价成交，下半场买意增强，股价回至高于开盘价成交，临收盘前卖方又占优势，而以低于开盘价之价格收盘。这也是一种反转试探。如在大跌之后出现，表示低档承接，行情可能反弹。如大涨之后出现，后市可能下跌。 
+9、十字线型 
+这是一种只有上下影线，没有实体的图形。开盘价即是收盘价，表示在交易中，股价出现高于或低于开盘价成交，但收盘价与开盘价相等。买方与卖方几乎势均力敌。 
+其中：上影线越长，表示卖压越重。下影线越长，表示买方旺盛。上下影线看似等长的十字线，可称为转机线，在高价位或低价位，意味着出现反转。 
+10、&quot;┴&quot;图形 
+又称空胜线，开盘价与收盘价相同。当日交易都在开盘价以上之价位成交，并以当日最低价（即开盘价）收盘，表示买方虽强，但卖方更强，买方无力再挺升，总体看卖方稍占优势，如在高价区，行情可能会下跌。 
+11、&quot;T&quot;图形 
+&quot;T&quot;图形又称多胜线，开盘价与收盘价相同，当日交易以开盘价以下之价位成交，又以当日最高价（即开盘价）收盘。卖方虽强，但买方实力更大，局势对买方有利，如在低价区，行情将会回升。 
+12、&quot;一&quot;图形 
+此较形不常见，即开盘价、收盘价、最高价、最低价在同一价位。只出现于交易非常冷清，全日交易只有一档价位成交。冷门股此类情形较易发生。 
+三、K线线势型态分析 
+线势型态是以日线图中，三至五天行情变化为对象，对未来股价走势的分析也是以短期行情变化为目标，不过在许多时候也必须把它放在大的长期的行情中去分析理解。 
+（一）、上升线势行情 
+1、二颗星 
+上升行情中出现极线的情形即称为二颗星、三颗星，此时股价上涨若再配合成交量放大，即为可信度极高的买进时机，股价是必再出现另一波涨升行情。 
+2、跳空上扬 
+在上涨行情中，某日跳空拉出一条阳线后，即刻出现一条下降阴线，此为加速股价上涨的前兆，投资人无须惊慌抛出持股，股价必将持续前一波涨势继续上升。 
+3、下降阴线 
+在涨升的途中，出现如图般的三条连续下跌阴线，为逢低承接的大好时机。当第四天的阳线超越前一天的开盘价时，表示买盘强于卖盘，应立刻买进以期股价扬升 
+4、上档盘旋 
+股价随着强而有力的大阳线往上涨升，在高档将稍做整理，也就是等待大量换手，随着成交量的扩大，即可判断另一波涨势的出现。上档盘整期间约6日至11日，若期间过长则表示上涨无力。 
+5、并排阳线 
+持续涨势中，某日跳空现阳线，隔日又出现一条与其几乎并排的阳线，如果隔日开高盘，则可期待大行情的出现。 
+6、超越覆盖线 
+行情上涨途中若是出现覆盖线，表示已达天价区，此后若是出现创新天价的阳线，代表行情有转为买盘的迹象，股价会继续上涨。 
+7、上涨插入线 
+在行情震荡走高之际，出现覆盖阴线的隔日，拉出一条下降阳线，这是短期的回档，股价必上涨。 
+8、三条大阴线 
+在下跌行情中出现三条连续大阴线，是股价隐入谷底的征兆，行情将转为买盘，股价上扬。 
+9、上升三法 
+行情上涨中，大阳线之后出现三根连续小阴线，这是蓄势待发的征兆，股价将上升。 
+10．向上跳空阴线 
+此图形虽不代表将有大行情出现，但约可持续七天左右的涨势，为买进时机 
+（二）、反弹线势行情 
+1、反弹线 
+在底价圈内，行情出现长长的下影线时，往往即为买进时机，出现买进信号之后，投资人即可买进，或为了安全起见，可待候行情反弹回升之后再买进，若无重大利空出现，行情必定反弹。 
+2、舍子线 
+在大跌行情中，跳空出现十字线，这暗示着筑底已经完成，为反弹之征兆。 
+3、阴线孕育阳线 
+在下跌行情中，出现大阴线的次日行情呈现一条完全包容在大阴线内的小阴线，显示卖盘出尽，有转盘的迹象，股价将反弹。 
+4、五条阴线后一条大阴线 
+当阴阳交错拉出五条阴线后，出现一条长长的大阴线，可判断&quot;已到底部&quot;，如果隔日开高盘，则可视为反弹的开始。 
+5、二条插入线 
+此图形暗示逢低接手力道强劲，股价因转盘而呈上升趋势。 
+6、最后包容线 
+在连续的下跌行情中出现小阳线，隔日即刻出现包容的大阴线，此代表筑底完成，行情即将反弹。虽然图形看起来呈现弱势，但该杀出的浮码均已出尽，股价必将反弹而上。 
+7、下档五根阳线 
+在底价圈内出现五条阳线，暗未逢低接手力道不弱，底部形成，股价将反弹。 
+8、反弹阳线 
+确认股价已经跌得很深，某一天，行情出现阳线，即&quot;反弹阳线&quot;时，即为买进信号，若反弹阳线附带着长长的下影线，表示低档已有主力大量承接，股价将反弹而上。 
+9、三空阴线 
+当行情出现连续三条跳空下降阴线，则为强烈的买进信号，股价即将反弹。 
+10、连续下降三颗星 
+确认股价已跌深，于低档盘整时跳空出现连续三条小阴线（极线）， 这是探底的前兆，如果第四天出现十字线，第五天出现大阳线，则可确认底部已筑成，股价反转直上。 
+（三）、下跌线势行情 
+1、覆盖线 
+股价连续数天扬升之后，隔日以高盘开出，随后买盘不愿追高，大势持续滑落，收盘价跌到前一日阳线之内。这是超买之后所形成的卖压涌现，获利了结股票大量释出之故，股价将下跌。 
+2、十字线 
+在高价圈出现十字线（开盘收盘等价线），并留下上下影线，其中上影线较长。此情形表示股价经过一段时日后，已涨得相当高，欲振乏力，开始要走下坡，这是明显的卖出讯号。 
+3、阴线孕育于较长阳线内 
+经过连日飚涨后，当日的开收盘价完全孕育在前一日的大阳线之中，并出现一根阴线，这也代表上涨力道不足，是股价下跌的前兆，若隔天再拉出一条上影阴线，更可判断为股价暴跌的征兆。 
+4、阳线孕育在较长阳线内 
+股价连续数天扬升之后，隔天出现一根小阳线，并完全孕育在前日之大阳线之中，表示上升乏力，是暴跌的前兆。 
+5、孕育十字线 
+亦即今日的十字线完全包含在前一日的大阳线之中的情况。此状态代表买盘力道减弱，行情即将回软转变成卖盘，股价下跌。 
+6、最后包容线 
+当股价持续数天涨势后出现一根阴线，隔天又开低走高拉出一根大阳线，将前一日的阴线完全包住，这种现象看来似乎买盘增强，但只要隔日行情出现比大阳线的收盘价低，则投资人应该断然释出持股。若是隔日行情高于大阳线的收盘价，也很有可能成为&quot;覆盖阴线&quot;，投资人应慎防。 
+7、跳空 
+所谓跳空即两条阴阳线之间不互相接触，中间有空格的意思。连续出现三根跳空阳线后，卖压必现，一般投资人在第二根跳空阳线出现后，即应先行获利了结，以防回档惨遭套牢。 
+8、下影线过长 
+股价于高档开盘，先前的买盘因获利了结而杀出，使得大势随之滑落，低档又逢有力承接，股价再度攀升，形成下影线为实线的三倍以上。此图型看起来似乎买盘转强，然宜慎防主力拉高出货，空手者不宜冒然介入，持股者宜逢高抛售。 
+9、尽头线 
+持续涨升的行情一旦出现此图形，表示上涨力道即将不足，行情将回档盘整，投资人宜先行获利了结。这也是一种&quot;障眼线&quot;，小阳线并没有超越前一日的最高点，证明上涨乏力，股价下跌。 
+10、反击顺沿线 
+此处所称之顺沿线为自高档顺次而下出现的二根阴线。为了打击此二根阴线所出现的一大根阳线，看起来似乎买盘力道增强了，但投资人须留意这只不过是根&quot;障眼线&quot;，主力正在拉高出货，也是投资人难得的逃命线，宜抛出持股。 
+11、跳空舍字线 
+行情跳空上涨开成一条十字线，隔日却又跳空拉出一根阴线，暗示行情即将暴跌。此时股价涨幅已经相当大，无力再往上冲，以致跳空而下，为卖出信号，在此情况下，成交量往往也会随之减少。 
+12、跳空孕育十字线 
+当股价跳空上涨后拉出三根大阳线，随后又出现一条十字线，代表涨幅过大，买盘不愿追高，持股者纷纷杀出，这也是融券放空者千载难逢的好机会，股价将暴跌。 
+13、下降插入线 
+持续下降阴线中，出现一条开低走高的阳线，为卖出时机，股价必将持续下跌。 
+14、下降覆盖线 
+在高档震荡行情中，出现一条包容大阴线，隔日牵出一条下降阳线，接下来又出出覆盖线，则暗示行情已到达天价价位，此时为脱手线。 
+15、高档五阴线 
+股价涨幅已高，线路图出现五条连续阴线，显示股价进入盘局，此时若成交量萎缩，更可确信行情不妙。 
+16、下降三法 
+在行情持续下跌中，出现一条大阴线，隔天起却又连现三根小阳线，这并不代表筑底完成，接下来若再出现一条大阴线，则为卖出时机，股价必将持续往下探底。 
+17、三段大阳线 
+行情持续下跌中出现一条大阳线，此大阳线将前三天的跌幅完全包容，这是绝好的逃命线，投资人宜尽快出脱持股，股价将持续下跌。 
+18、三颗星 
+下跌行情中出现极线，这是出脱持股的好机会，股价将再往下探底。 
+19、低档盘旋 
+通常盘整时间在六日至十一日之间，若接下来出现跳空阴线，则为大跌的起步，也就是说前段的盘整只不过是中段的盘整罢了，股价将持续回档整理。 
+20、跳空下降二阴线 
+在下降的行情中又出现跳空下降的连续二条阴线，这是暴跌的前兆。通常在两条阴线出现之前，会有一小段反弹行情，但若反弹无力，连续出现阴线时，表示买盘大崩盘，股价将继续往下探底。 
+参考资料：<a href="http://www.sunsc.com.cn/school/technology/fxll.html" target="_blank">http://www.sunsc.com.cn/school/technology/fxll.html</a>, 
+aDate= 2006-10-28 22:17, 
+aId=單純D, 
+aLevel=null, 
+aExpert=]
+
+
+The 3th(s) item is : 
+QA [title=最近股市行情怎样？, 
+question=分析一下, 
+category=股票, 
+qId=不会169, 
+qDate=2008-02-09 12:54, 
+answer=我以前也怕受美国股市的拖累.但是想明白了,因为游资不会回家睡觉,美国欧洲日本坏了,只有去中国哪.
+最近,偶天天看美国股市,涨跌没有明显趋势,估计中国股市会有开门红.
+
+万维专稿：股票价格还会下跌
+
+：财富杂志的文章说，现在的股市经常会有上上下下几百点的日子，油价接近每桶一百美元，美元下跌，媒体每天都有人在说经济衰退已经来了，在这样的日子里，股市其实给投资者提供了很好的机会，如果你有足够的耐心的话。
+
+但是，现在是不是最好的买进股票的时机，还有待观察。
+
+文章说，投资者不必被每天媒体的标题吓倒，回顾一下历史，这种日子我们以前也不是没有经历过，比如1987年十月的大跌，90年代初的S&L危机，97&98年的亚洲金融危机，2000年的科技泡沫。这些起伏既是可预知的－因为股市总是有起伏的；又是不可预知的－因为你没法知道到底什么时候会发生。但是，有一点必须承认的是，正因为股市的大起大落才会使投资者的长期回报比较高。一位金融顾问说，投资者应该感谢股市大跌，如果没有跌的话，股票的回报就会象债券一样沉闷。大跌给投资者提供买进便宜股票的机会。((<a href="http://www.creaders.net" target="_blank">www.creaders.net</a> 记者专稿  转载请注明出处)
+
+话虽这样说，投资者在大跌时买股票是需要勇气的，特别是目前。现在的股市不是八十年代，不再是投资者的乐园，当时各种股票都显得很便宜。而现在，不是各个行业的股票都值得买。比如说，投资者可以考虑那些已经跌了很多，行业已经经历了衰退的股票，如红利很好的银行股和药业股。除此之外，投资者手头最好要留一些现金等那些仍然比较贵的股票下跌时好买进，比如现在不少科技股仍然比较贵。
+
+华尔街人士说目前最大的危险是经济衰退，但是如果说美国经济会发生严重衰退是言过其实了。虽然就业市场的数字不好，但在上两次经济衰退中失业的上升率都达到25%，这次远远没有那么严重。有些经济学家说目前其实还没有真正显示经济衰退的信号。(<a href="http://www.creaders.net" target="_blank">www.creaders.net</a> 记者专稿  转载请注明出处)
+
+已知的是美国大众消费减弱，房价下跌，借款越来越难－包括买车贷款以及小企业贷款。如果美国会真的发生衰退的话，那么也应该只是在今年上半年，而且不会很严重，也不会为时很久。自从去年九月以来，联邦储备已经减息数次，目前利率在3%。通常减息刺激个人和企业消费要六到九个月才会体现出来，也就是说到了今年年中经济会有起色。而且，很多人都预测联邦储备还会进一步减息，通过这些措施，美国经济在下半年应该恢复到3%-3.5%的上涨率。
+
+经济学家们担心低利率政策会蕴酿一个更大的危机，就是通货膨胀。从历史经验看，高油价，高食品价格，高金属价格，低利率都是通货膨胀的必备条件。Carnegie Mellon的经济学家Allan Meltzer指出：真正的危险可能会是在2009到2010年发生，到时候联邦储备将不得不迅速加息以控制通货膨胀。
+
+虽然经济前景还不明朗，有一点可以看到的现实是：目前不少股票价格仍算贵的。虽然华尔街的分析师不停地说现在股价多么便宜，事实并非如此。他们所说的股价和利润的比值，现在看看确实是不高，但是大家必须记住现在公司的业绩是要走一段下坡路的，而不是在上升的过程中；也就是说我们所看到的低比率并不真实。根据耶鲁大学的一位经济学家的统计，现在标准普尔五百指数里的公司的股价／利润比值实际上是在24.5，而长期以来的历史平均比值应该只是15，所以说现在股价仍然较贵。((
+
+做为投资者，在今天这种股市中要保持冷静，首先大家必须认识到整个股市仍然处于高点，下跌的空间还有很多；其次，你必须均衡投资，将通货膨胀的因素考虑进去；第三，手头一定要有一些现金，以便在大跌时进货。, 
+aDate= 2008-02-10 00:16, 
+aId=tiangang8, 
+aLevel=null, 
+aExpert=]
+
+
+The 4th(s) item is : 
+QA [title=今年股票行情, 
+question=null, 
+category=股票, 
+qId=刘潮小姜, 
+qDate=2011-08-20 10:17, 
+answer=有机会也有陷阱，看自己操作水平, 
+aDate=null, 
+aId=konjunwudi, 
+aLevel=null, 
+aExpert=]
+
+
+The 5th(s) item is : 
+QA [title=目前股市行情好吗？, 
+question=买基金好还是股票好？, 
+category=股票, 
+qId=sunmer163, 
+qDate=2013-03-12 18:33, 
+answer=1、目前股市行情好吗：从近期股市的走势来看，略为弱势，但是牛市的格局并未完全被打破，还有待观察后市的演绎才能具体判断。
+
+2、买基金好还是股票好：如果您是一个风险承受能力较强的投机者，建议购买股票；如果你是一个稳健型投资者，建议购买指数型基金。, 
+aDate= 2013-03-12 18:40, 
+aId=汉赋唐诗, 
+aLevel=null, 
+aExpert= 股票 外汇 基金]
+
+
+The 6th(s) item is : 
+QA [title=你们谁有股票行情软件啊？, 
+question=null, 
+category=<link rel="canonical" href="http://zhidao.baidu.com/question/540202369.html"/><script type="text/javascript">(function(){function b(f){if(f>=0){for(var e=0;e<75;e+=25){if(f>=e&&f<e+25){return e/25}}if(f>=75&&f<500){return 3}return 4}}var d=function(e){this.name=e;this.dataArray=[0,0,0,0,0]};d.prototype.start=function(){var g=50,j,f,i=this;function e(){f=new Date;var k=f-j-g;k=k<0?0:k;i.dataArray[b(k)]++;h()}function h(){j=new Date;i.timer=setTimeout(e,g)}h()};d.prototype.end=function(){this.timer=clearTimeout(this.timer)};d.prototype.toString=function(){return'"'+this.name+'":['+this.dataArray.join(",")+"]"};var a={};var c={start:function(e,f){f=f||a;if(f){if(!f[e]){f[e]=new d(e)}f[e].start()}},end:function(e,f){f=f||a;if(f){if(f[e]){f[e].end()}}},toString:function(g){g=g||a;var e=[];if(g){for(var f in g){if(g.hasOwnProperty(f)){e.push(g[f].toString())}}}return"{"+e.join(",")+"}"},length:function(){return a.length}};window.CPU_MONITOR=c})(window);var PDC={_version:"0.8",_render_start:new Date().getTime(),_analyzer:{loaded:false,url:"http://static.tieba.baidu.com/tb/pms/wpo.pda.js?v=0.8",callbacks:[]},_opt:{is_login:false,sample:0,product_id:0,page_id:0,special_pages:[],display:false},_cpupool:{},_timingkey:"start",_timing:{},init:function(d){for(var c in d){if(d.hasOwnProperty(c)){this._opt[c]=d[c]}}},mark:function(b){this._timing[b]=new Date().getTime();if(window.CPU_MONITOR){CPU_MONITOR.end(this._lastkey+"-"+this._timingkey,this._cpupool);if(b!="let"){CPU_MONITOR.start(this._timingkey+"-"+b,this._cpupool);this._lastkey=this._timingkey;this._timingkey=b}}},view_start:function(){this.mark("vt")},tti:function(){this.mark("tti")},page_ready:function(){this.mark("fvt")},metadata:function(){var c=this._opt;var e={env:{user:(c.is_login==true?1:0),product_id:c.product_id,page_id:PDC._is_sample(c.sample)?c.page_id:0},common_resources:c.common_resources,special_resources:c.special_resources,render_start:this._render_start,timing:this._timing,display:c.display};var a=[];var d=c.special_pages;for(var b=0;b<d.length;b++){if(PDC._is_sample(d[b]["sample"])){a.push(d[b]["id"])}}if(a.length>0){e.env["special_id"]="["+a.join(",")+"]"}return e}};(function(){if(document.attachEvent){window.attachEvent("onload",function(){PDC.mark("let");PDC._load_analyzer()})}else{window.addEventListener("load",function(){PDC.mark("lt")},false)}})();</script> <!--[if lte IE 8]> <script>(function(){var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),i=e.length;while(i--){document.createElement(e[i])}})();</script> <![endif]-->
+<link rel="stylesheet" type="text/css" href="http://cdn.iknow.bdimg.com/static/common/pkg/module_76896ee3.css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.iknow.bdimg.com/static/question/pkg/css_a5f1ec98.css" />
+<script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/common/lib/base_aa43e0c6.js"></script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/common/pkg/framework_559aa67d.js' : ['/static/common/lib/tangram/base/base.js','/static/common/lib/magic/control/Dialog/Dialog.js','/static/common/lib/magic/Dialog/Dialog.js','/static/common/lib/magic/Mask/Mask.js','/static/common/lib/magic/control/Dialog/$mask/$mask.js','/static/common/lib/magic/control/Dialog/$button/$button.js','/static/common/lib/magic/setup/suggestion/suggestion.js','/static/common/lib/magic/control/Carousel/Carousel.js','/static/common/lib/magic/Carousel/Carousel.js','/static/common/lib/magic/control/Carousel/$fx/$fx.js','/static/common/lib/magic/control/Carousel/$autoScroll/$autoScroll.js','/static/common/lib/magic/magic.js','/static/common/lib/magic/Base/Base.js','/static/common/lib/magic/Calendar/Calendar.js','/static/common/lib/magic/control/control.js','/static/common/lib/magic/control/Carousel/$button/$button.js','/static/common/lib/magic/Carousel/$button/$button.js','/static/common/lib/magic/control/Layer/Layer.js','/static/common/lib/magic/control/Popup/Popup.js','/static/common/lib/magic/Background/Background.js','/static/common/lib/magic/Popup/Popup.js','/static/common/lib/magic/control/DatePicker/DatePicker.js','/static/common/lib/magic/control/DatePicker/$title/$title.js','/static/common/lib/magic/Pager/Pager.js','/static/common/lib/magic/setup/setup.js','/static/common/lib/magic/setup/datePicker/datePicker.js','/static/common/lib/magic/control/Suggestion/Suggestion.js','/static/common/lib/magic/control/Tab/Tab.js','/static/common/lib/magic/setup/tab/tab.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/common/pkg/module_4959883e.js' : ['/static/common/ui/event/event.js','/static/common/ui/dialog/dialog.js','/static/common/ui/phone-bind/phone-bind.js','/static/common/ui/tip/tip.js','/static/common/ui/uri/uri.js','/static/common/ui/util/util.js','/static/common/ui/baidu/fx/fx.js','/static/common/ui/baidu/baidu.js','/static/common/ui/log/log.js','/static/common/ui/store/store.js','/static/common/ui/form/form.js','/static/common/ui/ut/ut.js','/static/common/ui/submit/submit.js','/static/common/ui/login/login.js','/static/common/ui/template/template.js','/static/common/ui/baidu/form/form.js','/static/common/ui/category/category.js','/static/common/ui/set-care-field/set-care-field.js','/static/common/ui/tip/move/move.js','/static/common/ui/msg/msg.js','/static/common/ui/suggestion/suggestion.js','/static/common/ui/search-box/search-box.js','/static/common/ui/tip/fade/fade.js','/static/common/ui/set-class/set-class.js','/static/common/ui/hi/hi.js','/static/common/ui/fixed-ask/fixed-ask.js','/static/widget/common/userbar/twbanner/twbanner.js','/static/widget/common/userbar/userbar.js','/static/widget/common/menu/menu.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/common/pkg/more_4396a761.js' : ['/static/common/ui/address/address.js','/static/common/ui/editor/lang/lang.js','/static/common/ui/authcode/authcode.js','/static/common/ui/editor/addon/addon.js','/static/common/ui/editor/config/config.js','/static/common/ui/editor/prototype/prototype.js','/static/common/ui/editor/fileUploader/fileUploader.js','/static/common/ui/editor/editor.js','/static/common/ui/blink/blink.js','/static/common/ui/complain/complain.js','/static/common/ui/showcase/showcase.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/question/pkg/module_21051a33.js' : ['/static/widget/question/push/push.js','/static/question/ui/submitjump/submitjump.js','/static/question/ui/card/card.js','/static/question/ui/egg/egg.js','/static/question/ui/evaluate/evaluate.js','/static/question/ui/editor/comment/comment.js','/static/question/ui/comment/comment.js','/static/widget/question/answers/answers.js','/static/widget/question/ad-right/ad-right.js','/static/question/ui/editor/config/config.js','/static/question/ui/editor/editor.js','/static/widget/question/share/share.js','/static/question/ui/evaluate/open/open.js','/static/widget/question/value-comment/value-comment.js','/static/widget/question/topic/topic.js','/static/widget/question/ask/follow/follow.js','/static/widget/question/ask/ask.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/widget/question/user/login-panel/login-panel_72310605.js' : ['/static/widget/question/user/login-panel/login-panel.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/question/pkg/user_112be950.js' : ['/static/question/ui/accuse/accuse.js','/static/widget/question/user/info/rise-progressbar/rise-progressbar.js','/static/widget/question/user/info/task-list/task-list.js','/static/widget/question/user/info/info.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/question/ui/admin/officialAdmin/officialAdmin_72333d9d.js' : ['/static/question/ui/admin/officialAdmin/officialAdmin.js']});</script>
+<script type="text/javascript">F._fileMap({'http://cdn.iknow.bdimg.com/static/question/ui/admin/userAdmin/userAdmin_8317f720.js' : ['/static/question/ui/admin/userAdmin/userAdmin.js']});</script>
+</head> <script type="text/javascript">PDC.mark("ht");(function(){var a=PDC.ready=function(){var g=false,f=[],c;if(document.addEventListener){c=function(){document.removeEventListener("DOMContentLoaded",c,false);d()}}else{if(document.attachEvent){c=function(){if(document.readyState==="complete"){document.detachEvent("onreadystatechange",c);d()}}}}function d(){if(!d.isReady){d.isReady=true;for(var k=0,h=f.length;k<h;k++){f[k]()}}}function b(){try{document.documentElement.doScroll("left")}catch(h){setTimeout(b,1);return}d()}function e(){if(g){return}g=true;if(document.addEventListener){document.addEventListener("DOMContentLoaded",c,false);window.addEventListener("load",d,false)}else{if(document.attachEvent){document.attachEvent("onreadystatechange",c);window.attachEvent("onload",d);var h=false;try{h=window.frameElement==null}catch(i){}if(document.documentElement.doScroll&&h){b()}}}}e();return function(h){d.isReady?h():f.push(h)}}();a.isReady=false})();PDC.ready(function(){PDC.mark("drt")});PDC.mark("vt");</script><body class="layout-center">  <script type="text/javascript">F.context('user', {isLogin: '0',name: '',id: '',gradeIndex: '',wealth: ''});</script>       <script type="text/javascript">F.context('page',{isAdopted: '1',misAsk: '0',delAsk: '0',isLocked: '0',isReplyLocked: '0',isFromWap: "0",isSMSImport: "0",cid: '772',cidTop: '82',qid: '540202369',title: '你们谁有股票行情软件啊？',giveScore: '0',uid: '831520066',imId: '42fd6a6873736a728f31',passPhoto: '0',userName: 'jhssjr',user : {sex: '1',iconType: '6',gradeIndex: '1',gradeIndexC: '一'},con: '',answerNum: '2',isView: '1',userGuideType: '',isGetWealth:'1',ownerUid: '0'});F.context('user')['isAsker'] = '';F.context('user')['isReplyer'] = '';F.context('answers', {});F.context('egg', {id: '5',flashUrl: 'http:\/\/img.iknow.bdimg.com\/loregrowth\/zylq_cd.swf',onlineTime: '2013-03-20',offlineTime: '2013-04-05',loginRate: '1.0',notLoginRate: '0',targetUrl: 'http:\/\/zhidao.baidu.com\/s\/loregrowth\/index.html?fr=cd',btnText: '马上参与',dialogText: '知识青年成长计划启程喽！只要你的回答够完整、够优质，最终就会被“录取”，参与活动兑换大奖！iPad mini、拍立得多重好礼等你拿！知识青年们，赶紧行动吧！~',dialogBackground: '',dialogTextMargin: '0',active: '0',activeUrl: '',activeStatus: '',guideLogin: '',dialogTextLogin: '',btnTextLogin: '',dialogTextActive: '',btnTextActive: '',dialogBackground: '',limitGrade: '0',limitGoodRate: '0'});F.context('cmsTopic', [{'url': 'http:\/\/zhidao.baidu.com\/s\/qinliugan.html','title': 'H7N9禽流感病毒问题解答','qid': '538944731,538944974,538945159,538945410,538945640,538945806,538946023,538947972,538948119,538948841,538948985,538949170,538949278,538949607,538951811,538952044,538952289,539260208,539271130,539272340,539272652,539272848,539273004,538758680,537145971,537481975,537482138,537491741,537496345,537145971,539271582,539310838,96016332,16608956,16608956,534580619','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen18.html','title': '传统医学解读人体奥秘','qid': '','expert': '正安中医梁冬,薄化君大夫,罗炳翔大夫'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen17.html','title': '我们有文化，遇见“流氓”也不怕！','qid': '','expert': '打假第一人王海'},{'url': 'http:\/\/zhidao.baidu.com\/topic\/zhichangtiaocao\/index.html','title': '跳槽前必读8大问题','qid': '530550652,530550695,530550746,530550777,530550821,530550859,530550898,530550937','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/zhichangmianshi\/index.html','title': 'HR不懂爱，他的提问你答不来！','qid': '529252350,529252523,529252831,529253040,529253301,529253429,529256645,529256979,529257198,529257285','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen16.html','title': '孙云晓解答青春叛逆期教育','qid': '','expert': '青研中心孙云晓'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen16.html','title': '孙宏艳解答青春叛逆期教育','qid': '','expert': '青研中心孙宏艳'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen15.html?fr=qbzt','title': '雷明解答职场中的跳槽疑惑','qid': '','expert': '心理咨询雷明'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen15.html?fr=qbzt','title': '唐宁解答女性职场疑惑','qid': '','expert': '职场唐宁'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen14.html?fr=qbzt','title': '北大售票帝裴济洋教你买票回家！','qid': '','expert': 'peijiyang_pku'},{'url': 'http:\/\/zhidao.baidu.com\/s\/jiaogui.html?fr=qbzt','title': '权威解读2013驾考新规','qid': '496005611,105728210','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/shi\/index.html?fr=qbzt','title': '被误读最深的名言锦句','qid': '510380393,510380025,510380524,510380639,510380685,510380918,510381072,510380301','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen13.html?fr=qbzt','title': '交管局李晓东处长解答驾考新规','qid': '','expert': '交管局李晓东'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen13.html?fr=qbzt','title': '交管局李勤处长解读新交规','qid': '','expert': '交管局李勤'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen12.html?fr=qbzt','title': '胡柳解答保险理财','qid': '','expert': '保险理财胡柳'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen12.html?fr=qbzt','title': '魏德善解答证券投资','qid': '','expert': '证券专家魏德善'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt','title': '金韵蓉老师教你精油护肤','qid': '','expert': 'lafasojyr'},{'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/suhuaji\/index.html?fr=qbzt','title': '你的食物含塑化剂吗','qid': '499771676,274675532,273938276,275181078,274282140,499772730,275226786,274536152,282757232,274210910,275395808,499772593,275355018,274093929','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/youjia\/index.html?fr=qbzt','title': '油价是升还是降','qid': '7701062,7720360,23590745,239386624,302573038,218721231,337321559','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/2012usa\/index.html?fr=qbzt','title': '美国总统是如何选出来的','qid': '494863184,494863014,494869926,494869853,494868987','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/Chicken\/index.html?fr=qbzt','title': '45天鸡能不能吃','qid': '503005578,503006139,503006460,503006854,503007374,503007374','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/1942\/index.html?fr=qbzt','title': '你知道1942吗？','qid': '502766042,502766042,502647814,502647814,502777253,502776800,502650170,502650170','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/topic\/jiehuo\/jiankangyaoyan\/index.html?fr=qbzt','title': '健康流言知真假','qid': '178807906,334055366,498402753,291937633,209426382,414548424,7540625,222613405,498406267,498408474,109760622,388525641','expert': ''},{'url': 'http:\/\/www.baidu.com\/search\/zhidao\/jingshenbing\/index.html?fr=qbzt','title': '大家都有病','qid': '492345830,491605430,492350128,492350240,492350299,281444990,492440880,489745109,492443590,492443722','expert': ''},{'url': 'http:\/\/www.baidu.com\/search\/zhidao\/gangnamstyle\/index.html?fr=qbzt','title': '江南Style红的很科学','qid': '478958350,487057430,483904315,485109741,487057528,485109517,487057485,487057395,487057395,487057363,480719567','expert': ''},{'url': 'http:\/\/www.baidu.com\/search\/zhidao\/bing\/index.html?fr=qbzt','title': '其实这都不是病','qid': '480816980,480792024,481137959,480812943,480813792','expert': ''},{'url': 'http:\/\/www.baidu.com\/search\/zhidao\/aizheng\/index.html?fr=qbzt','title': '吃也会得癌症！','qid': '328576004,480213867,480213973,480218158,480232828','expert': ''},{'url': 'http:\/\/www.baidu.com\/search\/zhidao\/2012gongfu\/index.html?fr=qbzt','title': '江湖神功知多少','qid': '475780308,473798866,475780429,473806239,475780510,473800706,475780712,475782468,475780619,473801366','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen11.html?fr=qbzt','title': '姚海峰医生解答宠物健康','qid': '','expert': '姚海峰博士'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen11.html?fr=qbzt','title': '王天明专业解答宠物营养','qid': '','expert': '宠物营养'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen10.html?fr=qbzt','title': '苏芩谈远离爱留下的伤','qid': '','expert': '知名作家苏芩'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen08.html?fr=qbzt','title': '张国庆分析中日关系','qid': '','expert': '社科院张国庆'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt','title': '小P老师教你彩妆造型','qid': '','expert': 'yoka小P老师'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt','title': '梅琳老师教你美肌护肤','qid': '','expert': 'lafasoml'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt','title': '美丽主持人李静的美容问答','qid': '','expert': 'lafasolj'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt','title': '伊能静解答如何演电影','qid': '','expert': 'yinengjing2013'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt','title': '导演赵林山揭秘电影','qid': '','expert': 'daoyanzls'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt','title': '五岳散人谈美食','qid': '','expert': 'wysr2012'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen04.html?fr=qbzt','title': '早教专家李跃儿谈早教','qid': '','expert': 'lyer2013bd'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen04.html?fr=qbzt','title': '产科主任余梅教孕产','qid': '','expert': 'ym2013bd'},{'url': 'http:\/\/zhidao.baidu.com\/topic\/muru\/index.html?fr=qbzt','title': '妈妈最关心的8个问题','qid': '526309070,526865300,526865300,526308815,526865218,526865157,526865101,526865101,526309710,526865031','expert': ''},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt','title': '健身专家王友松教健身','qid': '','expert': 'wangyousong7'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt','title': '顾中一教你健康营养','qid': '','expert': 'guzhongyi'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt','title': '李湘教你减肥秘诀','qid': '','expert': 'lixiangzslx'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt','title': '心血管病专家贾玉和谈病痛','qid': '','expert': 'jiayuhe7'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt','title': '糖尿病专家向红丁谈病痛','qid': '','expert': 'xianghongd3'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt','title': '金领小V谈职场生存学','qid': '','expert': '小V2013'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt','title': '杜子建说创业','qid': '','expert': '杜子建2012'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen08.html?fr=qbzt','title': '张召忠谈钓鱼岛争端','qid': '','expert': 'zshaozhong2012'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen07.html?fr=qbgl','title': '崔玉涛谈婴幼儿护理','qid': '','expert': '儿科医生崔玉涛'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt','title': '急诊女超人于莺谈病痛','qid': '','expert': 'yuyingjzk'},{'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt','title': '薛蛮子谈天使投资','qid': '','expert': '薛蛮子2012'},{'url': 'http:\/\/zhidao.baidu.com\/s\/wowen09.html?fr=qbgl','title': '郑渊洁让童年如童话','qid': '','expert': '作家郑渊洁'},{'url': 'http:\/\/zhidao.baidu.com\/s\/maya.html?fr=qbgl','title': '2012世界末日真相','qid': '384640140,193245477,62563072,306563588,158114723,409478947,12992979,129335529,84523086,13774477,161887534','expert': ''}]);ik = (typeof ik == 'undefined')? {} : ik;F.use(['/static/common/lib/tangram/base/base.js','/static/common/ui/baidu/baidu.js'], function(t){var params = {s: window.screenLeft,e: window.screen.width,m: document.body.offsetWidth,t: (new Date()).getTime()};t.sio.callByBrowser("/task/data/tasks.js?"+t.url.jsonToQuery(params));});</script><div class="line"><div id="userbar" class="userbar">  <ul class="main-list"> <li><a rel="nofollow" href="http://www.baidu.com/" id="userbar-baidu-index">百度首页, 
+qId=jhssjr, 
+qDate=2013-04-11 16:29, 
+answer=万科也是要随大盘进入调整，暂时最好不要买入。股票行情中心为广大股民提供股市每个交易日股票行情、实时股票行情、股票行情软件等内容，其中整体概括分类为：个股行情、股票新闻、大盘分析、每日财股、要闻点评、新股情报、大宗交易、行业新闻、个股数据、名家看市、基金动向、股指期货、创业板、B股、权证、中小板、三板、港股、全球股市。股票是股份证书的简称，是股份公司为筹集资金而发行给股东作为持股凭证并借以取得股息和红利的一种有价证券。每股股票都代表股东对企业拥有一个基本单位的所有权。股票是股份公司资本的构成部分，可以转让、买卖或作价抵押，是资金市场的主要长期信用工具。给楼主推荐一个平台，“丿贝丿尔丿金丿 融丿”可以做沪深A股T 0双向操作，资金杠杆扩大100倍，存取款及时到账，24小时在线客服服务。, 
+aDate=null, 
+aId=听799, 
+aLevel=null, 
+aExpert=]
+
+
+The 7th(s) item is : 
+QA [title=股票行情在哪个网站可以查询到？, 
+question=我想知道最近股票行情，知道的朋友可以直接告诉我或是发网站地址也行，谢谢！, 
+category=股票, 
+qId=风格风格08, 
+qDate=2012-08-31 15:54, 
+answer=很多网站可以查的，主要看你自己分析, 
+aDate=null, 
+aId=qq674480377, 
+aLevel=null, 
+aExpert=]
+
+
+The 8th(s) item is : 
+QA [title=怎么看股市行情走势图啊？, 
+question=null, 
+category=股票, 
+qId=wyf718120, 
+qDate=2007-11-22 19:20, 
+answer=－、K线图特点 
+K线图这种图表源处于日本，被当时日本米市的商人用来记录米市的行情与价格波动，后因其细腻独到的标画方式而被引入到股市及期货市场。目前，这种图表分析法在我国以至整个东南亚地区均尤为流行。由于用这种方法绘制出来的图表形状颇似一根根蜡烛，加上这些蜡烛有黑白之分，因而也叫阴阳线图表。通过K线图，我们能够把每日或某一周期的市况表现完全记录下来， 
+股价经过一段时间的盘档后，在图上即形成一种特殊区域或形态，不同的形态显示出不同意义。我们可以从这些形态的变化中摸索出一些有规律的东西出来。K线图形态可分为反转形态、整理形态及缺口和趋向线等。 
+1、绘制方法 
+首先我们找到该日或某一周期的最高和最低价，垂直地连成一条直线；然后再找出当日或某一周期的开市和收市价，把这二个价位连接成一条狭长的长方柱体。假如当日或某一周期的收市价较开市价为高（即低开高收），我们便以红色来表示，或是在柱体上留白，这种柱体就称之为&quot;阳线&quot;。如果当日或某一周期的收市价较开市价为低（即高开低收），我们则以蓝色表示，又或是在住柱上涂黑色，这柱体就是&quot;阴线&quot;了。 
+2、优点 
+能够全面透彻地观察到市场的真正变化。我们从K线图中，既可看到股价（或大市）的趋势，也同时可以了解到每日市况的波动情形。 
+3、缺点 
+（1）绘制方法十分繁复，是众多走势图中最难制作的一种。 
+（2）阴线与阳线的变化繁多，对初学者来说，在掌握分析方面会有相当的困难，不及柱线图那样简单易明。 
+二、分析意义 
+由于&quot;阴阳线&quot;变化繁多，&quot;阴线&quot;与&quot;阳线&quot;里包涵着许多大小不同的变化，因此其分析的意义，有特别提出一谈的必要。 
+在讨论&quot;阴阳线&quot;的分析意义之前，先让我们知道阳线每一个部分的名称。 
+我们以阳线为例，最高与收市价之间的部分称之为&quot;上影&quot;，开市价与收市价之间称为&quot;实体&quot;，开市价与最低价之间就称作&quot;下影&quot;。 
+1、长红线或大阳线 
+此种图表示最高价与收盘价相同，最低价与开盘价一样。上下没有影线。从一开盘，买方就积极进攻，中间也可能出现买方与卖方的斗争，但买方发挥最大力量，一直到收盘。买方始终占优势，使价格一路上扬，直至收盘。表示强烈的涨势，股市呈现高潮，买方疯狂涌进，不限价买进。握有股票者，因看到买气的旺盛，不愿抛售，出现供不应求的状况。 
+2、长黑线或大阴线 
+此种图表示最高价与开盘价相同，最低价与收盘价一样。上下没有影线。从一开始，卖方就占优势。股市处于低潮。握有股票者不限价疯狂抛出，造成恐慌心理。市场呈一面倒，直到收盘、价格始终下跌，表示强烈的跌势。 
+3、先跌后涨型 
+这是一种带下影线的红实体。最高价与收盘价相同，开盘后，卖气较足，价格下跌。但在低价位上得到买方的支撑，卖方受挫，价格向上推过开盘价，一路上扬，直至收盘，收在最高价上。总体来讲，出现先跌后涨型，买方力量较大，但实体部分与下影线长短不同，买方与卖方力量对比不同。 
+实体部分比下影线长。价位下跌不多，即受到买方支撑，价格上推。破了开盘价之后，还大幅度推进，买方实力很大。 
+实体部分与下影线相等，买卖双方交战激烈，但大体上，买方占主导地位，对买方有利。 
+实体部分比下影线短。买卖双方在低价位上发生激战。遇买方支撑逐步将价位上推。但从图中可发现，上面实体部分较小，说明买方所占据的优势不太大，如卖方次日全力反攻，则买方的实体很容易被攻占。 
+4、下跌抵抗型 
+这是一种带下影线的黑实体，开盘价是最高价。一开盘卖方力量就特别大，价位一种下跌，但在低价位上遇到买方的支撑。后市可能会反弹。实体部分与下影线的长短不同也可分为三种情况： 
+（1）实体部分比影线长 卖压比较大，一开盘，大幅度下压，在低点遇到买方抵抗，买方与卖方发生激战，影线部分较短，说明买方把价位上推不多，从总体上看，卖方占了比较大的优势。 
+（2）实体部分与影线同长 表示卖方把价位下压后，买方的抵抗也在增加，但可以看出，卖方仍占优势。 
+（3）实体部分比影线短 卖方把价位一路压低，在低价位上，遇到买方顽强抵抗并组织反击，逐渐把价位上推，最后虽以黑棒收盘，但可以看出卖方只占极少的优势。后市很可能买方会全力反攻，把小黑实体全部吃掉。 
+5、上升阻力 
+这是一种带上影线的红实体。开盘价即最低价。一开盘买方强盛，价位一路上推，但在高价位遇卖方压力，使股价上升受阻。卖方与买方交战结果为买方略胜一筹。具体情况仍应观察实体与影线的长短。 
+红实体比影线长，表示买方在高价位是遇到阻力，部分多头获利回吐。但买方仍是市场的主导力量，后市继续看涨。 
+实体与影线同长，买方把价位上推，但卖方压力也在增加。二者交战结果，卖方把价位压回一半，买方虽占优势。但显然不如其优势大。 
+实体比影线短。在高价位遇卖方的压力、卖方全面反击，买方受到严重考验。大多短线投资者纷纷获利回吐，在当日交战结束后，卖方已收回大部分失地。买方一块小小的堡垒（实体部分）将很快被消灭，这种K线如出现在高价区，则后市看跌。 
+6、先涨后跌型 
+这是一种带上影线的黑实体。收盘价即是最低价。一开盘，买方与卖方进行交战。买方占上风，价格一路上升。但在高价位遇卖压阻力，卖方组织力量反攻，买方节节败退，最后在最低价收盘，卖方占优势，并充分发挥力量，使买方陷入&quot;套牢&quot;的困境。 
+具体情况仍有以下三种： 
+（1）黑实体比影线长 表示买方把价位上推不多，立即遇到卖方强有力的反击，把价位压破开盘价后乘胜追击，再把价位下推很大的一段。卖方力量特别强大，局势对卖方有利。 
+（2）黑实体与影线相等买方把价位上推；但卖方力量更强，占据主动地位。卖方具有优势。 
+（3）黑实体比影线短 卖方虽将价格下压，但优势较少，明日入市，买方力量可能再次反攻，黑实体很可能被攻占。 
+7、反转试探型 
+这是一种上下都带影线的红实体。开盘后价位下跌，遇买方支撑，双方争斗之后，买方增强，价格一路上推，临收盘前，部分买者获利回吐，在最高价之下收盘。这是一种反转信号。如在大涨之后出现，表示高档震荡，如成交量大增，后市可能会下跌。如在大跌后出现，后市可能会反弹。这里上下影线及实体的不同又可分为多种情况： 
+（1）上影线长于下影线之红实体：又分为：影线部分长于红实体表示买方力量受挫折。红实体长于影线部分表示买方虽受挫折，但仍占优势。 
+（2）下影线长于上影线之红实体：亦可分为：红实体长于影线部分表示买方虽受挫折，仍居于主动地位。影线部分长于红实体表示买方尚需接受考验。 
+8、弹升试探型 
+这是一种上下都带影线的黑实体，在交易过程中，股价在开盘后，有时会力争上游，随着卖方力量的增加，买方不愿追逐高价，卖方渐居主动，股价逆转，在开盘价下交易，股价下跌。在低价位遇买方支撑，买气转强，不至于以最低价收盘。有时股价在上半场以低于开盘价成交，下半场买意增强，股价回至高于开盘价成交，临收盘前卖方又占优势，而以低于开盘价之价格收盘。这也是一种反转试探。如在大跌之后出现，表示低档承接，行情可能反弹。如大涨之后出现，后市可能下跌。 
+9、十字线型 
+这是一种只有上下影线，没有实体的图形。开盘价即是收盘价，表示在交易中，股价出现高于或低于开盘价成交，但收盘价与开盘价相等。买方与卖方几乎势均力敌。 
+其中：上影线越长，表示卖压越重。下影线越长，表示买方旺盛。上下影线看似等长的十字线，可称为转机线，在高价位或低价位，意味着出现反转。 
+10、&quot;┴&quot;图形 
+又称空胜线，开盘价与收盘价相同。当日交易都在开盘价以上之价位成交，并以当日最低价（即开盘价）收盘，表示买方虽强，但卖方更强，买方无力再挺升，总体看卖方稍占优势，如在高价区，行情可能会下跌。 
+11、&quot;T&quot;图形 
+&quot;T&quot;图形又称多胜线，开盘价与收盘价相同，当日交易以开盘价以下之价位成交，又以当日最高价（即开盘价）收盘。卖方虽强，但买方实力更大，局势对买方有利，如在低价区，行情将会回升。 
+12、&quot;一&quot;图形 
+此较形不常见，即开盘价、收盘价、最高价、最低价在同一价位。只出现于交易非常冷清，全日交易只有一档价位成交。冷门股此类情形较易发生。 
+三、K线线势型态分析 
+线势型态是以日线图中，三至五天行情变化为对象，对未来股价走势的分析也是以短期行情变化为目标，不过在许多时候也必须把它放在大的长期的行情中去分析理解。 
+（一）、上升线势行情 
+1、二颗星 
+上升行情中出现极线的情形即称为二颗星、三颗星，此时股价上涨若再配合成交量放大，即为可信度极高的买进时机，股价是必再出现另一波涨升行情。 
+2、跳空上扬 
+在上涨行情中，某日跳空拉出一条阳线后，即刻出现一条下降阴线，此为加速股价上涨的前兆，投资人无须惊慌抛出持股，股价必将持续前一波涨势继续上升。 
+3、下降阴线 
+在涨升的途中，出现如图般的三条连续下跌阴线，为逢低承接的大好时机。当第四天的阳线超越前一天的开盘价时，表示买盘强于卖盘，应立刻买进以期股价扬升 
+4、上档盘旋 
+股价随着强而有力的大阳线往上涨升，在高档将稍做整理，也就是等待大量换手，随着成交量的扩大，即可判断另一波涨势的出现。上档盘整期间约6日至11日，若期间过长则表示上涨无力。 
+5、并排阳线 
+持续涨势中，某日跳空现阳线，隔日又出现一条与其几乎并排的阳线，如果隔日开高盘，则可期待大行情的出现。 
+6、超越覆盖线 
+行情上涨途中若是出现覆盖线，表示已达天价区，此后若是出现创新天价的阳线，代表行情有转为买盘的迹象，股价会继续上涨。 
+7、上涨插入线 
+在行情震荡走高之际，出现覆盖阴线的隔日，拉出一条下降阳线，这是短期的回档，股价必上涨。 
+8、三条大阴线 
+在下跌行情中出现三条连续大阴线，是股价隐入谷底的征兆，行情将转为买盘，股价上扬。 
+9、上升三法 
+行情上涨中，大阳线之后出现三根连续小阴线，这是蓄势待发的征兆，股价将上升。 
+10．向上跳空阴线 
+此图形虽不代表将有大行情出现，但约可持续七天左右的涨势，为买进时机 
+（二）、反弹线势行情 
+1、反弹线 
+在底价圈内，行情出现长长的下影线时，往往即为买进时机，出现买进信号之后，投资人即可买进，或为了安全起见，可待候行情反弹回升之后再买进，若无重大利空出现，行情必定反弹。 
+2、舍子线 
+在大跌行情中，跳空出现十字线，这暗示着筑底已经完成，为反弹之征兆。 
+3、阴线孕育阳线 
+在下跌行情中，出现大阴线的次日行情呈现一条完全包容在大阴线内的小阴线，显示卖盘出尽，有转盘的迹象，股价将反弹。 
+4、五条阴线后一条大阴线 
+当阴阳交错拉出五条阴线后，出现一条长长的大阴线，可判断&quot;已到底部&quot;，如果隔日开高盘，则可视为反弹的开始。 
+5、二条插入线 
+此图形暗示逢低接手力道强劲，股价因转盘而呈上升趋势。 
+6、最后包容线 
+在连续的下跌行情中出现小阳线，隔日即刻出现包容的大阴线，此代表筑底完成，行情即将反弹。虽然图形看起来呈现弱势，但该杀出的浮码均已出尽，股价必将反弹而上。 
+7、下档五根阳线 
+在底价圈内出现五条阳线，暗未逢低接手力道不弱，底部形成，股价将反弹。 
+8、反弹阳线 
+确认股价已经跌得很深，某一天，行情出现阳线，即&quot;反弹阳线&quot;时，即为买进信号，若反弹阳线附带着长长的下影线，表示低档已有主力大量承接，股价将反弹而上。 
+9、三空阴线 
+当行情出现连续三条跳空下降阴线，则为强烈的买进信号，股价即将反弹。 
+10、连续下降三颗星 
+确认股价已跌深，于低档盘整时跳空出现连续三条小阴线（极线）， 这是探底的前兆，如果第四天出现十字线，第五天出现大阳线，则可确认底部已筑成，股价反转直上。 
+（三）、下跌线势行情 
+1、覆盖线 
+股价连续数天扬升之后，隔日以高盘开出，随后买盘不愿追高，大势持续滑落，收盘价跌到前一日阳线之内。这是超买之后所形成的卖压涌现，获利了结股票大量释出之故，股价将下跌。 
+2、十字线 
+在高价圈出现十字线（开盘收盘等价线），并留下上下影线，其中上影线较长。此情形表示股价经过一段时日后，已涨得相当高，欲振乏力，开始要走下坡，这是明显的卖出讯号。 
+3、阴线孕育于较长阳线内 
+经过连日飚涨后，当日的开收盘价完全孕育在前一日的大阳线之中，并出现一根阴线，这也代表上涨力道不足，是股价下跌的前兆，若隔天再拉出一条上影阴线，更可判断为股价暴跌的征兆。 
+4、阳线孕育在较长阳线内 
+股价连续数天扬升之后，隔天出现一根小阳线，并完全孕育在前日之大阳线之中，表示上升乏力，是暴跌的前兆。 
+5、孕育十字线 
+亦即今日的十字线完全包含在前一日的大阳线之中的情况。此状态代表买盘力道减弱，行情即将回软转变成卖盘，股价下跌。 
+6、最后包容线 
+当股价持续数天涨势后出现一根阴线，隔天又开低走高拉出一根大阳线，将前一日的阴线完全包住，这种现象看来似乎买盘增强，但只要隔日行情出现比大阳线的收盘价低，则投资人应该断然释出持股。若是隔日行情高于大阳线的收盘价，也很有可能成为&quot;覆盖阴线&quot;，投资人应慎防。 
+7、跳空 
+所谓跳空即两条阴阳线之间不互相接触，中间有空格的意思。连续出现三根跳空阳线后，卖压必现，一般投资人在第二根跳空阳线出现后，即应先行获利了结，以防回档惨遭套牢。 
+8、下影线过长 
+股价于高档开盘，先前的买盘因获利了结而杀出，使得大势随之滑落，低档又逢有力承接，股价再度攀升，形成下影线为实线的三倍以上。此图型看起来似乎买盘转强，然宜慎防主力拉高出货，空手者不宜冒然介入，持股者宜逢高抛售。 
+9、尽头线 
+持续涨升的行情一旦出现此图形，表示上涨力道即将不足，行情将回档盘整，投资人宜先行获利了结。这也是一种&quot;障眼线&quot;，小阳线并没有超越前一日的最高点，证明上涨乏力，股价下跌。 
+10、反击顺沿线 
+此处所称之顺沿线为自高档顺次而下出现的二根阴线。为了打击此二根阴线所出现的一大根阳线，看起来似乎买盘力道增强了，但投资人须留意这只不过是根&quot;障眼线&quot;，主力正在拉高出货，也是投资人难得的逃命线，宜抛出持股。 
+11、跳空舍字线 
+行情跳空上涨开成一条十字线，隔日却又跳空拉出一根阴线，暗示行情即将暴跌。此时股价涨幅已经相当大，无力再往上冲，以致跳空而下，为卖出信号，在此情况下，成交量往往也会随之减少。 
+12、跳空孕育十字线 
+当股价跳空上涨后拉出三根大阳线，随后又出现一条十字线，代表涨幅过大，买盘不愿追高，持股者纷纷杀出，这也是融券放空者千载难逢的好机会，股价将暴跌。 
+13、下降插入线 
+持续下降阴线中，出现一条开低走高的阳线，为卖出时机，股价必将持续下跌。 
+14、下降覆盖线 
+在高档震荡行情中，出现一条包容大阴线，隔日牵出一条下降阳线，接下来又出出覆盖线，则暗示行情已到达天价价位，此时为脱手线。 
+15、高档五阴线 
+股价涨幅已高，线路图出现五条连续阴线，显示股价进入盘局，此时若成交量萎缩，更可确信行情不妙。 
+16、下降三法 
+在行情持续下跌中，出现一条大阴线，隔天起却又连现三根小阳线，这并不代表筑底完成，接下来若再出现一条大阴线，则为卖出时机，股价必将持续往下探底。 
+17、三段大阳线 
+行情持续下跌中出现一条大阳线，此大阳线将前三天的跌幅完全包容，这是绝好的逃命线，投资人宜尽快出脱持股，股价将持续下跌。 
+18、三颗星 
+下跌行情中出现极线，这是出脱持股的好机会，股价将再往下探底。 
+19、低档盘旋 
+通常盘整时间在六日至十一日之间，若接下来出现跳空阴线，则为大跌的起步，也就是说前段的盘整只不过是中段的盘整罢了，股价将持续回档整理。 
+20、跳空下降二阴线 
+在下降的行情中又出现跳空下降的连续二条阴线，这是暴跌的前兆。通常在两条阴线出现之前，会有一小段反弹行情，但若反弹无力，连续出现阴线时，表示买盘大崩盘，股价将继续往下探底。, 
+aDate= 2007-11-22 22:01, 
+aId=QQ为痴心浪子, 
+aLevel=null, 
+aExpert= 电脑/网络 股票 妇产科]
+
+
+The 9th(s) item is : 
+QA [title=中国现在股市行情如何？a, 
+question=是炒股好还是炒汇，期票好？, 
+category=个人理财, 
+qId=goddad, 
+qDate=2006-08-31 09:37, 
+answer=股市下半年将进入调整，不建议介入
+
+以下是简单理财建议，对普通家庭应该足够了。 
+
+最保险（零风险）：买货币基金，相当于可以随时支取的定期存款。年收益能达到2%左右。 
+其次（有利率风险）：买国债。 
+其次（有一定项目风险，要找担保机构比较强势的品种）：买信托产品，这需要有一定的资金规模。年收益一般可以达到4%以上 
+其次（风险较大）：买股票基金 
+其次（风险很大）：买股票 
+
+越保险的收益越低，风险高的收益也高。 钱越少选择越少,钱越多选择越多, 
+aDate= 2006-08-31 12:18, 
+aId=赈灾, 
+aLevel=null, 
+aExpert= 田径 个人理财 内分泌科 股票 文档/报告共享]
+
+
+The 10th(s) item is : 
+QA [title=最好的股票行情软件, 
+question=我指的最好的股票行情软件，就是平时可以让我看看股票行情，更新也要及时，界面友好的那种，股票行情软件免费的我也用了不少，也不想用收费的，看看那款免费股票行情软件比较好，推荐一下, 
+category=股票, 
+qId=囧囧用户, 
+qDate=2011-08-11 15:04, 
+answer=股票行情软件一般都那样，好坏之分也不太明显，免费的股票行情软件可以考虑一下证券丰股市通，股票信息网推出的这款软件还是不错的，希望能解决你的问题。, 
+aDate= 2011-08-19 09:20, 
+aId=股坛宵小, 
+aLevel=null, 
+aExpert= 股票 商业/理财]
+
+
+The 11th(s) item is : 
+QA [title=股票行情, 
+question=股票行情, 
+category=股票, 
+qId=chenchenpopo, 
+qDate=2013-03-06 09:09, 
+answer=如果跌倒2240-2250一线，是你进场或加仓的好机会，会有一波像样的反弹, 
+aDate=null, 
+aId=chenchenpopo, 
+aLevel=null, 
+aExpert=]
+
+
+The 12th(s) item is : 
+QA [title=现在股票行情, 
+question=null, 
+category=股票, 
+qId=xd514193343, 
+qDate=2013-01-05 15:59, 
+answer=现在是反弹 但是也可能是 牛市的开始。做股票 就是只能做涨不能做跌。还是做现货好。当天都可以买卖，还可以买空。不懂得可以扣偶问，现在做鲁西在线，南方大宗，辽宁亚东 这几个盘子还是很不错的！！！, 
+aDate=2013-01-06 11:27, 
+aId=现货2480904181, 
+aLevel=null, 
+aExpert= 股票 外汇 个人理财 创业投资 求职就业]
+
+
+The 13th(s) item is : 
+QA [title=股票行情, 
+question=null, 
+category=股票, 
+qId=Q1337581232, 
+qDate=2013-01-05 10:56, 
+answer=2013股票行情肯定比2012好！热点股布局加-昵+称, 
+aDate=null, 
+aId=Q1337581232, 
+aLevel=null, 
+aExpert=]
+
+
+The 14th(s) item is : 
+QA [title=三一重工股票行情还好吗？你有啥好的平台吗？谢谢了。, 
+question=null, 
+category=股票, 
+qId=东哥9868, 
+qDate=2013-04-03 20:17, 
+answer=应该是10年1.26号非公开增发的，增发价格是16.8 不过这中间已经有多次除权除息，所以这个你要计算进去，或者是原始股，股票可以在股票市场上随时转让，进行买卖，也可以继承、赠与、抵押，但不能退股。所以，股票亦是一种具有颇强流通性的流动资产。无记名股票的转让只要把股票交付会给受让人，即可达到转让的法律效果;记名股票转让则要在卖出人签章背书后才可转让。正是由于股票具有颇强的流通性，才使股票成为一种重要的融资工具而不断发展。目前中国股市 没有T o制度，所谓的T 0操作，是指在你原持有股票的基础上，当天买进一些，然后把原先持有的卖掉，实现低买高卖，或者先卖出再买进，高卖低卖，这就是变相的 T o，举个例子，你持有某只股票一万股，你觉得今天要涨，又买了一万股，涨了5%，你想卖了，你可以卖出你原先持有的一万股，实现获利，同时你的手上还有今天买的一万股。这就是 变相的T o，再有一个就是亅贝亅尔亅金亅融亅 能帮助到你了。, 
+aDate=null, 
+aId=东哥9868, 
+aLevel=null, 
+aExpert=]
+
+
+The 15th(s) item is : 
+QA [title=最近股市行情咋样，起稳了嘛？, 
+question=null, 
+category=股票, 
+qId=licheetang, 
+qDate=2012-11-27 13:49, 
+answer=只能说在底部区域附近，跌不会大跌，但大涨也难。每年股市都会有新增资金，每年股市也新发、增发大量新股套取资金，新增资金大于套取资金，股市就会上扬，反之下行。现在属于胶着状态，套取资金的步子小了，但新进场资金也少了，目前大盘无大幅上扬的动力。长期投资者倒是可以入场。, 
+aDate=2012-11-27 13:59, 
+aId=日月明志, 
+aLevel=null, 
+aExpert= 商业/理财 历史话题 民俗传统 时事政治]
+
+
+The 16th(s) item is : 
+QA [title=怎么阅读股票行情走势图?, 
+question=怎么阅读股票行情走势图?对炒股的知识不是很了解,所以请高手来解释下~~~谢谢, 
+category=股票, 
+qId=guomenke, 
+qDate=2007-09-09 11:41, 
+answer=如何看K线图之卖出信号!!
+1、十字线
+在高价圈出现十字线（开盘收盘等价线），并留下上下影线，其中上影线较长。此情形表示股票价格经过一段时日后，已涨得相当高，欲振乏力，开始要走下坡，这是明显的卖出信号。
+
+2、覆盖线
+行情连续数天扬升之后，隔日以高盘开出，随后买盘不愿追高，大势持续滑落，收盘价跌至前一日阳线之内。这是超买之后所形成的卖压涌现，获利了结盘大量抛出之故，将下跌。
+
+3、孕育线（阳线缩在较长的阳线之内）
+连续数天扬升之后，隔天出现一根小阳线，并完全孕育在前日之大阳线之中，表示上升乏力，是暴跌的前兆。
+
+4、孕育线（阴线缩在较长的阳线之内）
+经过连日飙升后，当日的开收盘价完全孕育在前一日的大阳线之中，并出现一根阴线，这也代表上涨力道不足，是下跌的前兆。若隔天再拉出一条上影阴线，更可判断为行情暴跌的征兆。
+
+5、上吊阳线
+于高档开盘，先前的买盘因获利了结而杀出，使得大势随之滑落，低档又逢有力承接，价格再度攀升，形成了下影线为实线的三倍以上。此图形看起来似乎买盘转强，然宜慎防主力拉高出货，空手者不宜冒然介入，持仓者宜逢高抛售。
+
+6、跳空
+所谓跳空即两条阴阳线之间不互相接触，中间有空格的意思。连续出现三根跳空阳线后，卖压必现，一般投资人在第二根跳空阳线出现后，即应先行获利了结，以防回档惨遭套牢。
+
+7、最后包容线
+当行情持续数天涨势后出现一根阴线，隔天又开低走高拉出一根大阳线，将前一日的阴线完全包住，这种现象看来似乎买盘增强，但只要隔日行情出现比大阳线的收盘价低，则投资人应该断然做空。若是隔日行情高于大阳线的收盘价，也很有可能成为“复盖阴线”，投资人应慎防。
+
+8、孕育十字线
+亦即今日的十字线完全包含在前一日的大阳线之中的情况。此状态代表买盘力道减弱，行情即将回软转变成买盘，价格下跌。
+
+9、反击顺沿线
+此处所称的顺沿线是指自高档顺次而下出现的二根阴线。为了打击此二根阴线所出现的一大根阳线，看起来似乎买盘力道增强了，但投资人须留意这只不过是根“障眼线”，主力正在拉高出货，也是投资人难得的逃命线，宜做空。
+
+10、尽头线
+持续涨升的行情一旦出现此图形，表示上涨力道即将不足，行情将回档盘整，投资人宜先行获利了结。这也是一种“障眼线”，小阳线并没有超越前一日的最高点，证明上涨乏力，行情下跌。
+
+11、跳空孕育十字线
+当价格跳空上涨后拉出三根大阳线，随后又出现一条十字线，代表涨幅过大，买盘不愿追高，持仓者纷纷杀出，市场价格将暴跌。
+
+12、舍子线
+行情跳空上涨形成一条十字线，隔日却又跳空拉出一根阴线，暗示行情即将暴跌。此时价格涨幅已经相当大，无力再往上冲，以致跳空而下，为卖出信号，在此情况下，成交量值往往也会随之减少。
+
+13、跳空下降
+在连续多日阴线之后出现一根往上的阳线，此情形是回光反照之征兆，宜把握时机卖出，否则价格会继续下跌。
+
+14、八段高峰获利了结
+如图所示，当价格爬上第八个新高价线是，即应获利了结，就算此时不脱手，也不可放至超过第十三个新高价线。
+
+15、三颗星
+下跌行情中出现极线，这是平仓的好机会，价格将再往下探底。
+
+16、三段大阳线
+行情持续下跌中出现一条大阳线，此大阳线将前三天的跌幅完全包容，这是绝好的逃命线，投资人宜尽快平仓，价格将持续下跌。
+
+17、顺沿线
+当行情上涨一个月以上后出现连续二条下降阴线，即可判定前些日的高价为天价，上涨已乏力，价格将往下降。
+
+18、暴跌三杰
+当行情大涨出现三条连续阴线，即为卖出信号，这是暴跌的前兆，行情将呈一个月以上的回档整理局面。
+
+19、跳空下降二阴线
+在下降的行情中又出现跳空下降的连续二条阴线，这是暴跌的前兆。通常在两条阴线出现之前，会有一小段反弹行情，但若反弹无力，连续出现阴线时，表示买盘大崩盘，行情将继续往下探底。
+
+20、低档盘旋
+通常整理时间在六日至十一日之间，若接下来出现跳空阴线，则为大跌的起步，也就是说前段的盘整只不过是中段的盘整罢了，行情将持续回档整理。
+
+21、下降覆盖
+在高档震荡行情中，出现一条包容大阴线，隔日牵出一条下降阳线，接下来又出现覆盖线，则暗示行情已到达天价价位，此时为脱手线。
+
+22、下降插入线
+持续下降阴线中，出现一开低走高的阳线，为卖出时机，行情必将持续下跌。
+
+23、下降三法
+在行情持续下跌中，出现一条大阴线，隔天起却又连现三根小阳线，这并不代表筑底完成，接下来若再出现一条大阴线，则为做空时机，价格必将持续往下探底。
+
+24、高档五条阴线
+价格涨幅已高，线路图出现五条连续阴线，显示行情进入盘局，此时若成交量萎缩，更可确信行情不妙。
+
+25、弹头天价
+在天价区并没有进行箱型整理，呈现平稳的滑动，代表价格将回档整理。
+
+26、M型信号
+所谓M字型（或称倒W型）系指行情出现第一次天价后，开始回跌，当第二次向天价挑战时，却因大量卖盘涌现，无法突破第一次天价价位，在第一次天价价位附近形成第二次天价，然后下跌。这种形态类似英文字母“M”，故称“M字型”。这是明显的卖出信号。, 
+aDate= 2007-09-09 11:55, 
+aId=cnrencai, 
+aLevel=null, 
+aExpert=]
+
+
+The 17th(s) item is : 
+QA [title=今日股市行情, 
+question=问一下这个要多少钱~, 
+category=社会民生, 
+qId=null, 
+qDate=2011-08-11 15:36, 
+answer=随便哪一支，一定要有文字说明的，时间是从九月到十一月，最好是每日的行情，本人需要总结出五篇股评周记用… 你想做历史学家？股市中没用的，资金专家
+ 这有今日股市行情信息，办理过今日股市行情，找了好久也找不到今日股市行情，今日股市行情真难找啊，到处问到底哪里今日股市行情，快告诉我今日股市行情网址吧，我要今日股市行情，后来在这里找到了,今日股市行情哪里办理最稳妥，今日股市行情找了很多公司，但今日股市行情都不是很全，今日股市行情也不是绝对的，今日股市行情给你地址 你自己看一下吧 里面有更多今日股市行情信息，今日股市行情，希望今日股市行情可以帮到你, 
+aDate=null, 
+aId=null, 
+aLevel=null, 
+aExpert=]
+
+
+The 18th(s) item is : 
+QA [title=今日股市行情, 
+question=null, 
+category=商业/理财, 
+qId=湘蜀之行, 
+qDate=2012-12-28 16:24, 
+answer=短线一天，今天买明天卖，加我枯枯号119580, 
+aDate=null, 
+aId=beizhiapw7, 
+aLevel=null, 
+aExpert=]
+
+
+The 19th(s) item is : 
+QA [title=2013年股市行情如何？, 
+question=2013年股市行情如何？, 
+category=股票, 
+qId=汉赋唐诗, 
+qDate=2013-02-01 00:37, 
+answer=1、神仙也无法准确预测股市的涨跌，预测股市的涨跌往往是徒劳的。
+2、个人意见、仅供参考：中国股市自2007年见顶后下跌了整整五年之久；自2009年反弹高点3478点下跌了整整三年之久。至2012年12月，很多股票已经跌无可跌，同时也进入了理性投资的范畴。终于迎来了2012年12月至今天的强势反弹行情。
+    本人相信这一行情仍会继续深入发展，目前只有部分板块涨幅较大，绝大部分个股只是跟风而动，没有较好的表现，这是本轮牛市继续深入进行下去的“物质基础”；其次，中国经济未来着眼于产业升级和自主创新，这将催生一大批新兴产业的发展，给股市输入了新的、强劲的上涨动力，这是股市上涨的“精神基础”。既然物质和精神的条件均已具备，相信股市的未来一片光明。当然，股市的涨跌不会一帆风顺，肯定会表现出坎坷和曲折，但是只要我们具备以上认识，就没有什么好担心的。, 
+aDate= 2013-02-01 08:19, 
+aId=汉赋唐诗, 
+aLevel=null, 
+aExpert= 股票 外汇 基金]
+

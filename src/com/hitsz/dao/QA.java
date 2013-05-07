@@ -1,53 +1,52 @@
 package com.hitsz.dao;
 
 public class QA {
+
 	/**
-	 * ÎÊ¾ä±êÌâ
+	 * é—®å¥æ ‡é¢˜
 	 */
 	private String title;
 	/**
-	 * ÎÊ¾äÃèÊö
+	 * é—®å¥æè¿°
 	 */
 	private String question;
 	
 	
-	@Override
-	public String toString() {
-		return "QA [title=" + title + ", \nquestion=" + question + ", \ncategory="
-				+ category + ", \nqId=" + qId + ", \nqDate=" + qDate + ", \nanswer="
-				+ answer + ", \naDate=" + aDate + ", \naId=" + aId + ", \naLevel="
-				+ aLevel + ", \naExpert=" + aExpert + "]\n";
-	}
+
 	/**
-	 * ÎÊ¾äÀà±ğ
+	 * é—®å¥ç±»åˆ«
 	 */
 	private String category;
+
 	/**
-	 * ÌáÎÊÕßID
+	 * æé—®è€…ID
 	 */
 	private String qId;
+
 	/**
-	 * ÌáÎÊÊ±¼ä
+	 * æé—®æ—¶é—´
 	 */
 	private String qDate;
 	/**
-	 * ²ÉÄÉ´ğ°¸
+	 * é‡‡çº³ç­”æ¡ˆ
 	 */
 	private String answer;
 	/**
-	 * ´ğ°¸Ìá½»Ê±¼ä
+	 * ç­”æ¡ˆæäº¤æ—¶é—´
 	 */
 	private String aDate;
 	/**
-	 * »Ø´ğÕßID
+	 * ç­”æ¡ˆè€…ID
+	 * 
 	 */
 	private String aId;
+	
 	/**
-	 * »Ø´ğÕßµÈ¼¶
+	 * å›ç­”è€…ç­‰çº§
 	 */
 	private String aLevel;
 	/**
-	 * »Ø´ğÕßµÄÉÃ³¤
+	 * å›ç­”è€…çš„æ“…é•¿
 	 */
 	private String aExpert;
 	
@@ -136,5 +135,13 @@ public class QA {
 	}
 	public void setaExpert(String aExpert) {
 		this.aExpert = aExpert;
+	}
+	
+	@Override
+	public String toString() {
+		return "QA [title=" + title + ", \nquestion=" + question + ", \ncategory="
+				+ category + ", \nqId=" + qId + ", \nqDate=" + qDate + ", \nanswer="
+				+ answer + ", \naDate=" + aDate + ", \naId=" + aId + ", \naLevel="
+				+ aLevel + ", \naExpert=" + aExpert + "]\n";
 	}
 }
