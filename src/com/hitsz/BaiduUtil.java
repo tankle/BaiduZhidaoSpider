@@ -33,6 +33,12 @@ public class BaiduUtil {
 	
 	public static int count = 0;
 	
+	
+	public BaiduUtil() {
+		
+	}
+	
+	
 	/**
 	 * 百度知道搜索结果的每个item开始标记
 	 */
@@ -242,37 +248,14 @@ public class BaiduUtil {
 		return true;
 	}
 
-	/**
-	 * 对list中的每个term进行解析
-	 */
-	public void parseTermList() {
-	 
-		 for(int i=0; i < termList.size(); i++){
-			 
-			 String url = termList.get(i).getUrl();
-			 if(null == url)
-				 continue;
-			 
-			 String content = null;
-			try {
-				NetUtil netutil =NetUtil.getInstance();
-				
-				content = netutil.getHtml(url);
+
+	//<--------------------------------------------------------------------->//
 	
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			 if(null == content)
-				 continue;
-			 
-			 parseTerm(content);
-			 	 
-		 }		 
-	}
-
-
 	/**
-	 * 
+	 * 对每个问答对进行解析
+	 * 包括：
+	 * 	title  question category  qId  qDate 
+	 * 	answer aDate aId aLevel  aExpert 
 	 * @param content
 	 */
 	public void parseTerm(String content) {
@@ -314,8 +297,10 @@ public class BaiduUtil {
 		 qaList.add(qa);		
 	}
 
+
+
 	/**
-	 * 
+	 * 擅长
 	 * @param content
 	 * @return
 	 */
@@ -355,11 +340,22 @@ public class BaiduUtil {
 		return expert;
 	}
 
+	/**
+	 * 等级
+	 * @param content
+	 * @return
+	 */
 	public String getLevel(String content) {
 		
 		return null;
 	}
 
+	/**
+	 * 提问者id
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getAID(String content) {
 		//user-name
 		String uname = null;
@@ -374,6 +370,12 @@ public class BaiduUtil {
 		return uname;
 	}
 
+	/**
+	 * 提问者时间
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getADate(String content) {
 		
 		String aDate = null;
@@ -415,7 +417,11 @@ public class BaiduUtil {
 		return str;
 	}
 	
-	
+	/**
+	 * 获取问题
+	 * @param content
+	 * @return
+	 */
 	public String getAnswer(String content) {
 		//aContent
 		String answer = null;
@@ -432,6 +438,12 @@ public class BaiduUtil {
 		return answer;
 	}
 
+	/**
+	 * 获取回答者时间
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getQDate(String content) {
 		
 		String date = null;
@@ -455,6 +467,12 @@ public class BaiduUtil {
 		return date;
 	}
 
+	/**
+	 * 回答者id
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getQId(String content) {
 		
 		String name = null;
@@ -464,11 +482,17 @@ public class BaiduUtil {
 		
 		name = getSubStr(nameHead, nameEnd, nameMid, content);
 		
-		System.out.println("name --> "+ name);
+		System.out.println("name -->"+ name);
 		
 		return name;
 	}
 
+	/**
+	 * 分类
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getCategory(String content) {
 		String category = null;
 		String caHead = "分类";
@@ -476,11 +500,17 @@ public class BaiduUtil {
 		String caMid = ">";
 		category = getSubStr(caHead, caEnd, caMid, content);
 				
-		System.out.println("category --> "+ category);
+		System.out.println("category -->"+ category);
 		
 		return category;
 	}
 
+	/**
+	 * 获取回答
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getQuestion(String content) {
 
 		String question = null;
@@ -489,12 +519,18 @@ public class BaiduUtil {
 		
 		question = getSubStr(questionHead, questionEnd, content);
 		
-		System.out.println("question --> "+ question);
+		System.out.println("question -->"+ question);
 		
 		return question;
 	}
 	
 
+	/**
+	 * 问题的标题
+	 * 
+	 * @param content
+	 * @return
+	 */
 	public String getTitle(String content) {
 		String title = null;
 		String titleHead = "class=\"ask-title\">";
@@ -502,7 +538,7 @@ public class BaiduUtil {
 		
 		title  = getSubStr(titleHead, titleEnd, content);
 			
-		System.out.println("title --> "+ title);
+		System.out.println("title -->"+ title);
 		
 		return title;
 	}
@@ -514,7 +550,7 @@ public class BaiduUtil {
 		start = content.indexOf(headStr);
 		end = content.indexOf(endStr,start);
 		
-		if(validate(start, end)){
+		if(validate(start + headStr.length(), end)){
 			str = content.substring(start + headStr.length(), end);
 		}
 		return str;
