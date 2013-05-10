@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.hitsz.Baidu;
+import com.hitsz.spider.Baidu;
 
 public class TestBaidu {
 	static Baidu baidu = null;
@@ -47,7 +47,12 @@ public class TestBaidu {
 		for(String keyword : keywords){
 			baidu.parsePage(keyword);	
 			
+			System.out.println(baidu.getBdu().getTermList().toString());
+			
 			baidu.downLoadTerm();
+			
+			baidu.getBdu().getTermList().clear();
+			
 		}
 	}
 	
@@ -59,7 +64,10 @@ public class TestBaidu {
 		for(String keyword : keywords){
 			baidu.parsePage(keyword);	
 			
-			baidu.parseQAPage();
+			baidu.parserQAPages();
+			
+			baidu.getBdu().getTermList().clear();
+		//	baidu.parseQAPage();
 		}
 	}
 	

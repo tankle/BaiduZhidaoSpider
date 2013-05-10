@@ -1,4 +1,4 @@
-package com.hitsz;
+package com.hitsz.spider;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,13 +22,22 @@ import com.hitsz.util.NetUtil;
  * 
  * @author JasonTan
  * E-mail: tankle120@gmail.com
- * Create on£º2013-5-7 ÏÂÎç7:30:49 
+ * Create onï¼š2013-5-10 ä¸‹åˆ9:53:55 
  *
  */
 public class BaiduUtil {
 	
 	
 	List<Term> termList = new ArrayList<Term>();
+	public List<Term> getTermList() {
+		return termList;
+	}
+
+	public void setTermList(List<Term> termList) {
+		this.termList = termList;
+	}
+
+
 	List<QA>	qaList = new ArrayList<QA>();
 	
 	public static int count = 0;
@@ -40,13 +49,12 @@ public class BaiduUtil {
 	
 	
 	/**
-	 * °Ù¶ÈÖªµÀËÑË÷½á¹ûµÄÃ¿¸öitem¿ªÊ¼±ê¼Ç
-	 */
+	 * é”ŸåŠ«è®¹æ‹·çŸ¥é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æ¯é”Ÿæ–¤æ‹·itemé”Ÿæ–¤æ‹·å§‹é”Ÿæ–¤æ‹·é”Ÿï¿½	 */
 	final String itemBegin = "<dl class=\"result-item\">";
 	final String itemEnd = "</dd></dl>";
 	
 	/**
-	 * »ñÈ¡ËùÓĞµÄitem£¬²¢·µ»ØÒ»¸ölist
+	 * é”Ÿæ–¤æ‹·å–é”Ÿæ–¤æ‹·é”Ÿå«ç¢‰æ‹·itemé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ä¸€é”Ÿæ–¤æ‹·list
 	 * @param content
 	 * @return
 	 */
@@ -82,7 +90,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * ¶ÔÃ¿¸öitem½øĞĞ½âÎö£¬·µ»ØÒ»¸öItem
+	 * é”Ÿæ–¤æ‹·æ¯é”Ÿæ–¤æ‹·itemé”Ÿæ–¤æ‹·é”Ÿå«æ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ä¸€é”Ÿæ–¤æ‹·Item
 	 * @param item
 	 * @return
 	 */
@@ -91,7 +99,7 @@ public class BaiduUtil {
 		String titleMid = "\"si:1\">";
 		String titleEnd = "</a>";
 		
-		String ansHead = "´ğ";
+		String ansHead = "ç­”";
 		String ansMid = "<b>:</b></span>";
 		String ansEnd = "</p>";
 				
@@ -105,44 +113,42 @@ public class BaiduUtil {
 		start = end = 0;
 		
 		/**
-		 * »ñÈ¡url
+		 * æå–url
 		 */
 		url = getUrl(item);
 		url = url.substring(0,url.length()-1);
 		
 		/**
-		 * »ñÈ¡id
+		 * æå–id
 		 */
 		id = getId(url);
 		
 		/**
-		 * »ñÈ¡title
+		 * æå–title
 		 */
 		start = item.indexOf(titleHead);
 		end = item.indexOf(titleEnd, start);
 		
 		/**
-		 * ÒòÎªtitleµÄ¸ñÊ½ÈçÏÂ£º
-		 * 		target="_blank" log="si:1">ÏÖÔÚ¹ÉÆ±<em>ĞĞÇé</em>ÔõÑù?</a>
-		 * ¶øsi£º*ÖĞµÄ*ÊÇ±ä»¯µÄ£¬ËùÒÔÖ»Æ¥Åälog£¬È»ºóÔÙ¼ÓÉÏ"si£º*">ÖĞ¼äµÄ³¤¶È£¬ÒÔ´ËÀ´Æ¥Åä
-		 * title 
+		 * é”Ÿæ–¤æ‹·ä¸ºtitleé”Ÿä¾¥é©æ‹·å¼é”Ÿæ–¤æ‹·é”Ÿé“°ï½æ‹·
+		 * 		target="_blank" log="si:1">é”Ÿæ–¤æ‹·é”ŸèŠ‚ç™¸æ‹·ç¥¨<em>é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·</em>é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·?</a>
+		 * é”Ÿæ–¤æ‹·sié”Ÿæ–¤æ‹·*é”Ÿå«ç¢‰æ‹·*é”Ÿè§’å˜åŒ–é”Ÿä¾¥ï½æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·åªåŒ¹é”Ÿæ–¤æ‹·logé”Ÿæ–¤æ‹·ç„¶é”Ÿæ–¤æ‹·é”ŸåŠ«ç¡·æ‹·é”Ÿæ–¤æ‹·"sié”Ÿæ–¤æ‹·*">é”Ÿå«ç¡·æ‹·æŸé”Ÿæ–¤æ‹·é¾‹é”Ÿæ–¤æ‹·æºé”Ÿæ–¤æ‹·é”Ÿç‹¡ãƒ¯æ‹·é”Ÿï¿½		 * title 
 		 */
 		title = item.substring(start + titleHead.length() + titleMid.length(),end);
 		
-		//Ìæ»»Ò»Ğ©±ê¼Ç×Ö·û£¬Èç<em></em>
+		//é”ŸèŠ¥æ¢ä¸€äº›é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·å€é”Ÿæ–¤æ‹·é”Ÿï¿½em></em>
 		title = replaceMark(title);
 		
 		/**
-		 * »ñÈ¡answer
+		 * é”Ÿæ–¤æ‹·å–answer
 		 */
 		start = item.indexOf(ansHead);
 		end = item.indexOf(ansEnd,start);
 		/**
-		 * answerµÄ¸ñÊ½ÈçÏÂ£º
-		 * <span class="answer-flag">´ğ<b>:</b></span>1 Á¿¼ÛÅäºÏ¹ØÏµ£º
-		 * 			¼´¼ÛÉıÁ¿Ôö¸ÅÂÊÏòÉÏ£¬¼ÛÉıÁ¿¼õÉÏÉıµÄ¸ÅÂÊ½ÏĞ£ </p>  </dd>  
+		 * answeré”Ÿä¾¥é©æ‹·å¼é”Ÿæ–¤æ‹·é”Ÿé“°ï½æ‹·
+		 * <span class="answer-flag">é”Ÿæ–¤æ‹·<b>:</b></span>1 é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·çé”Ÿè¾ƒç¢‰æ‹·é”Ÿï¿½		 * 			é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿè¾ƒï½æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æ¯é”Ÿæ–¤æ‹·å¼é”Ÿå«ï¿½</p>  </dd>  
 		 * 				<dd class="result-cate">  
-		 * Æ¥ÅäÍ·Îª¡°´ğ¡±
+		 * åŒ¹é”Ÿæ–¤æ‹·å¤´ä¸ºé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 		 */
 		start = start + ansHead.length() + ansMid.length();
 		if(validate(start, end) && end < item.length()){
@@ -151,7 +157,7 @@ public class BaiduUtil {
 		}
 	
 		/**
-		 * »ñÈ¡Ê±¼ä
+		 * é”Ÿæ–¤æ‹·å–æ—¶é”Ÿæ–¤æ‹·
 		 */
 		date = getDate(item);
 		
@@ -166,7 +172,7 @@ public class BaiduUtil {
 	
 
 	/**
-	 * Æ¥ÅäURl
+	 * åŒ¹é”Ÿæ–¤æ‹·URl
 	 * @param item
 	 * @return
 	 */
@@ -184,7 +190,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * Æ¥ÅäÈÕÆÚ
+	 * åŒ¹é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	 * @param item
 	 * @return
 	 */
@@ -201,8 +207,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * Ìæ»»±ê¼Ç
-	 * @param str
+	 * é”ŸèŠ¥æ¢é”Ÿæ–¤æ‹·é”Ÿï¿½	 * @param str
 	 * @return
 	 */
 	private String replaceMark(String str) {
@@ -215,7 +220,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * »ñÈ¡urlµÄÖĞµÄid
+	 * é”Ÿæ–¤æ‹·å–urlé”Ÿæ–¤æ‹·é”Ÿå«ç¢‰æ‹·id
 	 * @param url
 	 * @return
 	 */
@@ -234,7 +239,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * ÅĞ¶ÏµÃµ½µÄÏÂ±êÊÇ²»ÊÇºÏ·¨µÄ
+	 * é”Ÿå«æ–­å¾—ç¢‰æ‹·é”Ÿæ–¤æ‹·é”Ÿé“°æ†‹æ‹·é”Ÿè§’è¯§æ‹·é”Ÿè§’åˆå‡¤æ‹·é”Ÿæ–¤æ‹·
 	 * 
 	 * @param start
 	 * @param end
@@ -252,8 +257,7 @@ public class BaiduUtil {
 	//<--------------------------------------------------------------------->//
 	
 	/**
-	 * ¶ÔÃ¿¸öÎÊ´ğ¶Ô½øĞĞ½âÎö
-	 * °üÀ¨£º
+	 * é”Ÿæ–¤æ‹·æ¯é”Ÿæ–¤æ‹·é”Ÿç»è¾¾æ‹·è¶Šé”Ÿæ–¤æ‹·è–ªé”Ÿæ–¤æ‹·é”Ÿï¿½	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	 * 	title  question category  qId  qDate 
 	 * 	answer aDate aId aLevel  aExpert 
 	 * @param content
@@ -291,25 +295,25 @@ public class BaiduUtil {
 		 
 		 aExpert = getExpert(content);
 		 
-		 QA qa = new QA(title, question, category, qId,
-				 qDate, answer, aDate, aId, aLevel, aExpert);
+//		 QA qa = new QA(title, question, category, qId,
+//				 qDate, answer, aDate, aId, aLevel, aExpert);
 		 
-		 qaList.add(qa);		
+//		 qaList.add(qa);		
 	}
 
 
 
 	/**
-	 * ÉÃ³¤
+	 * é”ŸçŸ«ç­¹æ‹·
 	 * @param content
 	 * @return
 	 */
 	public String getExpert(String content) {
-		//ÉÃ³¤
+		//é”ŸçŸ«ç­¹æ‹·
 		//</p>
-		//>Ìï¾¶</a>
+		//>é”Ÿæ–¤å¾„</a>
 		
-		String exHead = "ÉÃ³¤";
+		String exHead = "é”ŸçŸ«ç­¹æ‹·";
 		String exEnd = "</p>";
 		
 		String expert = "";
@@ -341,7 +345,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * µÈ¼¶
+	 * é”Ÿé¥ºç¡·æ‹·
 	 * @param content
 	 * @return
 	 */
@@ -351,7 +355,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * ÌáÎÊÕßid
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·id
 	 * 
 	 * @param content
 	 * @return
@@ -371,7 +375,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * ÌáÎÊÕßÊ±¼ä
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æ—¶é”Ÿæ–¤æ‹·
 	 * 
 	 * @param content
 	 * @return
@@ -418,7 +422,7 @@ public class BaiduUtil {
 	}
 	
 	/**
-	 * »ñÈ¡ÎÊÌâ
+	 * é”Ÿæ–¤æ‹·å–é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	 * @param content
 	 * @return
 	 */
@@ -439,7 +443,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * »ñÈ¡»Ø´ğÕßÊ±¼ä
+	 * é”Ÿæ–¤æ‹·å–é”Ÿæˆªè¾¾æ‹·é”Ÿæ–¤æ‹·æ—¶é”Ÿæ–¤æ‹·
 	 * 
 	 * @param content
 	 * @return
@@ -468,7 +472,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * »Ø´ğÕßid
+	 * é”Ÿæˆªè¾¾æ‹·é”Ÿæ–¤æ‹·id
 	 * 
 	 * @param content
 	 * @return
@@ -488,14 +492,14 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * ·ÖÀà
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	 * 
 	 * @param content
 	 * @return
 	 */
 	public String getCategory(String content) {
 		String category = null;
-		String caHead = "·ÖÀà";
+		String caHead = "é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·";
 		String caEnd = "</a>";
 		String caMid = ">";
 		category = getSubStr(caHead, caEnd, caMid, content);
@@ -506,7 +510,7 @@ public class BaiduUtil {
 	}
 
 	/**
-	 * »ñÈ¡»Ø´ğ
+	 * é”Ÿæ–¤æ‹·å–é”Ÿæˆªè¾¾æ‹·
 	 * 
 	 * @param content
 	 * @return
@@ -526,8 +530,7 @@ public class BaiduUtil {
 	
 
 	/**
-	 * ÎÊÌâµÄ±êÌâ
-	 * 
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·è°‹é”Ÿæ–¤æ‹·é”Ÿï¿½	 * 
 	 * @param content
 	 * @return
 	 */

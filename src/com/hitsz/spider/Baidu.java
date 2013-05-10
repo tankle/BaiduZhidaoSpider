@@ -1,13 +1,10 @@
-package com.hitsz;
+package com.hitsz.spider;
 
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,12 +13,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.concurrent.locks.Lock;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.junit.experimental.theories.Theories;
-
+import com.hitsz.dao.QA;
 import com.hitsz.dao.Term;
 import com.hitsz.util.Constants;
 import com.hitsz.util.DBUtil;
@@ -43,6 +36,14 @@ public class Baidu {
 	
 	private static BaiduUtil bdu = new BaiduUtil();
 	
+	public static BaiduUtil getBdu() {
+		return bdu;
+	}
+
+	public static void setBdu(BaiduUtil bdu) {
+		Baidu.bdu = bdu;
+	}
+
 	static String baiduFile = "resource" + File.separator + "data.txt";
 	static String answerFile = "resource" + File.separator + "answer.txt";
 
@@ -51,30 +52,89 @@ public class Baidu {
 	 */
 	public List<String> keywords = new ArrayList<String>();
 	
-	/**
-	 * 对每个问答对网页进行解析
-	 */
-	public void parseQAPage(){
+//	/**
+//	 * 对每个问答对网页进行解析
+//	 */
+//	public void parseQAPage(){
+//		
+//		bdu.qaList.clear();
+//		
+//
+//		for(int i=0; i<bdu.termList.size(); i++){
+//			int id = bdu.termList.get(i).getId();
+//			
+//			String fileName = getFileName(id+"", "qapair");
+//			
+//			String content = FileUtil.readFileByLines(fileName);
+//			
+//			bdu.parseTerm(content);	
+//		}
+//	}
+	
+	public void parserQAPages(){
+		List<QA> qalist = new ArrayList<QA>();
 		
-		bdu.qaList.clear();
+		BaiduParser parser = new BaiduParser();
 		
 		for(int i=0; i<bdu.termList.size(); i++){
 			int id = bdu.termList.get(i).getId();
 			
 			String fileName = getFileName(id+"", "qapair");
 			
-			String content = FileUtil.readFileByLines(fileName);
+			File input = new File(fileName);
 			
-			bdu.parseTerm(content);
+			System.out.println("parsering "+fileName +"\n");
 			
+			QA qa = null;
+			try {
+				qa = parser.getQA(input);
+			} catch (IOException e) {
+				System.err.println("The file: " + fileName +" is not found!!!");
+			}
+			
+			if(null != qa){
+				qalist.add(qa);
+				System.out.println("the "+i + "th(s) qa is "+"\n");// + qa.toString()
+			}
 		}
+		
+		saveQAList(qalist);
+		
+		qalist.clear();
+		
 	}
 	
+	private void saveQAList(List<QA> qalist) {
+		String filename ;
+		FileWriter fw = null ;
+		int i=0;
+		for(QA qa: qalist){
+			filename = getFileName(qa.getTitle(),"qa");
+			
+			try {
+				fw = new FileWriter(filename, false);
+				
+				fw.write(qa.toString());
+				
+//				System.out.println("the " + i + "th " + qa.toString()+"\n");
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}finally{
+				try {
+					if(null != fw)
+						fw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
 	/**
-	 * 下载每个我问答对网页
+	 * 下载每个问答对网页
 	 */
 	public void downLoadTerm(){
-
 		 for(int i=0; i < bdu.termList.size(); i++){
 			 Term term = bdu.termList.get(i);
 			 String url = term.getUrl();
@@ -179,8 +239,6 @@ public class Baidu {
 		
 		BaiduUtil.count = 0;
 		String fileName = null;
-		bdu.termList.clear();
-		
 		
 		for(int i=0; i<10; i++){
 			fileName = getFileName(keyword, i * 10);
