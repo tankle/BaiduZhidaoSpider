@@ -174,7 +174,7 @@ public class Baidu {
 	 *   然后保存到qapair文件夹下
 	 * @param url
 	 */
-	public void downLoadItem(String url) {
+	public boolean downLoadItem(String url) {
 		 String content = null;
 		 
 		NetUtil netutil = NetUtil.getInstance();
@@ -185,13 +185,15 @@ public class Baidu {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		
+		if(content.contains("百度--您的访问出错了")){
+			return false;
+		}
 		//保存网页
 		content = getFilehead() + content;
 		String fileName = getFileName(bdu.getId(url)+"", "html","qapair");
 		System.out.println("save the " + fileName);
 		FileUtil.writeFile(fileName, content, true);
-
+		return true;
 	}
 
 	/**
