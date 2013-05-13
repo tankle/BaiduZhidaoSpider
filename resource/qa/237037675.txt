@@ -1,0 +1,12 @@
+QA [title=什么是股票
+ question=
+ category=股票 
+ questionId=热心网友
+ questionDate=2011-03-13 22:27
+ answer=股票是一种有价证券，是股份公司在筹集资本时向出资人公开或私下发行的、用以证明出资人的股本身份和权利，并根据持有人所持有的股份数享有权益和承担义务的凭证。 
+ answerDate=2011-03-13 22:28
+ downDate=2013-5-13 17:05:45
+ baiduUser=BaiduUser [username=yuduoxu
+ level=三级
+ carefield=烦恼 历史话题 地理 器乐/声乐 其他社会话题 
+ goodRate=采纳率25%]]

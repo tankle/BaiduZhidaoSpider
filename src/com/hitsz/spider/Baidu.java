@@ -12,14 +12,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.hitsz.dao.QA;
-import com.hitsz.dao.Term;
+import com.hitsz.dao.Item;
 import com.hitsz.util.Constants;
 import com.hitsz.util.DBUtil;
 import com.hitsz.util.FileUtil;
 import com.hitsz.util.NetUtil;
+import com.hitsz.util.QADBUtil;
 
 /**
  * 
@@ -34,14 +36,14 @@ public class Baidu {
 	private static String URL_MID_STR1 = "/search?word=";
 	private static String URL_MID_STR2 = "&nocluster&lm=0&rn=10&sort=0&ie=gbk&pn=";
 	
-	private static BaiduUtil bdu = new BaiduUtil();
+	private  BaiduUtil bdu = new BaiduUtil();
 	
-	public static BaiduUtil getBdu() {
+	public  BaiduUtil getBdu() {
 		return bdu;
 	}
 
-	public static void setBdu(BaiduUtil bdu) {
-		Baidu.bdu = bdu;
+	public  void setBdu(BaiduUtil bdu) {
+		this.bdu = bdu;
 	}
 
 	static String baiduFile = "resource" + File.separator + "data.txt";
@@ -50,7 +52,7 @@ public class Baidu {
 	/**
 	 * 问句list
 	 */
-	public List<String> keywords = new ArrayList<String>();
+	public List<String> keywords = null;
 	
 //	/**
 //	 * 对每个问答对网页进行解析
@@ -71,15 +73,21 @@ public class Baidu {
 //		}
 //	}
 	
-	public void parserQAPages(){
-		List<QA> qalist = new ArrayList<QA>();
+	/**
+	 * 从数据库中查询出所有的问题的id
+	 * 然后小哦难过qapair文件夹下读取相应的文件进行分析，返回一个QA
+	 * 必须保证qapair下的id.html必须存在
+	 * 
+	 */
+	public List<QA> parserQAPages(){
+		List<QA> qalist = new LinkedList<QA>();
 		
 		BaiduParser parser = new BaiduParser();
 		
-		for(int i=0; i<bdu.termList.size(); i++){
-			int id = bdu.termList.get(i).getId();
-			
-			String fileName = getFileName(id+"", "qapair");
+		List<String> ids = QADBUtil.getTermIDsFromDB();
+		
+		for(String id : ids){
+			String fileName = getFileName(id, "html","qapair");
 			
 			File input = new File(fileName);
 			
@@ -93,31 +101,26 @@ public class Baidu {
 			}
 			
 			if(null != qa){
+				qa.setId(id);
 				qalist.add(qa);
-				System.out.println("the "+i + "th(s) qa is "+"\n");// + qa.toString()
 			}
 		}
+//		saveQAList(qalist);
 		
-		saveQAList(qalist);
-		
-		qalist.clear();
-		
+		return qalist;
 	}
 	
+	@Deprecated
 	private void saveQAList(List<QA> qalist) {
 		String filename ;
 		FileWriter fw = null ;
 		int i=0;
 		for(QA qa: qalist){
-			filename = getFileName(qa.getTitle(),"qa");
+			filename = getFileName(qa.getId(),"txt","qa");
 			
 			try {
 				fw = new FileWriter(filename, false);
-				
 				fw.write(qa.toString());
-				
-//				System.out.println("the " + i + "th " + qa.toString()+"\n");
-				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}finally{
@@ -134,10 +137,11 @@ public class Baidu {
 	/**
 	 * 下载每个问答对网页
 	 */
-	public void downLoadTerm(){
-		 for(int i=0; i < bdu.termList.size(); i++){
-			 Term term = bdu.termList.get(i);
-			 String url = term.getUrl();
+	@Deprecated
+	public void downLoadItem(){
+		 for(int i=0; i < bdu.itemList.size(); i++){
+			 Item item = bdu.itemList.get(i);
+			 String url = item.getUrl();
 			 if(null == url)
 				 continue;
 			 
@@ -147,7 +151,7 @@ public class Baidu {
 				
 				content = netutil.getHtml(url);
 				
-				String fileName = getFileName(term.getId()+"", "qapair");
+				String fileName = getFileName(item.getId()+"", "html","qapair");
 				System.out.println("FileName -->" + fileName);
 				FileUtil.writeFile(fileName, content, true);
 				
@@ -164,6 +168,31 @@ public class Baidu {
 		 }		 
 
 	}
+	
+	/**
+	 *   根据url来下载对应的问答对网页，
+	 *   然后保存到qapair文件夹下
+	 * @param url
+	 */
+	public void downLoadItem(String url) {
+		 String content = null;
+		 
+		NetUtil netutil = NetUtil.getInstance();
+		
+		try {
+			content = netutil.getHtml(url);
+			
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		
+		//保存网页
+		content = getFilehead() + content;
+		String fileName = getFileName(bdu.getId(url)+"", "html","qapair");
+		System.out.println("save the " + fileName);
+		FileUtil.writeFile(fileName, content, true);
+
+	}
 
 	/**
 	 * 现在问句keyword的10个网页
@@ -171,63 +200,25 @@ public class Baidu {
 	 * @param keyword
 	 */
 	public void downLoadPages(final String keyword) {
-		/*
-		 * 设置代理
-		 */
-		if(Constants.ISPROXY)
-			NetUtil.setProxy();
-	
-//		new Thread(){
-//	
-//			@Override
-//			public void run() {			
-				int num  = 0;
-				
-				while(num < Constants.LIMITS){
-					
-					String content = getHtml(keyword,num * 10);
-					
-//					if(null == content){
-//						try {
-//							sleep(3 * 60 * 1000);
-//						} catch (InterruptedException e) {
-//							// TODO Auto-generated catch block
-//							e.printStackTrace();
-//						}
-//						continue;
-//					}
-					
-					saveContent(keyword, num * 10,content);
-					
-					num++;
-					
-					/**
-					 * 
-					 */
-					try {
-						Thread.sleep(3 * 1000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-				
-//			}
-			
-//		}.start();
-		
-		
-//
-//		outList();
-//
-//		saveList(baiduFile,bdu.termList);
-//
-//		bdu.parseTerm();
-//		
-//		outQAList();
-//
-//		saveList(answerFile, bdu.qaList);
+
+		int num = 0;
+
+		while (num < Constants.LIMITS) {
+
+			String content = getHtml(keyword, num * 10);
+
+			saveContent(keyword, num * 10, content);
+
+			num++;
+
+			try {
+				Thread.sleep(3 * 1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
-	
 	
 	/**
 	 * 解析keyword对应的第num个网页
@@ -243,24 +234,31 @@ public class Baidu {
 		for(int i=0; i<10; i++){
 			fileName = getFileName(keyword, i * 10);
 			
-			String content = FileUtil.readFileByLines(fileName);
+//			String content = FileUtil.readFileByLines(fileName);
 			
-			bdu.getItemList(content);
+//			bdu.getItemList(content);
+			
+			File input = new File(fileName);
+			
+			bdu.getItemList(input);
 		}
 		
-		fileName = getFileName(keyword,"term");
-		System.out.println("fileName--->" + fileName);
-		saveTermList(fileName, bdu.termList);
 	}
 	
 	/**
-	 * 
-	 * @param keyword
+	 *  根据前缀和后缀，以及文件夹名字来获得一个相对文件的名字
+	 *  
+	 * @param prefix
+	 * @param suffix
+	 * @param folder
 	 * @return
 	 */
-	private String getFileName(String keyword, String folder) {
+	private String getFileName(String prefix, String suffix, String folder) {
+		
+		prefix = prefix.replaceAll("/", "|");
+		
 		String fileName = "resource" + File.separator + folder + File.separator+ 
-				keyword +".txt";
+				prefix + "." + suffix;
 		return fileName;
 	}
 
@@ -276,11 +274,26 @@ public class Baidu {
 		
 		System.out.println("Save the html's content. The filename is -->" + fileName);
 		
-		content = Calendar.getInstance().getTime().toLocaleString() +"\r\n" + content;
+		content = getFilehead() + content;
 		
 		FileUtil.writeFile(fileName, content, false);
 	}
 
+	/**
+	 * 每个下载的文件头部是这样的
+	 * 
+	 * <div class="version">1.0</div>
+	 * <div class="downloadtime">Mon Apr 05 14:22:53 CST 2010</div>
+	 */
+	private String getFilehead() {
+		String head = "<div class=\"version\">1.0</div>";
+		head = head +"<div class=\"downloadtime\">" + Calendar.getInstance().getTime().toLocaleString() +"</div>\r\n";
+		return head;
+		
+	}
+
+
+	
 	/**
 	 * 根据keyword和i生成一个文件名
 	 * 
@@ -289,36 +302,55 @@ public class Baidu {
 	 * @return
 	 */
 	private String getFileName(String keyword, int i) {
+		/**
+		 * 将问句中的问号替换掉
+		 * 因为windows下的文件名不能含有<,>,(,),?,*等
+		 */
+		if(Constants.OS_NAME.startsWith("win") || Constants.OS_NAME.startsWith("Win")){
+			keyword = keyword.replaceAll("\\?", "");
+		}
+		
 		String fileName = "resource" + File.separator +"baidu" + File.separator+ 
-				keyword + "--->" + i +" page(s).html";
+				keyword + "---" + i +" page(s).html";
 		return fileName;
 	}
+//
+//	/**
+//	 * 
+//	 */
+//	private  void outQAList() {
+//		for (int i = 0; i < bdu.qaList.size(); i++) {
+//			String content = "The " + i + "th(s) qa is : \n"
+//					+ bdu.qaList.toString() + "\n";
+//			System.out.println(content);
+//		}		
+//	}
 
 	/**
-	 * 
+	 * 将每个Term的list存入数据库中
+	 * @param query 
 	 */
-	private  void outQAList() {
-		for (int i = 0; i < bdu.qaList.size(); i++) {
-			String content = "The " + i + "th(s) qa is : \n"
-					+ bdu.qaList.toString() + "\n";
-			System.out.println(content);
-		}		
+	public void saveItemListIntoDB(String query){
+		if(null != bdu.itemList)
+			QADBUtil.saveTermList(bdu.itemList,query);
 	}
-
+	
 	/**
 	 * 
 	 * @param fileName
 	 * @param list
 	 */
-	private  void saveTermList(String fileName , List<Term> list) {
+	public  void saveItemList(String fileName ) {
+		
+		
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(fileName, true);
 
-			for (int i = 0; i < list.size(); i++) {
+			for (int i = 0; i < bdu.itemList.size(); i++) {
 				String content = "\nThe " + i + "th(s) item is : \n"
-						+ list.get(i).toString() + "\n";
-			//	System.out.println("Writing ..." + content);
+						+ bdu.itemList.get(i).toString() + "\n";
+				System.out.println("Writing ..." + content);
 				fw.write(content);
 			}
 		} catch (IOException e) {
@@ -398,56 +430,19 @@ public class Baidu {
 	 * @return
 	 */
 	public List<String> getKeywords(){
-		
-		getKeywordsList();
-		
+
 		return this.keywords;
 	}
 	
 	/**
-	 * 从数据库中读取所有问句
+	 * 从数据库中读取问题List
 	 */
-	private void getKeywordsList() {
+	public void getQuerysFromDB(){
 		
-		Connection conn = DBUtil.getDBConnection();	
-		Statement stmt = DBUtil.getStatment(conn);
-
-		String sql = "select * from query";
-		
-		ResultSet rs = null;
-		
-		try {
-			rs = stmt.executeQuery(sql);
-						
-			while(rs.next()){
-				String query = rs.getString("query");
-
-				keywords.add(query);
-				
-				System.out.println("id is " + rs.getString("id") + " queryid is "+
-						rs.getString(2) + " query is " + rs.getString("query"));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}finally{
-			try {
-				if(rs != null){
-					rs.close();
-					rs = null;
-				}
-				if(stmt != null){			
-					stmt.close();
-					stmt = null;
-				}				
-				if(null != conn){
-					conn.close();
-					conn = null;
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		this.keywords = QADBUtil.getQueryListFromDB();
 	}
+
+
+
 
 }

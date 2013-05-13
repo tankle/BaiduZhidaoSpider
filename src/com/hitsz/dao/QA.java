@@ -3,6 +3,14 @@ package com.hitsz.dao;
 public class QA {
 
 	/**
+	 * 百度中的查询id，即
+	 * http://zhidao.baidu.com/question/39038584.html
+	 * 中的39038584这串数字
+	 * 
+	 */
+	private String id;
+
+	/**
 	 * 问句标题
 	 */
 	private String title;
@@ -15,16 +23,18 @@ public class QA {
 	 * 问句类别
 	 */
 	private String category;
+	
+	/**
+	 * 提问时间
+	 */
+	private String questionDate;
 
 	/**
 	 * 提问者ID
 	 */
 	private String questionId;
 
-	/**
-	 * 提问时间
-	 */
-	private String questionDate;
+	
 	/**
 	 * 采纳答案
 	 */
@@ -33,6 +43,12 @@ public class QA {
 	 * 答案提交时间
 	 */
 	private String answerDate;
+	
+	/**
+	 * 网页下载时间
+	 */
+	private String downDate;
+	
 //	/**
 //	 * 答案者ID
 //	 * 
@@ -48,6 +64,15 @@ public class QA {
 //	 */
 //	private String aExpert;
 	
+	public String getDownDate() {
+		return downDate;
+	}
+
+	public void setDownDate(String downDate) {
+		this.downDate = downDate;
+	}
+
+
 	private BaiduUser baiduUser;
 	
 	
@@ -55,7 +80,14 @@ public class QA {
 		
 	}
 
+	public String getId() {
+		return id;
+	}
 
+
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -118,7 +150,7 @@ public class QA {
 		return "QA [title=" + title + "\n question=" + question + "\n category="
 				+ category + "\n questionId=" + questionId + "\n questionDate=" +
 					questionDate + "\n answer="
-				+ answer + "\n answerDate=" + answerDate + "\n baiduUser=" + baiduUser
+				+ answer + "\n answerDate=" + answerDate +"\n downDate=" + downDate +"\n baiduUser=" + baiduUser
 				+ "]";
 	}
 

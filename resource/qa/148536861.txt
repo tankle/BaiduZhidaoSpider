@@ -1,0 +1,12 @@
+QA [title=什么是股票 怎么买
+ question=
+ category=股票 
+ questionId=huizhen0912
+ questionDate=2010-04-21 13:08
+ answer=开户后下载软件安装登录交易 资金是:够需买股票的100股价钱就可以     佣 金  万 6  免  费开  户         ********专业贴身，服务贴心********* 
+ answerDate=2010-04-21 13:19
+ downDate=2013-5-13 17:01:43
+ baiduUser=BaiduUser [username=低佣Q873151218
+ level=二级
+ carefield=暂未定制
+ goodRate=null]]

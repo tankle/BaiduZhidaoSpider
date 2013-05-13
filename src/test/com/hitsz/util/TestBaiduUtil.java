@@ -29,34 +29,34 @@ public class TestBaiduUtil {
 				+ aId + ", aLevel=" + aLevel + ", aExpert=" + aExpert + "]";
 	}
 
-	@Test
-	public void test() {
-		String content = FileUtil.readFileByLines("resource" + File.separator 
-				+ "test.txt");
-		
-		BaiduUtil bdu = new BaiduUtil();
-		 
-		 title = bdu.getTitle(content);
-		 
-		 question = bdu.getQuestion(content);
-		 
-		 category = bdu.getCategory(content);
-		 
-		 qId = bdu.getQId(content);
-		 
-		 qDate = bdu.getQDate(content);
-		 
-		 answer = bdu.getAnswer(content);
-		 
-		 aDate = bdu.getADate(content);
-		 
-		 aId = bdu.getAID(content);
-		 
-		 aLevel = bdu.getLevel(content);
-		 
-		 aExpert = bdu.getExpert(content);
-		
-		// System.out.println(toString());
-	}
+//	@Test
+//	public void test() {
+//		String content = FileUtil.readFileByLines("resource" + File.separator 
+//				+ "test.txt");
+//		
+//		BaiduUtil bdu = new BaiduUtil();
+//		 
+//		 title = bdu.getTitle(content);
+//		 
+//		 question = bdu.getQuestion(content);
+//		 
+//		 category = bdu.getCategory(content);
+//		 
+//		 qId = bdu.getQId(content);
+//		 
+//		 qDate = bdu.getQDate(content);
+//		 
+//		 answer = bdu.getAnswer(content);
+//		 
+//		 aDate = bdu.getADate(content);
+//		 
+//		 aId = bdu.getAID(content);
+//		 
+//		 aLevel = bdu.getLevel(content);
+//		 
+//		 aExpert = bdu.getExpert(content);
+//		
+//		// System.out.println(toString());
+//	}
 
 }

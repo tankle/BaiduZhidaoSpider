@@ -28,6 +28,10 @@ public class BaiduParser {
 		
 		QA qa = new QA();
 		
+		Element downloadtime = doc.getElementsByAttributeValue("class", "downloadtime").first();
+		
+		qa.setDownDate(downloadtime.text());
+		
 		Element askDiv = article.getElementsByAttributeValue("id", "wgt-ask").first();
 		
 		qa.setTitle(getAskTitle(askDiv));

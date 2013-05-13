@@ -79,4 +79,19 @@ public class TestDB {
 		
 		assertNull(rs);
 	}
+	
+	
+	@Test
+	public void testInsert(){
+		//insert into `qapair_resultlist`(`id`,`qid`,`rankid`,`title`,`answer`,`answer_time`,`link`,`querytime`) values();
+		String sql = "INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , " +
+				"										`answer_time` , `link` , `querytime` )" +
+				"VALUES ('123', 456, 'test标题', '回答', '2013-5-6', 'http://zhidao.baidu.com', '2013-5-13')";
+		
+		Connection conn = DBUtil.getDBConnection();
+
+		assertTrue(DBUtil.insert(conn, sql));
+		
+		
+	}
 }

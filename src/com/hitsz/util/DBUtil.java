@@ -58,7 +58,7 @@ public class DBUtil {
 	public static boolean insert(Connection conn, String sql){
 		try {
 			Statement st = conn.createStatement();
-			st.executeQuery(sql);
+			st.executeUpdate(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
@@ -77,12 +77,15 @@ public class DBUtil {
 		try {
 			Statement st = conn.createStatement();
 			for(String sql : sqlList){
+				System.out.println("insert qapair_list:\n"+sql);
+				
 				temp = sql;
 				st.executeUpdate(sql);
 			}
-
+			if(null != st){
+				st.close();
+			}
 		} catch (SQLException e) {
-			System.out.println(temp);
 			e.printStackTrace();
 			return false;
 		}
@@ -176,7 +179,7 @@ public class DBUtil {
 	 */
 	public static void close(Connection conn){
 		try {
-			if(conn != null && !conn.isClosed()){
+			if(conn != null){
 				conn.close();
 			}
 		} catch (SQLException e) {
@@ -190,7 +193,7 @@ public class DBUtil {
 	 */
 	public static void close(Statement stmt){
 		try {
-			if(stmt != null && !stmt.isClosed())
+			if(stmt != null )
 				stmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -203,7 +206,7 @@ public class DBUtil {
 	 */
 	public static void close(ResultSet rs){
 		try {
-			if(rs != null && !rs.isClosed())
+			if(rs != null )
 				rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

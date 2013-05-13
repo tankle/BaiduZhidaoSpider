@@ -24,7 +24,11 @@ public class NetUtil{
 	private static NetUtil netutil = null;
 	
 	private NetUtil(){
-		
+		/*
+		 * 设置代理
+		 */
+		if(Constants.ISPROXY)
+				setProxy();
 	}
 	
 	public static NetUtil getInstance(){

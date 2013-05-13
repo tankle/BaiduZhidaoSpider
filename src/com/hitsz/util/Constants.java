@@ -13,7 +13,7 @@ public class Constants {
 	/**
 	 * debug 模式
 	 */
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 	
 	/**
 	 * 是否设置代理
@@ -31,5 +31,9 @@ public class Constants {
 	 */
 	public static final String ENCODING = "gbk";
 	
+	/**
+	 * 系统名字
+	 */
+	public static final String OS_NAME= System.getProperty("os.name");
 	
 }

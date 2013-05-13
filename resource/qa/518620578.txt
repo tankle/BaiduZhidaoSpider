@@ -1,0 +1,12 @@
+QA [title=什么是股票，怎么样炒股？
+ question=
+ category=股票 
+ questionId=风铃忘
+ questionDate=2013-01-21 13:19
+ answer=通俗的说股票就是企业的股份，炒股就是买卖企业的股份。 带身份证——证券公司——开户——到银行联三方存管（可办新卡或用旧卡都行）——卡里存钱——转证券账户即可用来交易。 得账号-——电脑（手机）下载行情和交易软件——登录行情软件后——交易链接（F12）——登入交易软件——买卖股票。 
+ answerDate=2013-01-21 15:23
+ downDate=2013-5-13 17:02:37
+ baiduUser=BaiduUser [username=来证券开户优惠
+ level=七级
+ carefield=股票 基金 
+ goodRate=采纳率42%]]

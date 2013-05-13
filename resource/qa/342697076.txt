@@ -1,0 +1,12 @@
+QA [title=什么是股票，风险大吗？
+ question=
+ category=股票 
+ questionId=汤见简
+ questionDate=2011-11-15 09:12
+ answer=对于什么是股票，风险是否大，这样的问题楼主一定要搞清楚才能决定选择哪种股票。楼主还是去新浪show学习下吧，可以帮助你判断现在的行情，其实风险决定自己的判断哦。新浪show是一个多人视频聊天平台，第一时间分析财富走势，掌握全天候的财经动态，会增强自己的判断力，去新浪show提问下什么的股票吧。 
+ answerDate=2011-11-15 19:48
+ downDate=2013-5-13 17:05:59
+ baiduUser=BaiduUser [username=星林0322
+ level=一级
+ carefield=暂未定制
+ goodRate=采纳率100%]]
