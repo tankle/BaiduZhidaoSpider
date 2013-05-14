@@ -11,6 +11,13 @@ import org.jsoup.select.Elements;
 import com.hitsz.dao.BaiduUser;
 import com.hitsz.dao.QA;
 
+/**
+ * 
+ * @author JasonTan
+ * E-mail: tankle120@gmail.com
+ * Create on: 2013-5-14下午9:17:06
+ *
+ */
 public class BaiduParser {
 
 	public QA getQA(File input) throws IOException{

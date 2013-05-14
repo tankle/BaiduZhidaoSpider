@@ -29,7 +29,7 @@ public class QADBUtil {
 		Connection conn = DBUtil.getDBConnection();	
 		Statement stmt = DBUtil.getStatment(conn);
 
-		String sql = "select * from query";
+		String sql = "select * from query where id >= 3";
 		
 		ResultSet rs = null;
 		
