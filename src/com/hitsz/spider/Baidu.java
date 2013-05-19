@@ -6,19 +6,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import com.hitsz.dao.QA;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
 import com.hitsz.dao.Item;
+import com.hitsz.dao.QA;
 import com.hitsz.util.Constants;
-import com.hitsz.util.DBUtil;
 import com.hitsz.util.FileUtil;
 import com.hitsz.util.NetUtil;
 import com.hitsz.util.QADBUtil;
@@ -198,16 +198,46 @@ public class Baidu {
 
 	/**
 	 * 现在问句keyword的10个网页
+	 * 如果少于10个网页则就下载最多的页数
 	 * 
 	 * @param keyword
 	 */
 	public void downLoadPages(final String keyword) {
 
-		int num = 0;
+		/**
+		 * 1 先下载第一页，获取其中的关于该问题的回答数
+		 * 2 然后在判断下载多少页
+		 * 
+		 */
+		String content = getHtml(keyword, 0);
+		
+		saveContent(keyword, 0, content);
+		
+		Document doc  = Jsoup.parse(content);
+		//class="widget-pager clearfix"
+		/**
+		 * 解析出某个问题有多少回答项
+		 */
+		Element pages = doc.getElementsByAttributeValueContaining("class", "widget-pager").first();
+		Element items = pages.getElementsByTag("span").first();
+		String regEx="[^0-9]";   
+		Pattern p = Pattern.compile(regEx);   
+		Matcher m = p.matcher(items.ownText());   
+		int nums = Integer.parseInt(m.replaceAll("").trim());
+		
+		if(nums/10 > Constants.LIMITS ){
+			nums = Constants.LIMITS;
+		}else{
+			nums = (int) Math.floor(nums / 10) + 1;
+		}
+		
+		/**
+		 * 上面已经保存了一页了，所以只要保存nums-1页
+		 */
+		int num = 1;
+		while (num < nums) {
 
-		while (num < Constants.LIMITS) {
-
-			String content = getHtml(keyword, num * 10);
+			content = getHtml(keyword, num * 10);
 
 			saveContent(keyword, num * 10, content);
 
@@ -306,14 +336,20 @@ public class Baidu {
 	private String getFileName(String keyword, int i) {
 		/**
 		 * 将问句中的问号替换掉
-		 * 因为windows下的文件名不能含有<,>,(,),?,*等
+		 * 因为windows下的文件名不能含有<,>,(,),?,*,",\,/等
 		 */
 		if(Constants.OS_NAME.startsWith("win") || Constants.OS_NAME.startsWith("Win")){
-			keyword = keyword.replaceAll("\\?", "");
+			keyword = keyword.replaceAll("\\?|<|>|\\(|\\)|\"", "");
 		}
+		/**
+		 * 替换掉反斜杠\,需要使用四个\\\\
+		 * \\\\  ，java解析为\\交给正则表达式，  正则表达式再经过一次转换，把\\转换成为\ 
+		 */
+		keyword = keyword.replaceAll("\\\\", "");
+		keyword = keyword.replaceAll("/", "");
 		
 		String fileName = "resource" + File.separator +"baidu" + File.separator+ 
-				keyword + "---" + i +" page(s).html";
+				keyword + "---" + i +"page.html";
 		return fileName;
 	}
 //

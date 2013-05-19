@@ -1,3 +1,4 @@
+
 package test.com.hitsz.util;
 
 
@@ -80,7 +81,7 @@ public class TestBaidu {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				 		
+				 
 			 }
 			
 			/**
