@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.hitsz.dao.BaiduUser;
-import com.hitsz.dao.Item;
-import com.hitsz.dao.QA;
+import com.hitsz.model.BaiduUser;
+import com.hitsz.model.Item;
+import com.hitsz.model.QA;
 
 /**
  * 
@@ -22,20 +22,34 @@ import com.hitsz.dao.QA;
 public class QADBUtil {
 	
 	/**
-	 * 从数据库中读取所有问句
+	 * qa数据库中各个表的名字
 	 */
-	public static List<String> getQueryListFromDB() {
+//	public static final String QUERYTB = "query";
+//	public static final String RESULTLISTDB = "qapair_resultlist";
+//	public static final String PAIRDB = "qapair";
+//	public static final String USER = "baiduuser";
+	
+	/**
+	 * 从数据库中读取所有问句
+	 * 从数据库中获取是否有下载过的问句
+	 * 	finished = 1 获取已经下载过的
+	 * 	finished = 0 没有下载过的
+	 * @param finished
+	 */
+	public static List<String> getQueryListFromDB(int finished) {
 		
 		Connection conn = DBUtil.getDBConnection();	
 		Statement stmt = DBUtil.getStatment(conn);
 
-		String sql = "select * from query where id >= 3";
+		String sql = "select * from query where finished = " + finished;
 		
 		ResultSet rs = null;
 		
 		List<String> querys = new ArrayList<String>();
 		
 		try {
+			Log.info("execute sql:" + sql);
+			
 			rs = stmt.executeQuery(sql);
 						
 			while(rs.next()){
@@ -43,7 +57,7 @@ public class QADBUtil {
 
 				querys.add(query);
 				
-				System.out.println("id is " + rs.getString("id") + " queryid is "+
+				Log.info("id is " + rs.getString("id") + " queryid is "+
 						rs.getString(2) + " query is " + rs.getString("query"));
 			}
 		} catch (SQLException e) {
@@ -87,7 +101,7 @@ public class QADBUtil {
 		 *   根据问句获得问句的queryid
 		 */
 		String sqlid = "select `queryid` from `query` where query = \"" + query + "\"";
-		
+		Log.info("execute sql:" + sqlid);
 		ResultSet rs = DBUtil.getResultSet(conn, sqlid);
 		
 		String queryid = null;
@@ -123,15 +137,26 @@ public class QADBUtil {
 		
 	}
 
-	public static List<String> getUrlsFromQAPair() {
+	/**
+	 * 从数据库中读取所有的未下载的urls
+	 * 	根据finished标识，来选取相应的urls
+	 * 
+	 * @param finished
+	 * 			表示该item中的link是否已经下载过
+	 * 		 = 1 表示已经下载过
+	 * 		 = 0 表示还没有下载 
+	 * 
+	 * @return
+	 */
+	public static List<String> getUrlsFromQAPair(int finished) {
 		Connection conn = DBUtil.getDBConnection();	
 		String sql;
 		if(Constants.DEBUG)
-			 sql = "select link from `qapair_resultlist` where id <= 5";
+			 sql = "select link from `qapair_resultlist` where id <= 5 and finished = " + finished;
 		else
-			sql = "select link from `qapair_resultlist`";
+			sql = "select link from `qapair_resultlist` where finished = " + finished;
 		
-		System.out.println("execute sql :" + sql);
+		Log.info("execute sql :" + sql);
 		
 		ResultSet rs = DBUtil.getResultSet(conn, sql);
 		
@@ -154,7 +179,11 @@ public class QADBUtil {
 		return urls;
 	}
 
-	public static List<String> getTermIDsFromDB() {
+	/**
+	 * 
+	 * @return
+	 */
+	public static List<String> getItemIDsFromDB() {
 		
 		Connection conn = DBUtil.getDBConnection();	
 
@@ -233,6 +262,12 @@ public class QADBUtil {
 		}
 	}
 
+	/**
+	 * 保存user的信息
+	 * @param conn
+	 * @param user
+	 * @return
+	 */
 	private static int saveUser(Connection conn, BaiduUser user) {
 		String sql = "select * from `baiduuser` where `userName` = " +"'"+user.getUsername()+"'";
 		
@@ -273,5 +308,54 @@ public class QADBUtil {
 		}
 		
 		return id;
+	}
+
+	/**
+	 * 设置query表中的查询问句query 的finished位为1
+	 * @param keyword
+	 */
+	public static void setQueryFinished(String query) {
+		Connection con = DBUtil.getDBConnection();
+		String sql = "update query set finished = 1 where query = '" +query+"'";
+		
+		setFinished(con, sql);
+		
+		
+	}
+
+	private static void setFinished(Connection con, String sql) {
+		Statement stat;
+		try {
+			con.setAutoCommit(false);
+			stat  = DBUtil.getStatment(con);
+			Log.info("execute sql:" + sql);
+			stat.executeUpdate(sql);
+			con.commit();
+		} catch (SQLException e) {
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			Log.info("sql is roll back:" + sql);
+			e.printStackTrace();
+		}finally{
+			if(null != con ){
+				try {
+					con.setAutoCommit(true);
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public static void setQAPairResultFinished(String url) {
+		Connection con = DBUtil.getDBConnection();
+		String sql = "update qapair_resultlist set finished = 1 where link = '" +url+"'";
+		
+		setFinished(con, sql);
+		
 	}
 }

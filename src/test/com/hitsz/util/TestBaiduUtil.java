@@ -6,7 +6,7 @@ import java.io.File;
 
 import org.junit.Test;
 
-import com.hitsz.spider.BaiduUtil;
+import com.hitsz.spider.BaiduItemParser;
 import com.hitsz.util.FileUtil;
 
 public class TestBaiduUtil {

@@ -73,21 +73,35 @@ public class DBUtil {
 	 * @return
 	 */
 	public static boolean insert(Connection conn, List<String> sqlList){
-		String temp = "";
 		try {
+			conn.setAutoCommit(false);
+			
 			Statement st = conn.createStatement();
 			for(String sql : sqlList){
-				System.out.println("insert qapair_list:\n"+sql);
-				
-				temp = sql;
+				Log.info("execute sql:"+sql);
 				st.executeUpdate(sql);
 			}
+			
+			conn.commit();
+			
 			if(null != st){
 				st.close();
 			}
 		} catch (SQLException e) {
+			Log.info("commit ERROR!!! SQL have roll back");
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
 			return false;
+		}finally{
+			try {
+				conn.setAutoCommit(true);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return true;
 	}

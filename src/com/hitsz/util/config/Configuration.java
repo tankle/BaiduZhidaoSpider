@@ -19,7 +19,7 @@ public class Configuration {
 	private static Properties properties = null;
 	//配置文件名，无需.properties后缀，不可随意更改（ /config/config.properties）
 	private static final String  CONFIG_FILE =  "config" + File.separator + "url.properties";
-	
+//	private static final String  CONFIG_FILE =  "url.properties";
 	
 	private Configuration()
 	{

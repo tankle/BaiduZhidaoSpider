@@ -1,8 +1,11 @@
 package test.com.hitsz.util;
 
 import java.util.Calendar;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.hitsz.util.Log;
 
 
 public class Test {
@@ -41,6 +44,7 @@ public class Test {
 
 	@org.junit.Test
 	public void testDate(){
-		System.out.println(Calendar.getInstance().getTime().toLocaleString());
+		System.out.println(Logger.class.getName());
+		Log.info("The current time is " + Calendar.getInstance().getTime().toLocaleString());
 	}
 }

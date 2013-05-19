@@ -16,10 +16,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import com.hitsz.dao.Item;
-import com.hitsz.dao.QA;
+import com.hitsz.model.Item;
+import com.hitsz.model.QA;
 import com.hitsz.util.Constants;
 import com.hitsz.util.FileUtil;
+import com.hitsz.util.Log;
 import com.hitsz.util.NetUtil;
 import com.hitsz.util.QADBUtil;
 
@@ -36,13 +37,13 @@ public class Baidu {
 	private static String URL_MID_STR1 = "/search?word=";
 	private static String URL_MID_STR2 = "&nocluster&lm=0&rn=10&sort=0&ie=gbk&pn=";
 	
-	private  BaiduUtil bdu = new BaiduUtil();
+	private  BaiduItemParser bdu = new BaiduItemParser();
 	
-	public  BaiduUtil getBdu() {
+	public  BaiduItemParser getBdu() {
 		return bdu;
 	}
 
-	public  void setBdu(BaiduUtil bdu) {
+	public  void setBdu(BaiduItemParser bdu) {
 		this.bdu = bdu;
 	}
 
@@ -82,16 +83,16 @@ public class Baidu {
 	public List<QA> parserQAPages(){
 		List<QA> qalist = new LinkedList<QA>();
 		
-		BaiduParser parser = new BaiduParser();
+		BaiduPairParser parser = new BaiduPairParser();
 		
-		List<String> ids = QADBUtil.getTermIDsFromDB();
+		List<String> ids = QADBUtil.getItemIDsFromDB();
 		
 		for(String id : ids){
 			String fileName = getFileName(id, "html","qapair");
 			
 			File input = new File(fileName);
 			
-			System.out.println("parsering "+fileName +"\n");
+			Log.info("parsering "+fileName +"\n");
 			
 			QA qa = null;
 			try {
@@ -152,8 +153,8 @@ public class Baidu {
 				content = netutil.getHtml(url);
 				
 				String fileName = getFileName(item.getId()+"", "html","qapair");
-				System.out.println("FileName -->" + fileName);
-				FileUtil.writeFile(fileName, content, true);
+				Log.info("FileName -->" + fileName);
+				FileUtil.writeFile(fileName, content);
 				
 				try {
 					Thread.sleep(2 * 1000);
@@ -186,13 +187,14 @@ public class Baidu {
 			e1.printStackTrace();
 		}
 		if(content.contains("百度--您的访问出错了")){
+			Log.info("downloading ERROR!!!");
 			return false;
 		}
 		//保存网页
 		content = getFilehead() + content;
 		String fileName = getFileName(bdu.getId(url)+"", "html","qapair");
-		System.out.println("save the " + fileName);
-		FileUtil.writeFile(fileName, content, true);
+		Log.info("Save file:" + fileName);
+		FileUtil.writeFile(fileName, content);
 		return true;
 	}
 
@@ -209,6 +211,7 @@ public class Baidu {
 		 * 2 然后在判断下载多少页
 		 * 
 		 */
+		
 		String content = getHtml(keyword, 0);
 		
 		saveContent(keyword, 0, content);
@@ -224,12 +227,16 @@ public class Baidu {
 		Pattern p = Pattern.compile(regEx);   
 		Matcher m = p.matcher(items.ownText());   
 		int nums = Integer.parseInt(m.replaceAll("").trim());
-		
+		Log.info("Total pages is " + nums);
+		/**
+		 * 判断下载多少个网页
+		 */
 		if(nums/10 > Constants.LIMITS ){
 			nums = Constants.LIMITS;
 		}else{
 			nums = (int) Math.floor(nums / 10) + 1;
 		}
+		
 		
 		/**
 		 * 上面已经保存了一页了，所以只要保存nums-1页
@@ -260,9 +267,10 @@ public class Baidu {
 	 */
 	public void parsePage(String keyword){
 		
-		BaiduUtil.count = 0;
+		BaiduItemParser.count = 0;
 		String fileName = null;
 		
+		Log.info("parsing the " + keyword +"'s content");
 		for(int i=0; i<10; i++){
 			fileName = getFileName(keyword, i * 10);
 			
@@ -304,11 +312,11 @@ public class Baidu {
 		
 		String fileName = getFileName(keyword,i);
 		
-		System.out.println("Save the html's content. The filename is -->" + fileName);
+		Log.info("Save the html's content. The filename is :" + fileName);
 		
 		content = getFilehead() + content;
 		
-		FileUtil.writeFile(fileName, content, false);
+		FileUtil.writeFile(fileName, content);
 	}
 
 	/**
@@ -388,7 +396,7 @@ public class Baidu {
 			for (int i = 0; i < bdu.itemList.size(); i++) {
 				String content = "\nThe " + i + "th(s) item is : \n"
 						+ bdu.itemList.get(i).toString() + "\n";
-				System.out.println("Writing ..." + content);
+				Log.info("Writing ..." + content);
 				fw.write(content);
 			}
 		} catch (IOException e) {
@@ -427,19 +435,17 @@ public class Baidu {
 		try {
 			keyword  = URLEncoder.encode(keyword,Constants.ENCODING);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
+			Log.info("Encoder ERROR:" + keyword);
 			e.printStackTrace();
+			return null;
 		}
 		
 		final String url = Constants.URLHEAD_BAIDU + URL_MID_STR1 + keyword + URL_MID_STR2 + num;
-
-		System.out.println("The url is "+url);
 
 		String content = null;
 		
 		try {
 			NetUtil netutil = NetUtil.getInstance();
-			
 			content = netutil.getHtml(url);
 			
 		} catch (IOException e) {
@@ -448,7 +454,7 @@ public class Baidu {
 
 		// System.out.println(content);
 		if(null == content){
-			System.out.println("Get the Html content Error!!!");
+			Log.info("Get the Html content Error!!!");
 			return null;
 		}
 		
@@ -474,10 +480,11 @@ public class Baidu {
 	
 	/**
 	 * 从数据库中读取问题List
+	 * @param i 
 	 */
-	public void getQuerysFromDB(){
+	public void getQuerysFromDB(int i){
 		
-		this.keywords = QADBUtil.getQueryListFromDB();
+		this.keywords = QADBUtil.getQueryListFromDB(i);
 	}
 
 

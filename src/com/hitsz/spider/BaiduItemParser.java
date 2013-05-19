@@ -13,7 +13,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.hitsz.dao.Item;
+import com.hitsz.model.Item;
 
 /**
  * 
@@ -22,7 +22,7 @@ import com.hitsz.dao.Item;
  * Create on：2013-5-10 下午9:53:55 
  *
  */
-public class BaiduUtil {
+public class BaiduItemParser {
 	
 	
 	List<Item> itemList = new ArrayList<Item>();
@@ -34,7 +34,7 @@ public class BaiduUtil {
 	public static int count = 0;
 	
 	
-	public BaiduUtil() {
+	public BaiduItemParser() {
 		
 	}
 	
@@ -47,6 +47,9 @@ public class BaiduUtil {
 	}
 	
 	/**
+	 * 
+	 * 每个item结构大致如下：
+	 * 解析每个网页的item-result存入到一个list中
 	 * <dl class="result-item"> 
 	 * 		<dt class="result-title" alog-alias="result-title-0">  
 	 * 			<a href="http://zhidao.baidu.com/question/103374317.html" target="_blank" log="si:1"><em>股票</em>是什么???</a> 
@@ -87,14 +90,15 @@ public class BaiduUtil {
 		Elements resultItems = doc.getElementsByAttributeValue("class", "result-item"); 
 		for(Element e :resultItems){
 			Item item = new Item();
+			//下载时间
 			item.setDowndate(downloadTime);
-			
+			//百度的排序id
 			item.setRankid(count++);
-			
+			//名字
 			Element title = e.getElementsByAttributeValue("class", "result-title").first();
-			
+			//
 			item.setTitle(title.text());
-			
+			//问句的link
 			Element url = e.getElementsByTag("a").first();
 			item.setUrl(url.attr("href"));
 			item.setId(getId(item.getUrl()));
@@ -107,7 +111,7 @@ public class BaiduUtil {
 					break;
 				}
 			}
-			
+			//回答日期
 			Element date = e.getElementsByAttributeValue("alog-group", "result-userinfo").first();
 			item.setDate(date.ownText());
 			

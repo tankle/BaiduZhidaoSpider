@@ -84,7 +84,7 @@ public class NetUtil{
         String temp = null;
         StringBuffer sb = new StringBuffer();
         try {
-        	System.out.println("loading the " + htmlurl);
+        	Log.info("loading the: " + htmlurl);
         	
             url = new URL(htmlurl);
             BufferedReader in = new BufferedReader(new InputStreamReader(url
@@ -94,9 +94,9 @@ public class NetUtil{
             }
             in.close();
             
-            System.out.println("loading end ....");
+            Log.info("loading end ....");
         }catch(MalformedURLException me){
-            System.out.println("你输入的URL格式有问题！请仔细输入");
+            Log.info("你输入的URL格式有问题！请仔细输入");
             me.getMessage();
            throw me;
         }catch (IOException e) {

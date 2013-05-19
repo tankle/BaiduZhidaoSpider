@@ -8,8 +8,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.hitsz.dao.BaiduUser;
-import com.hitsz.dao.QA;
+import com.hitsz.model.BaiduUser;
+import com.hitsz.model.QA;
 
 /**
  * 
@@ -18,7 +18,7 @@ import com.hitsz.dao.QA;
  * Create on: 2013-5-14下午9:17:06
  *
  */
-public class BaiduParser {
+public class BaiduPairParser {
 
 	public QA getQA(File input) throws IOException{
 		Document doc = null;

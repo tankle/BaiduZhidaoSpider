@@ -1,4 +1,4 @@
-package com.hitsz.dao;
+package com.hitsz.model;
 
 public class QA {
 

@@ -13,10 +13,9 @@ public class FileUtil {
 	 * @param content
 	 * @param append
 	 */
-	public static void writeFile(String fileName, String content, boolean append){
+	public static void writeFile(String fileName, String content){
 		try {
-			FileWriter fw = new FileWriter(fileName, append);
-			
+			FileWriter fw = new FileWriter(fileName, false);
 			fw.write(content);
 			fw.write("\r\n");
 			fw.close();
