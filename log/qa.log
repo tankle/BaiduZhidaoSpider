@@ -1,523 +1,99 @@
-0    INFO  [2013-05-19 20:02:31] The current time is May 19, 2013 8:02:31 PM
-0    INFO  [2013-05-19 20:50:53] Downloading the pages about "[什么是股票?, 股票行情, 中国最长(姓)氏"爨<邯>汕/寺\武穆云籍鞲"有何含义?]" now !
-37267 INFO  [2013-05-19 20:51:30] sql is roll back update query set finished = 1 where query = '什么是股票?'
-37269 INFO  [2013-05-19 20:51:30] Downloading the pages about "[什么是股票?, 股票行情, 中国最长(姓)氏"爨<邯>汕/寺\武穆云籍鞲"有何含义?]" now !
-0    INFO  [2013-05-19 20:59:39] The current time is May 19, 2013 8:59:39 PM
-0    INFO  [2013-05-19 21:04:31] Downloading the pages about "[股票行情]" now !
-
-0    INFO  [2013-05-19 21:07:53] execute sql select * from query where finished = 0
-5    INFO  [2013-05-19 21:07:53] id is 2 queryid is 0002 query is 股票行情
-8    INFO  [2013-05-19 21:07:53] Downloading the pages about "[股票行情]" now !
-
-33096 INFO  [2013-05-19 21:08:26] execute sql update query set finished = 1 where query = '股票行情'
-0    INFO  [2013-05-19 21:54:28] execute sql:select * from query where finished = 0
-5    INFO  [2013-05-19 21:54:28] id is 2 queryid is 0002 query is 股票行情
-7    INFO  [2013-05-19 21:54:28] parsing the 股票行情's content
-429  INFO  [2013-05-19 21:54:29] execute sql:select `queryid` from `query` where query = "股票行情"
-431  INFO  [2013-05-19 21:54:29] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('541916153',0, '现在股票行情怎样?', '比较弱，化工板块还不错，已基本见底，可适当关注.....', '2013-04-17', 'http://zhidao.baidu.com/question/541916153.html', 'May 19, 2013 9:07:53 PM','0002')
-431  INFO  [2013-05-19 21:54:29] commit ERROR!!! SQL have roll back
-0    INFO  [2013-05-19 22:00:11] execute sql:select * from query where finished = 1
-5    INFO  [2013-05-19 22:00:12] id is 2 queryid is 0002 query is 股票行情
-6    INFO  [2013-05-19 22:00:12] parsing the 股票行情's content
-410  INFO  [2013-05-19 22:00:12] execute sql:select `queryid` from `query` where query = "股票行情"
-412  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('541916153',0, '现在股票行情怎样?', '比较弱，化工板块还不错，已基本见底，可适当关注.....', '2013-04-17', 'http://zhidao.baidu.com/question/541916153.html', 'May 19, 2013 9:07:53 PM','0002')
-479  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('506292308',1, '股票行情主要看什么', '1 量价配合关系：即价升量增概率向上，价升量减上升的概率较校 2大盘趋势：上涨的数量远远大于下跌的数量，大面积涨停。上涨的概率大大增加。 3冲破近期连续的3-4个最高点（关键阻力位），放量向上说明近期见底，很可能有一段向上的机会。 建议60分钟均线改成144 168 186 如果三线相交金叉，短线上升基本确立。', '2012-12-10', 'http://zhidao.baidu.com/question/506292308.html', 'May 19, 2013 9:07:53 PM','0002')
-480  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('513684396',2, '股票行情', '2013肯定比2012好！热点股布局加-昵+称', '2013-01-15', 'http://zhidao.baidu.com/question/513684396.html', 'May 19, 2013 9:07:53 PM','0002')
-480  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('462257577',3, '股票行情', '1、指数是用来表示市场交易状况的； 2、大盘是一个统称。就好比，女人与男人； 3、去证券公司办理开户手续后即可买卖。 谢谢。', '2012-08-10', 'http://zhidao.baidu.com/question/462257577.html', 'May 19, 2013 9:07:53 PM','0002')
-480  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('471676944',4, '股票行情在哪个网站可以查询到?', '最近有一个微信的应用很方便，直接打开微信，关注中金在线官方微信，输入股票简拼、代码或者名称就行了。能查还有大盘指数。很方便，你可以试试', '2013-02-06', 'http://zhidao.baidu.com/question/471676944.html', 'May 19, 2013 9:07:53 PM','0002')
-481  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('529903181',5, '股票行情', '如果跌倒2240-2250一线，是你进场或加仓的好机会，会有一波像样的反弹', '2013-03-06', 'http://zhidao.baidu.com/question/529903181.html', 'May 19, 2013 9:07:53 PM','0002')
-481  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('14370034',6, '怎么看股市行情图?', '－、K线图特点 K线图这种图表源处于日本，被当时日本米市的商人用来记录米市的与价格波动，后因其细腻独到的标画方式而被引入到股市及期货市常目前，这种图表分析法在我国以至整个东南亚地区均尤为流行。由于用这种方法绘制出来的图表形状颇似一根根蜡烛，加上这些蜡烛有黑白之分，因而也叫阴阳线图表。通过K线图，我们能够把每日或某一周...', '2006-10-28', 'http://zhidao.baidu.com/question/14370034.html', 'May 19, 2013 9:07:53 PM','0002')
-492  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('309402763',7, '今年股票行情', '有机会也有陷阱，看自己操作水平', '2011-08-26', 'http://zhidao.baidu.com/question/309402763.html', 'May 19, 2013 9:07:53 PM','0002')
-493  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('513775694',8, '现在股票行情', '现在是反弹 但是也可能是 牛市的开始。做 就是只能做涨不能做跌。还是做现货好。当天都可以买卖，还可以买空。不懂得可以扣偶问，现在做鲁西在线，南方大宗，辽宁亚东 这几个盘子还是很不错的！！！', '2013-01-06', 'http://zhidao.baidu.com/question/513775694.html', 'May 19, 2013 9:07:53 PM','0002')
-493  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('305454405',9, '最好的股票行情软件', '软件一般都那样，好坏之分也不太明显，免费的软件可以考虑一下证券丰股市通，股票信息网推出的这款软件还是不错的，希望能解决你的问题。', '2011-08-19', 'http://zhidao.baidu.com/question/305454405.html', 'May 19, 2013 9:07:53 PM','0002')
-493  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('35110152',10, '怎么阅读股票行情走势图?', '如何看K线图之卖出信号!! 1、十字线 在高价圈出现十字线（开盘收盘等价线），并留下上下影线，其中上影线较长。此情形表示价格经过一段时日后，已涨得相当高，欲振乏力，开始要走下坡，这是明显的卖出信号。 2、覆盖线 连续数天扬升之后，隔日以高盘开出，随后买盘不愿追高，大势持续滑落，收盘价跌至前一日阳线之内。这是超买之后所...', '2007-09-09', 'http://zhidao.baidu.com/question/35110152.html', 'May 19, 2013 9:07:54 PM','0002')
-494  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('425249000',11, '现在股市行情如何', '正在筑底。这个是大的底。有钱进去放段时间应该会有收益。我看好的两个中期投资分享一下：中化岩土，大连热电（不是购买建议哦。）。', '2012-05-18', 'http://zhidao.baidu.com/question/425249000.html', 'May 19, 2013 9:07:54 PM','0002')
-494  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('531631964',12, '目前股市行情好吗?', '1、目前股市好吗：从近期股市的走势来看，略为弱势，但是牛市的格局并未完全被打破，还有待观察后市的演绎才能具体判断。 2、买基金好还是好：如果您是一个风险承受能力较强的投机者，建议购买；如果你是一个稳健型投资者，建议购买指数型基金。', '2013-03-12', 'http://zhidao.baidu.com/question/531631964.html', 'May 19, 2013 9:07:54 PM','0002')
-495  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('497250368',13, '股票行情', '是股票用语，就是指股票交易所内各只股票的涨幅变化以及交易流通情况。希望能够帮到你。', '2012-11-13', 'http://zhidao.baidu.com/question/497250368.html', 'May 19, 2013 9:07:54 PM','0002')
-495  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('548948836',14, '股票行情', '炒股最好用闲钱炒股，这样心态就不容易受到股市的涨跌所打乱，才能保持较好的心态，冷静观察，踏准市场节奏。若将全部资金投入到股市中，甚至去融资炒股，那炒股就变成豪赌，就很难保持有好的心态，继而就会出现追涨杀跌的操作，而踏错节奏。的涨跌是很正常的，这是市场规律，涨多了会下跌调整，同样跌多了也会反弹上升。要努力做到不以涨...', '2013-05-10', 'http://zhidao.baidu.com/question/548948836.html', 'May 19, 2013 9:07:54 PM','0002')
-496  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('99431524',15, '股票 股票行情 股票软件', '主流的 大智慧。 方便快捷。 还有其他的好多。', '2009-05-30', 'http://zhidao.baidu.com/question/99431524.html', 'May 19, 2013 9:07:54 PM','0002')
-496  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('540202369',16, '你们谁有股票行情软件啊?', '万科也是要随大盘进入调整，暂时最好不要买入。中心为广大股民提供股市每个交易日、实时、软件等内容，其中整体概括分类为：个股行情、股票新闻、大盘分析、每日财股、要闻点评、新股情报、大宗交易、行业新闻、个股数据、名家看市、基金动向、股指期货、创业板、B股、权证、中小板、三板、港股、全球股市。...', '2013-04-11', 'http://zhidao.baidu.com/question/540202369.html', 'May 19, 2013 9:07:54 PM','0002')
-496  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('379038593',17, '现在股票行情好吗?', '暂时算一般，一般可以看大盘的涨停股与跌停股，如果超过50只以上涨停，最好没有跌停，则大盘为强势；如果涨停股在10只以内甚至没有涨停股，有很多跌幅超过6%，那大盘就是弱势。你可以通过这些标准进行目测，另外有板块持续走强或这板块热点轮换，这是局部牛市的表现。', '2012-02-15', 'http://zhidao.baidu.com/question/379038593.html', 'May 19, 2013 9:07:54 PM','0002')
-497  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('12008265',18, '中国现在股市行情如何?a', '中国现在股市如何b 中国现在股市如何? 我想买,在现在中国的股市下,我想做长线投资,可以吗? 8 ...', '2006-08-31', 'http://zhidao.baidu.com/question/12008265.html', 'May 19, 2013 9:07:54 PM','0002')
-497  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('440969558',19, '股票行情请推荐下', '现在庄家都在洗盘，今年应该得有机会 因为现在有钱人已经不玩了，现在已经成为穷人的游戏了！ 找到你自己的操盘线，5 10 20 30 这四根均线找到适合你自己的操盘线，按照线上多线下空的原则进行买卖 学会自己分析个股的支持和压力 例如超声电子目前价格13.93，那么这个股的支撑位是12.18,压力位是14.14,目前此股处于庄家洗盘震荡中...', '2012-06-21', 'http://zhidao.baidu.com/question/440969558.html', 'May 19, 2013 9:07:54 PM','0002')
-498  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('539509673',20, '谁知道股票行情如何', '今天的大盘走强太勉强了,靠些冷门的和超跌地参股金融的使指数收阳,看明天吧,能否攻破10日20日均线,不行就回落了.', '2013-04-09', 'http://zhidao.baidu.com/question/539509673.html', 'May 19, 2013 9:07:57 PM','0002')
-498  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('461046828',21, '股市行情?', '股市行情?不需要推建,进我空间去学习吧,会 了你 自己就明白想要什么了... 股市行情? 话语vbht 网上的查询介绍的确...', '2012-08-07', 'http://zhidao.baidu.com/question/461046828.html', 'May 19, 2013 9:07:57 PM','0002')
-499  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('521728307',22, '2013年股市行情如何?', '1、神仙也无法准确预测股市的涨跌，预测股市的涨跌往往是徒劳的。 2、个人意见、仅供参考：中国股市自2007年见顶后下跌了整整五年之久；自2009年反弹高点3478点下跌了整整三年之久。至2012年12月，很多已经跌无可跌，同时也进入了理性投资的范畴。终于迎来了2012年12月至今天的强势反弹。 本人相信这一仍会继续深入发展，目前只有...', '2013-02-01', 'http://zhidao.baidu.com/question/521728307.html', 'May 19, 2013 9:07:57 PM','0002')
-499  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('278676227',23, '最近股票行情怎么样?', '由于欧美的市场上周五大跌，以及B股最近连续大跌导致市场热情极其低落，所以股指最近两个交易日连创新低。但就像之前阐述，当前市场处于阶段性盘底阶段，那么下跌也没有空间，所以股指最终运行出来的是探底之后就会有反弹，结果两个交易日新低均出现谈底锤头线。量能上，下跌时量能不断缩小更是使得做空动能明显不足。而且，最近两个交易日探...', '2011-06-13', 'http://zhidao.baidu.com/question/278676227.html', 'May 19, 2013 9:07:57 PM','0002')
-500  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('551019306',24, '股票行情哪里有?', '烈士暮年，壮心不已', '2013-05-18', 'http://zhidao.baidu.com/question/551019306.html', 'May 19, 2013 9:07:57 PM','0002')
-500  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('437550123',25, '股市行情软件有哪些', '微信就可以查了，不要登录繁琐的电脑了，不要耗费巨额的手机上网流量了，只须关注中金在线官方微信（微信中搜索“中金在线”或扫描如下二维码），发送个股名称或个股代码，1秒即可查询个股最新，轻松便捷省流量。', '2013-01-05', 'http://zhidao.baidu.com/question/437550123.html', 'May 19, 2013 9:07:57 PM','0002')
-501  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('404630662',26, '看股票行情,请问最好用哪个软件?', '对于刚入门的人来说，我觉得软件不是关键，现在的免费软件很多，功能也很全，看足够用了。重要的是多学习。收费软件鱼龙混杂，鱼多龙少。好的收费软件当一个工具用还是可以的，它能缩小你的选股范围，但用的人必须技术很好，软件选出来的股，自己还要会签别。如果完全依赖软件，一方面不能提高自己的炒股水平，另一方面软件是死的，市场是...', '2012-04-02', 'http://zhidao.baidu.com/question/404630662.html', 'May 19, 2013 9:07:57 PM','0002')
-501  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('471794783',27, '请教最近股票行情', '一直不好，反弹之象貌似尚未显现、、、', '2012-08-31', 'http://zhidao.baidu.com/question/471794783.html', 'May 19, 2013 9:07:57 PM','0002')
-501  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('459668594',28, '股票行情在线观看能使用股票行情软件吗?', '软件就是看行情的最好工具，股民就是通过它来了解实时行情的。 这比你看电视了解行情要及时、方便许多。 软件还有普通电视所没有的更多功能，安装后你就会知道的。 祝愉快！', '2012-08-04', 'http://zhidao.baidu.com/question/459668594.html', 'May 19, 2013 9:07:57 PM','0002')
-502  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('523130442',29, '2013股票行情', '找我说，这波没结束，至少到5月才见顶，现在还可以参与！', '2013-02-06', 'http://zhidao.baidu.com/question/523130442.html', 'May 19, 2013 9:07:57 PM','0002')
-502  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('351285470',30, '现在股票行情怎么样', '昨日市场继续震荡下行。上交所中只有63支上涨，865支下跌。截止收盘，沪指报2333.23点，跌27.43点，跌幅1.16%，成交486亿元；深成指报9586.08点，跌222.15点，跌幅2.26%，成交479亿元。 昨日是存准率下调正式执行的第一天，中短期资金利率下行，资金面紧张的局面得到一定的缓解。周一美股小幅上涨1%，但A股明显弱于美股，美股上涨的带动作...', '2011-12-06', 'http://zhidao.baidu.com/question/351285470.html', 'May 19, 2013 9:08:01 PM','0002')
-502  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('444884873',31, '什么软件可以看美国的股票行情', '同花顺软件即可。 依次点‘全球’-‘美股’就可以查看标普成分股、中国概念股、金融、媒体、制造零售股等美国交易市场的。 祝投资顺利！', '2012-06-30', 'http://zhidao.baidu.com/question/444884873.html', 'May 19, 2013 9:08:01 PM','0002')
-503  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('530289215',32, '看股市行情用什么软件??免费的', '1、如果您已经在证券公司开户，可下载证券公司指定的交易软件查看股市。 2、如果您没有开户，可下载免费的“钱龙旗舰版”交易软件查看。钱龙公司是中国最早开发软件的公司。请注意：不要相信其收费项目。', '2013-03-07', 'http://zhidao.baidu.com/question/530289215.html', 'May 19, 2013 9:08:01 PM','0002')
-503  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('373004746',33, '怎样察看股票行情?', 'A股的化国内无数证券公司的软件都可以 常用大智慧,同花顺等 H股 同花顺 全球指数博易软件 美股可以上www.NASDQ.COM不懂英文用谷歌翻译 ...', '2012-02-02', 'http://zhidao.baidu.com/question/373004746.html', 'May 19, 2013 9:08:01 PM','0002')
-504  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('447833806',34, '想学习股票行情的观看!', '在详细的分析视频教程的话，那你就去新浪show平台学习，那里将是展示你才华的好地方。 1. 股市高峰期和低迷期还在新手阶段的你，完全无法预知？新浪SHOW财经版就是专业的财经讲解和交流的平台，让你总是在最优先的时候避免掉你的损失，在最能盈利的时候买入转到更多的钱。 2. 新浪SHOW拥有众多的专家教授，豪华的阵容。空空道人等…都...', '2012-07-09', 'http://zhidao.baidu.com/question/447833806.html', 'May 19, 2013 9:08:01 PM','0002')
-504  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('499522251',35, '怎么阅读股票行情走势图?', '的技术很多狠多，你也不可能研究明白，你其实也不需要，关注下这只与盘面和同行业的反应情况，还有就是这只的阻力支撑走向，量与价位结合起来看 具体的点击我的昵称，看我详细资料的个人简介', '2012-11-20', 'http://zhidao.baidu.com/question/499522251.html', 'May 19, 2013 9:08:01 PM','0002')
-505  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('537005066',36, '股票行情主要看什么', '孤帆远影碧空尽 网址：tieba.baidu.com/WWW.city.IST-ok。de?bbccl007churen1231唯见长江天际流。', '2013-04-01', 'http://zhidao.baidu.com/question/537005066.html', 'May 19, 2013 9:08:01 PM','0002')
-505  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('318406191',37, '股票行情软件哪种最好啊?', '我觉得模拟和实际差距还是很大的 心理状态不同 先试试模拟的也好 不过别以为模拟的赚了就能在真正的股市赚钱咯 要时刻保持冷静噢 祝你成功~', '2011-09-13', 'http://zhidao.baidu.com/question/318406191.html', 'May 19, 2013 9:08:01 PM','0002')
-517  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('472021803',38, '股票行情软件怎么用?是查询股票行情的吗?', '是的，常用的软件有大智慧、同花顺和通达信，都可以免费查看。', '2012-09-05', 'http://zhidao.baidu.com/question/472021803.html', 'May 19, 2013 9:08:01 PM','0002')
-517  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('513425201',39, '2013年的股市行情如何', '今年的股市有一波，但要小心被套，看好药业板块，银行也还不错，金属的差不多吧，只能说这么多', '2013-03-27', 'http://zhidao.baidu.com/question/513425201.html', 'May 19, 2013 9:08:01 PM','0002')
-518  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('456811458',40, '今日股票行情有什么软件可以查询?哪个网站有今日股票行情可以...', '准确，大智慧那些都可以看哈！东方财富网，证券之星网站也可以', '2012-07-28', 'http://zhidao.baidu.com/question/456811458.html', 'May 19, 2013 9:08:04 PM','0002')
-518  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('528116793',41, '最近股票行情怎么样?', '观察一两个月吧，复苏期交易者的心态都很不稳定，一点风吹草动就会立刻离场造成价格下跌。', '2013-02-27', 'http://zhidao.baidu.com/question/528116793.html', 'May 19, 2013 9:08:04 PM','0002')
-518  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('494605591',42, '我想了解我的股票行情。', '可以上网查看，下载个大智慧类似的股票客户端；或者如果你的手机是苹果或android系统的智能机，下载个手机股票软件，都可以轻松查看的。', '2012-11-06', 'http://zhidao.baidu.com/question/494605591.html', 'May 19, 2013 9:08:04 PM','0002')
-519  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('286973188',43, '求一款好的股票行情软件', '很多的. 证券公司都有的 一般都是 通达信的 都是免费下载 你安装之后就可以看了 开户之后就可以登陆账号 交易了. 下载页面,免费的.参考资料 百度是不可以贴地址的.你直接在 百度 搜索"XX证券" 这 四个字,找到 官方网站,下载一个就好了. 百度知道里面很多贴的都是 假地址,你要小心了. XX代表 两个汉字,就是 证券公司 的 名字,比如 银河证券...', '2011-07-15', 'http://zhidao.baidu.com/question/286973188.html', 'May 19, 2013 9:08:04 PM','0002')
-519  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('509072563',44, '求2012年股市行情分析以及2013年股市行情预测~', '2013股市可期 二八定律是在任何一组东西中，最重要的只占约20%，80%是多数却是次要的，因此称二八法则。股市也一样，80%以上的股民赚不到钱，如果你是赚不到钱的那个【加昵称】，带你股市投资稳健增值，短线操作，先赚后付', '2012-12-25', 'http://zhidao.baidu.com/question/509072563.html', 'May 19, 2013 9:08:04 PM','0002')
-519  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('457107132',45, '现在股市行情是什么样子的?', '近期看将会持续下行，中期看没有太大变化，长期看是上升趋势', '2012-07-29', 'http://zhidao.baidu.com/question/457107132.html', 'May 19, 2013 9:08:04 PM','0002')
-520  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('474585436',46, '急求股票行情软件,不知道哪个股票行情软件看股票行情比较好?...', '朋友，这个好多的，免费的比如有：通达信、大智慧、同花顺等等。 这些软件功能都比较齐全，个人建议没必要买付费软件。 软件只是个工具，自己做要多多总结，分析失败的原因，另外多结合MACD、均线、成交量来分析，祝你股市好运！', '2012-09-08', 'http://zhidao.baidu.com/question/474585436.html', 'May 19, 2013 9:08:04 PM','0002')
-520  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('526856251',47, '最好用股票行情软件', '大智慧，我个人比较喜欢，速度快。 预警方面用涨 停小刺客。', '2013-02-22', 'http://zhidao.baidu.com/question/526856251.html', 'May 19, 2013 9:08:04 PM','0002')
-520  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('475334761',48, '股票行情软件哪里有?我想查询今日股票行情,近期股票行情好吗?', '网上多的是啊，大智慧，东方财付通、同花顺等等等等。去官方网站下载。', '2012-09-10', 'http://zhidao.baidu.com/question/475334761.html', 'May 19, 2013 9:08:04 PM','0002')
-521  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('460456912',49, '想要找个能看股票行情的股票软件,不知道有什么品牌的股票行情...', '免费的通达信和同花顺软件都不错，要是花钱买的话就不值当了！免费的软件功能也很强大，自己花心思多研究研究！', '2012-08-06', 'http://zhidao.baidu.com/question/460456912.html', 'May 19, 2013 9:08:04 PM','0002')
-521  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('217298969',50, '股票行情分析软件图', '如何看图？如何识别庄家的行为？请高人来解答！！', '2011-01-19', 'http://zhidao.baidu.com/question/217298969.html', 'May 19, 2013 9:08:08 PM','0002')
-521  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('481049171',51, '现在股市行情怎么样?', '已经见底，是为期3年大牛的开始。 股市是经济的晴雨表，通常会比经济早一些复苏。根据权威机构预测，中国经济在今年第四季度见底，明年呈现缓慢回升，今后的20年的GDP增长率将保持7~8%，仍然是全球最活跃的经济体。 目前的A股，用而行打压来表示不满，希望监管部门减少新股发行，出台鼓励股市发展的政策。政策一旦出来，将迎来久违的红盘！', '2012-09-27', 'http://zhidao.baidu.com/question/481049171.html', 'May 19, 2013 9:08:08 PM','0002')
-521  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('538615783',52, '股票行情是什么啊?你能帮帮我吗?谢谢了', '主力就是指市场上一只里有一个或多个操纵价格的人或机构，以引导市场或股价向某个方向运行如果是上市公司，股东还要承担有时与公司运作没有密切关系的市场风险，其中包括市尝资本市尝金融市场等[1]。当天如果预测你的会上涨，那么先买进，等当天上涨后把手中原来有的卖出就获得了T o的效果。国内沪深A“外围”可以做T o双向...', '2013-04-06', 'http://zhidao.baidu.com/question/538615783.html', 'May 19, 2013 9:08:08 PM','0002')
-522  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('511476706',53, '明年股票行情会怎样?', '先跌后涨…… 跌是因为技术调整需要，涨是因为改革的政策红利释放……', '2012-12-28', 'http://zhidao.baidu.com/question/511476706.html', 'May 19, 2013 9:08:08 PM','0002')
-522  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('467313982',54, '股票行情软件 在今年有哪些牌子?哪个好啊?', '常用的三大品牌有：同花顺、大智慧、通达信。一般券商都有这三种软件。 大智慧的图有点乱，我不喜欢，但是它编辑公式比较强大。 通达信界面比较清爽，喜欢的人不少，运行最稳定。 同花顺软件速度稍微好点，功能方面比较落后，看盘还好。 个人用同花顺，速度优先，其他功能不追求。 以上软件券商都有免费版的，收费版的是由level2或者level...', '2012-08-21', 'http://zhidao.baidu.com/question/467313982.html', 'May 19, 2013 9:08:08 PM','0002')
-522  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('538933920',55, '股民们你们谁有股票行情软件啊?', '目前大盘正在中期调整阶段，如果没有买股票，暂时先不要买。 万科也是要随大盘进入调整，暂时最好不要买入。中心为广大股民提供股市每个交易日、实时、软件等内容，其中整体概括分类为：个股行情、股票新闻、大盘分析、每日财股、要闻点评、新股情报、大宗交易、行业新闻、个股数据、名家看市、基金动向、股...', '2013-04-07', 'http://zhidao.baidu.com/question/538933920.html', 'May 19, 2013 9:08:08 PM','0002')
-523  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('489984012',56, '股票行情走势', '是股票用语，指股票交易所内各只股票的涨幅变化及交易流通情况。走势也就是股价运行的路线，用于预测股价将来可能运行的方向。希望可以帮到您 。', '2012-10-24', 'http://zhidao.baidu.com/question/489984012.html', 'May 19, 2013 9:08:08 PM','0002')
-523  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('493586793',57, '手机看股票行情用免费软件好呢?', '推荐招商证券的手机软件，支持苹果，android和塞班系统，即使不是它的客户也可以使用。但是非客户只能看，不能交易。', '2012-11-03', 'http://zhidao.baidu.com/question/493586793.html', 'May 19, 2013 9:08:08 PM','0002')
-523  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('458494206',58, '股票行情是不是使用股票分析软件就能看的比较准确?什么股票行...', '必须打好功底，有研判市场趋势的能力，会选择板块和公司，买卖时间把握好。平常心做到了，参看软件研判。', '2012-08-01', 'http://zhidao.baidu.com/question/458494206.html', 'May 19, 2013 9:08:08 PM','0002')
-523  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('537849817',59, '股民们你们谁有股票行情软件啊?', '软件也可称为是证券行情决策分析系统，它是在普通行情软件的基本功能整加了一些特定的功能，如一些分析大盘的指标、公式，新闻资讯，预警系统，选股系统，盘后分析，信息实时发布系统，研究报告，赢富数据等。中心为广大股民提供股市每个交易日、实时、软件等内容，其中整体概括分类为：个股行情、股...', '2013-04-03', 'http://zhidao.baidu.com/question/537849817.html', 'May 19, 2013 9:08:08 PM','0002')
-524  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('538628196',60, '谈股论金股票行情网有吗?', '中国经济的增长随着宏观调控的变迁有一定的周期性，货币政策始终在稳姜—从紧——宽松——稳健（从紧）——稳健（宽松）中间轮回。是股份公司在筹集资本时向出资人公开或私下发行的、用以证明出资人的股本身份和权利，并根据持有人所持有的股份数享有权益和承担义务的凭证。是一种有价证券，代表着其持有人（股东）对股份公司的所有权，每一...', '2013-04-06', 'http://zhidao.baidu.com/question/538628196.html', 'May 19, 2013 9:08:11 PM','0002')
-524  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('98520409',61, '和讯网股票行情', '和讯股票:提供全方位24小时全球、原创证券资讯、动态播报、资金流向、港股、美股、股票要闻、主力动向、上市公司、创业板、股票推荐。 和讯网：', '2009-05-24', 'http://zhidao.baidu.com/question/98520409.html', 'May 19, 2013 9:08:11 PM','0002')
-524  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('439316969',62, '什么网站能在线看股市行情', '百度知道 > 商业/理财 > 什么网站能在线看股市 youshuixinnn 我来帮他解答 满意 新浪,...', '2012-06-18', 'http://zhidao.baidu.com/question/439316969.html', 'May 19, 2013 9:08:11 PM','0002')
-525  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('509806941',63, '股票行情软件在哪里下载?我想知道近期的股票行情如何。', '安信证券 广发证券 广州证券 等等 他们官网上都有软件下载.', '2012-12-22', 'http://zhidao.baidu.com/question/509806941.html', 'May 19, 2013 9:08:11 PM','0002')
-525  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('435341718',64, '最近股市行情怎么样?', '看多就行了', '2012-06-09', 'http://zhidao.baidu.com/question/435341718.html', 'May 19, 2013 9:08:11 PM','0002')
-525  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('471906110',65, '股票行情哪个股票行情软件来看比较好?大家给介绍一款比较好的...', '你好，比较好的有。通达信，大智慧。你可以选择一些操作简单些的。即可。 用熟练了其实都一样的。', '2012-09-01', 'http://zhidao.baidu.com/question/471906110.html', 'May 19, 2013 9:08:11 PM','0002')
-526  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('544769276',66, '近期股市行情还有希望么?', '从大盘来看，月线上涨压力巨大，想要在未来几个月内突破3396很要难度，需要下降回调至1664.93.今日来看是重整阶段，短期之内上涨一点还是有希望的，但是不容乐观。等抄底吧！', '2013-04-26', 'http://zhidao.baidu.com/question/544769276.html', 'May 19, 2013 9:08:11 PM','0002')
-526  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('542539329',67, '最近中国的股市行情怎么样?', '2012年分十次阐述房地产泡沫将破灭，2013年开跌的观点； 2012年8月提示金银可以做多一波，国庆前提示节后高抛做空，金银走熊，油价选择方向； 2012年10月多次发博文提示股市历史性底部机会，砸锅卖铁抄底，与祖国经济共命运。 股市却迎来近几年最后一次砸锅卖铁低位买股机会，靠胆识和智慧去投资，当然这些都需要相对稳定的政治经济环境。', '2013-04-30', 'http://zhidao.baidu.com/question/542539329.html', 'May 19, 2013 9:08:11 PM','0002')
-526  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('181607001',68, '股票行情分析交易软件哪款最好用?', '说破大天，股市中的软件无非就是以下4种： 通达信、大智慧、同花顺、钱龙。(都是免费的) 其中通达信、大智慧比较普及一些。可以提供一般的、交易功能。下载方法，也很简单，就是到自己开户的证券公司去下载，里面都有。 大智慧又分大智慧经典版好大智慧L2（也叫大智慧新一代、大智慧level2）。大智慧L2付费以后的功能可以查询主力资金...', '2010-09-06', 'http://zhidao.baidu.com/question/181607001.html', 'May 19, 2013 9:08:11 PM','0002')
-527  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('446377044',69, '中石油在今年股票行情如何?', '法国思想家卢梭曾经说过这样一句名言：“人之所以犯错误，不是因为他们不懂，而是因为他们自以为什么都懂。”现在的散户大多数都是凭着自己个人的经验和技术，自以为什么都懂的心态去盲目的投资，这样不科学的做法，只会让你的资金越陷越深。炒股不仅要凭个人经验和技术，更注重的是它信息来源的前卫性和准确性。本公司拥有优秀的技术团队和...', '2012-07-04', 'http://zhidao.baidu.com/question/446377044.html', 'May 19, 2013 9:08:11 PM','0002')
-527  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('538934097',70, 'tcl股票行情行好吗?还能跌吗?能都上哪个平台啊?', '应该是10年1.26号非公开增发的，增发价格是16.8 不过这中间已经有多次除权除息，所以这个你要计算进去，或者是原始股，可以在市场上随时转让，进行买卖，也可以继承、赠与、抵押，但不能退股。所以，亦是一种具有颇强流通性的流动资产。无记名的转让只要把交付会给受让人，即可达到转让的法律效果;记名转让则要在卖出...', '2013-04-07', 'http://zhidao.baidu.com/question/538934097.html', 'May 19, 2013 9:08:15 PM','0002')
-527  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('469234552',71, '谁能预计股票行情什么时候能好起来?有依据吗?', '最近都是无量下跌，说明大家都没有在卖了，在一个有部分版块的在大盘下跌的时候开始走强，这个一般是底部的特点，你可以多关注一下 ，但最主要的还是看有没有大的经济政策要是有的话，那这个也会更加快的推动大盘走强', '2012-08-25', 'http://zhidao.baidu.com/question/469234552.html', 'May 19, 2013 9:08:15 PM','0002')
-528  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('520304912',72, '股票行情软件----指数问题', '深证综指与深证成指有什么区别? 股价指数是运用统计学中的指数方法编制而成的，反映股市总体价格或某类股价变动和走势的指标。根据股价指数反映的价格走势所涵盖的范围，可以将股价指数划分为反映整个市场走势的综合性指数和反映某一行业或某一类价格走势的分类指数。 深证综合指数，是深圳证券交易所编制的，以深圳证券交易所挂牌上市的...', '2013-01-27', 'http://zhidao.baidu.com/question/520304912.html', 'May 19, 2013 9:08:15 PM','0002')
-528  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('475448873',73, '股票行情软件在哪里下载?我想查询今日股票行情!', '骗人用的 百度一下炒股软件骗人 百度一下麟龙软件骗人', '2012-09-11', 'http://zhidao.baidu.com/question/475448873.html', 'May 19, 2013 9:08:15 PM','0002')
-528  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('521374678',74, '2013年2月份哪只股票行情好', '建议关注6001633的再次介入机会，属汽车板块的绩优股。该股长周期均线支撑有力，后市仍有空间，可伺机介入，看长做短，波段操作。', '2013-01-30', 'http://zhidao.baidu.com/question/521374678.html', 'May 19, 2013 9:08:15 PM','0002')
-529  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('529601734',75, '明天的股票行情', '1、楼上几人的回答您满意吗？ 2、所有成功的投资大师均告诫我们：世界上没有人能够准确预测股市的涨跌。 3、操作不是一门简单的工作，靠着空想和预测是永远不能成功的。只有掌握了正确的投资理念的人，才是未来股市的风云人物。', '2013-03-05', 'http://zhidao.baidu.com/question/529601734.html', 'May 19, 2013 9:08:15 PM','0002')
-529  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('525042142',76, '台湾股票行情软件有免费的吗?如果有,在哪里下得到?', '国内券商提供的软件倒是可以看港股。可以看台湾倒没见过。 境外、欧美国家就是这样，不是客户不让用。不像国内的都可以免费用。 能看台湾的软件，免费且完全开放的电脑版软件，没有。如果你开了户，可以向券商索龋 谷歌台湾的财经频道可以看台股，但延时15分钟。', '2013-02-16', 'http://zhidao.baidu.com/question/525042142.html', 'May 19, 2013 9:08:15 PM','0002')
-529  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('476944799',77, '股票行情软件,哪个股票行情软件看股票行情更新的数据比较准确...', '只要是正规的软件数据都是准确的，关键是看接收的速度是否快。你可以比对一下你所拥有的各个软件的数据接收的快慢，以决定使用那款软件作为即时看盘软件。', '2012-09-14', 'http://zhidao.baidu.com/question/476944799.html', 'May 19, 2013 9:08:15 PM','0002')
-530  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('466231541',78, '今年股市行情怎么样?', '股市航行还是不太看好 刚刚大盘又跌破2100 真的有点像无底洞的概念了 下半年的还是看跌为主 因为每年都是如此 上半年涨 下半年跌 到春节那会就更不用说了 钱都拿出来了 股市 是公认的不景气了 如果想投资 不妨考虑下黄金白银', '2012-08-20', 'http://zhidao.baidu.com/question/466231541.html', 'May 19, 2013 9:08:15 PM','0002')
-530  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('472039496',79, '股票行情软件在哪下载?我想但询今日股票行情,急用!', '楼主您好！ 今天是礼拜六，不开市的，软件就那些，大智慧同花顺操盘手等等，百度一下就可以找到。如果您是需要具体历史数据做研究的话，可能需花钱买一些数据，少量的数据可以留言，可以帮你', '2012-09-01', 'http://zhidao.baidu.com/question/472039496.html', 'May 19, 2013 9:08:15 PM','0002')
-530  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('471533583',80, '股票行情查询哪个股票软件比较好?我想要了解哪个网站有比较好...', '这个软件对于新手都是一样的。对于老手来说就会有自己的喜好。因为老手有了一定的技术基础，所以他们会选用自己熟悉的软件。 现在用的多的有大智慧，同花顺软件。你可以在网上搜搜 。 至于收费的软件新手不建议用，因为用收费低端的软件没有什么作用，高端的费用太高，而且即便是软件选出来了也选择不好进场点和出场点。一天选出个3到...', '2012-09-02', 'http://zhidao.baidu.com/question/471533583.html', 'May 19, 2013 9:08:19 PM','0002')
-531  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('515961923',81, '股票行情查询在那些软件上可以查询', '基本上软件都可以看！你应该是新手吧，多看少动，多学习，交+流+昵称', '2013-01-15', 'http://zhidao.baidu.com/question/515961923.html', 'May 19, 2013 9:08:19 PM','0002')
-531  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('459865911',82, '股票行情软件谁能给我推荐一个?哪个品牌的比较权威?最好这个...', '免费软件有大智慧/通达信/钱龙/同花顺/东方财富等，别人说好的不一定适合你，你可以百度一下，在软件的官网下载比较一下看那款软件适合你。各个软件各有侧重，谈不上那个权威，数据都是一样的，关键看谁的数据接收快，系统稳定。CCTV证券咨询上有你想看的内容。', '2012-08-04', 'http://zhidao.baidu.com/question/459865911.html', 'May 19, 2013 9:08:19 PM','0002')
-531  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('521099132',83, '通化天马绿色饮品股票行情(知情人进)', '知识市场的市场深发展A（000001），万科A（000002）ST国农（000004）ST兴源（000005）深振业A（000006），ST大盛（000007） 分享知识市场的市场/ >知识市场<a href="http://gupiaozhishihangqing.blogcn.com/dia??rypage.shtml" http://gupiaozhishihangqing.blogcn.com/dia??rypage.shtml * ST宝的知识市场的市场投资（0000...', '2013-02-06', 'http://zhidao.baidu.com/question/521099132.html', 'May 19, 2013 9:08:19 PM','0002')
-532  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('519568083',84, '2013年股票行情咋样呢?', '比较确定的板块有，医药，电子信息，城镇化，节能环保。银行总股本太大，不适合中小投资者，个别的股份制银行可以。金属必须是稀缺的，1899很一般。只能看一季度可以。 希望对你有帮助', '2013-01-24', 'http://zhidao.baidu.com/question/519568083.html', 'May 19, 2013 9:08:19 PM','0002')
-532  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('472638813',85, '股票行情查询,什么股票行情软件能查询到最新的股票行情?求一...', '每一款软件都能及时更新最新的交易，相隔时间不会超过五秒，难道你使用的是外星人制造的软件？呵呵。', '2012-09-03', 'http://zhidao.baidu.com/question/472638813.html', 'May 19, 2013 9:08:19 PM','0002')
-532  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('434681099',86, '怎么写股票行情分析', '先看市场，哪方面向好，那种版块的就会好，但也不绝对，接着是公司业绩，公司的业绩好对于庄家拉盘的可能性就高，而且不会轻易的可以拉高出货，然后是公司的消息，公司重组、公司融资什么的都是好消息，弄不好就是几个涨停，会看K线是必须的，买时不要看到它涨了就赶紧买进，要看看形式再说不要操之过急注意低买高卖。', '2012-06-07', 'http://zhidao.baidu.com/question/434681099.html', 'May 19, 2013 9:08:19 PM','0002')
-533  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('459423488',87, '查询股市行情', '你问的意思是,股市,是分析出来的?那还不如加到Q群里面听一些分析,有... 任何软件,都可解决您的问题! 0 | 评论 3 分钟前 liuyu616511398 ...', '2012-08-03', 'http://zhidao.baidu.com/question/459423488.html', 'May 19, 2013 9:08:19 PM','0002')
-533  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('467138762',88, '2011年上半年股票行情怎么样', '是波段挺好，走了一波但不是牛市只是一波，政策面是一部分原因，主要原因还是因为现在的经济很不景气，现在很多企业效益都开始下滑经营惨淡高房价高物价，实体经济产能过剩泡沫过大，所以今年的不会很好，最多走个波段，现在想进也可以找个好长期持有就行了', '2012-08-21', 'http://zhidao.baidu.com/question/467138762.html', 'May 19, 2013 9:08:19 PM','0002')
-533  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('475413839',89, '听说股票行情不好,股票有行业之分吗?股票在哪里查询?', '近期正在筑底，当然有行业之分，可以在财经类网站查询，也可以在下载的交易软件内查询公司详情', '2012-09-10', 'http://zhidao.baidu.com/question/475413839.html', 'May 19, 2013 9:08:19 PM','0002')
-534  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('468171119',90, '现在买什么股票好呢?股市行情是什么样的?', '大盘还没跌到位，空仓最好。等跌破2000点在选择业绩预增，盘小中价买入比较好。', '2012-08-23', 'http://zhidao.baidu.com/question/468171119.html', 'May 19, 2013 9:08:23 PM','0002')
-534  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('470264288',91, '现在炒股票怎么样?我想知道今日股市行情!', '现在的相对来说，还是不错的，但机会主要集中在一般个股上面，今天大盘走红的概率要大一些，你可以关注一些业绩相对比较好的', '2012-08-28', 'http://zhidao.baidu.com/question/470264288.html', 'May 19, 2013 9:08:23 PM','0002')
-534  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('476892538',92, '听说股票行情不好,中金黄金股票行情如何?哪个网站能查到股票...', '下载个软件就行了。。。。。。什么的趋势都有了。。。。。', '2012-09-14', 'http://zhidao.baidu.com/question/476892538.html', 'May 19, 2013 9:08:23 PM','0002')
-535  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('473737384',93, '现在股票行情好不好?炒股票行不行?', '你好， 你的问题非常好！ 第一，俗话说，没有只涨不跌的市场也没有只跌不涨的市场； 第二，当下市场的大幅下跌，其实已将风险充分释放，所以现在是入场的一个时机； 第三，至于做投资，需要你具备很多的知识和操作技术。只有这样，你才能保持少赔多赚； 祝投资顺利。', '2012-09-06', 'http://zhidao.baidu.com/question/473737384.html', 'May 19, 2013 9:08:23 PM','0002')
-535  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('514623003',94, '谁知道最近有什么好的股票给推荐下?股市行情这么好,是否可以做点', '你好，国内的股市现在不好做。交易时间每天才4小时，而且开盘时间都是在上班时间，有时候会无暇顾及，今天买入到明天才能卖出，跌了就真的亏了，而黄金做空是可以赚钱的^_^如果你有资金想做投资的话建议可以做黄金、外汇、白银。^_^ 品种发展比较稳定，可以设止损止盈，仓位可控。 24小时交易 T+0交易，即买即卖 保证金交易（以小博大，投资成...', '2013-01-08', 'http://zhidao.baidu.com/question/514623003.html', 'May 19, 2013 9:08:23 PM','0002')
-535  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('438075512',95, '股票行情最近怎么样,可以买吗?', '近几年都不是很好，套了不少股民包括一些老股民。我认识的一些老股民朋友资金都被套了。 大盘股票几千只，不要说新手就是老股民都很难选择，说实话当选择太多的时候不如没选择。而且股市的影响因素又比较复杂，除了大盘影响外，个股的因素也极多，还要看上市公司业绩。有很多公司做假账，垃圾股票非常多，很难识别，尤其是对新手来说...', '2012-06-15', 'http://zhidao.baidu.com/question/438075512.html', 'May 19, 2013 9:08:23 PM','0002')
-536  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('496333723',96, '请问怎么看到美国股票行情?', '偶尔看看美国股指，跟中国股市关联不大，至于美国的市场个股没关注过，不清楚哪里可以看到，很多人通过外汇保证金交易软件可以看，还有博弈期货软件据说可以，没考证。', '2012-11-10', 'http://zhidao.baidu.com/question/496333723.html', 'May 19, 2013 9:08:23 PM','0002')
-536  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('453379407',97, '今日股票行情啥股票软件看的比较明了?大家都在用什么股票分析...', '同花顺', '2012-07-20', 'http://zhidao.baidu.com/question/453379407.html', 'May 19, 2013 9:08:23 PM','0002')
-536  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('455934363',98, '今日股票行情大家都是通过什么来看的?是通过股票行情分析软件...', '你上财经网站看吧，软件毕竟智能的，没有感情色彩，没法看大众看法，多看时事政治，很有帮助的...', '2012-07-26', 'http://zhidao.baidu.com/question/455934363.html', 'May 19, 2013 9:08:23 PM','0002')
-537  INFO  [2013-05-19 22:00:12] execute sql:INSERT INTO `qapair_resultlist` (`qid` , `rankid` , `title` , `answer` , `answer_time` , `link` , `querytime` ,`queryid`) VALUES ('457620734',99, '现在什么股票软件是最好的股票软件?哪个网站能下载到?我想要...', '不要相信那些收费的就可以了 收费炒股软件和会员 分成 都是骗人的 他们骗人的方式无非就是每个管理员控制2到3个群，同时会注册十几个个号码去群里当托，天天在群里自问自答，那些交割和转账单都是假的，每天在群里推荐的其实都是当天9点15分才出现的集合竞价的票，如果哪一支涨了 就立马吹嘘一下 马上做个假的交割单 说是用户提前建仓...', '2012-07-30', 'http://zhidao.baidu.com/question/457620734.html', 'May 19, 2013 9:08:23 PM','0002')
-0    INFO  [2013-05-19 22:37:31] execute sql :select link from `qapair_resultlist` where finished = 0
-14   INFO  [2013-05-19 22:37:31] loading the: http://zhidao.baidu.com/question/541916153.html
-441  INFO  [2013-05-19 22:37:31] loading end ....
-443  INFO  [2013-05-19 22:37:31] Save file:resource/qapair/541916153.html
-468  INFO  [2013-05-19 22:37:31] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/541916153.html'
-3526 INFO  [2013-05-19 22:37:34] loading the: http://zhidao.baidu.com/question/506292308.html
-3904 INFO  [2013-05-19 22:37:35] loading end ....
-3914 INFO  [2013-05-19 22:37:35] Save file:resource/qapair/506292308.html
-3953 INFO  [2013-05-19 22:37:35] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/506292308.html'
-6985 INFO  [2013-05-19 22:37:38] loading the: http://zhidao.baidu.com/question/513684396.html
-7365 INFO  [2013-05-19 22:37:38] loading end ....
-7366 INFO  [2013-05-19 22:37:38] Save file:resource/qapair/513684396.html
-7394 INFO  [2013-05-19 22:37:38] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/513684396.html'
-10470 INFO  [2013-05-19 22:37:41] loading the: http://zhidao.baidu.com/question/462257577.html
-10922 INFO  [2013-05-19 22:37:42] loading end ....
-10923 INFO  [2013-05-19 22:37:42] Save file:resource/qapair/462257577.html
-10940 INFO  [2013-05-19 22:37:42] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/462257577.html'
-13987 INFO  [2013-05-19 22:37:45] loading the: http://zhidao.baidu.com/question/471676944.html
-14556 INFO  [2013-05-19 22:37:45] loading end ....
-14557 INFO  [2013-05-19 22:37:45] Save file:resource/qapair/471676944.html
-14573 INFO  [2013-05-19 22:37:45] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/471676944.html'
-17605 INFO  [2013-05-19 22:37:48] loading the: http://zhidao.baidu.com/question/529903181.html
-17995 INFO  [2013-05-19 22:37:49] loading end ....
-17996 INFO  [2013-05-19 22:37:49] Save file:resource/qapair/529903181.html
-18026 INFO  [2013-05-19 22:37:49] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/529903181.html'
-21065 INFO  [2013-05-19 22:37:52] loading the: http://zhidao.baidu.com/question/14370034.html
-21545 INFO  [2013-05-19 22:37:52] loading end ....
-21546 INFO  [2013-05-19 22:37:52] Save file:resource/qapair/14370034.html
-21574 INFO  [2013-05-19 22:37:52] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/14370034.html'
-24624 INFO  [2013-05-19 22:37:55] loading the: http://zhidao.baidu.com/question/309402763.html
-25303 INFO  [2013-05-19 22:37:56] loading end ....
-25304 INFO  [2013-05-19 22:37:56] Save file:resource/qapair/309402763.html
-25333 INFO  [2013-05-19 22:37:56] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/309402763.html'
-28376 INFO  [2013-05-19 22:37:59] loading the: http://zhidao.baidu.com/question/513775694.html
-28735 INFO  [2013-05-19 22:38:00] loading end ....
-28736 INFO  [2013-05-19 22:38:00] Save file:resource/qapair/513775694.html
-28761 INFO  [2013-05-19 22:38:00] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/513775694.html'
-31801 INFO  [2013-05-19 22:38:03] loading the: http://zhidao.baidu.com/question/305454405.html
-32341 INFO  [2013-05-19 22:38:03] loading end ....
-32342 INFO  [2013-05-19 22:38:03] Save file:resource/qapair/305454405.html
-32363 INFO  [2013-05-19 22:38:03] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/305454405.html'
-35403 INFO  [2013-05-19 22:38:06] loading the: http://zhidao.baidu.com/question/35110152.html
-35876 INFO  [2013-05-19 22:38:07] loading end ....
-35877 INFO  [2013-05-19 22:38:07] Save file:resource/qapair/35110152.html
-35906 INFO  [2013-05-19 22:38:07] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/35110152.html'
-38962 INFO  [2013-05-19 22:38:10] loading the: http://zhidao.baidu.com/question/425249000.html
-39464 INFO  [2013-05-19 22:38:10] loading end ....
-39465 INFO  [2013-05-19 22:38:10] Save file:resource/qapair/425249000.html
-39477 INFO  [2013-05-19 22:38:10] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/425249000.html'
-42546 INFO  [2013-05-19 22:38:13] loading the: http://zhidao.baidu.com/question/531631964.html
-42879 INFO  [2013-05-19 22:38:14] loading end ....
-42880 INFO  [2013-05-19 22:38:14] Save file:resource/qapair/531631964.html
-42906 INFO  [2013-05-19 22:38:14] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/531631964.html'
-45956 INFO  [2013-05-19 22:38:17] loading the: http://zhidao.baidu.com/question/497250368.html
-46307 INFO  [2013-05-19 22:38:17] loading end ....
-46307 INFO  [2013-05-19 22:38:17] Save file:resource/qapair/497250368.html
-46331 INFO  [2013-05-19 22:38:17] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/497250368.html'
-49382 INFO  [2013-05-19 22:38:20] loading the: http://zhidao.baidu.com/question/548948836.html
-49755 INFO  [2013-05-19 22:38:21] loading end ....
-49756 INFO  [2013-05-19 22:38:21] Save file:resource/qapair/548948836.html
-49772 INFO  [2013-05-19 22:38:21] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/548948836.html'
-52825 INFO  [2013-05-19 22:38:24] loading the: http://zhidao.baidu.com/question/99431524.html
-53311 INFO  [2013-05-19 22:38:24] loading end ....
-53312 INFO  [2013-05-19 22:38:24] Save file:resource/qapair/99431524.html
-53333 INFO  [2013-05-19 22:38:24] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/99431524.html'
-56343 INFO  [2013-05-19 22:38:27] loading the: http://zhidao.baidu.com/question/540202369.html
-56687 INFO  [2013-05-19 22:38:28] loading end ....
-56688 INFO  [2013-05-19 22:38:28] Save file:resource/qapair/540202369.html
-56709 INFO  [2013-05-19 22:38:28] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/540202369.html'
-59752 INFO  [2013-05-19 22:38:31] loading the: http://zhidao.baidu.com/question/379038593.html
-60272 INFO  [2013-05-19 22:38:31] loading end ....
-60273 INFO  [2013-05-19 22:38:31] Save file:resource/qapair/379038593.html
-60292 INFO  [2013-05-19 22:38:31] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/379038593.html'
-63336 INFO  [2013-05-19 22:38:34] loading the: http://zhidao.baidu.com/question/12008265.html
-63783 INFO  [2013-05-19 22:38:35] loading end ....
-63784 INFO  [2013-05-19 22:38:35] Save file:resource/qapair/12008265.html
-63801 INFO  [2013-05-19 22:38:35] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/12008265.html'
-66845 INFO  [2013-05-19 22:38:38] loading the: http://zhidao.baidu.com/question/440969558.html
-67332 INFO  [2013-05-19 22:38:38] loading end ....
-67333 INFO  [2013-05-19 22:38:38] Save file:resource/qapair/440969558.html
-67353 INFO  [2013-05-19 22:38:38] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/440969558.html'
-70405 INFO  [2013-05-19 22:38:41] loading the: http://zhidao.baidu.com/question/539509673.html
-70785 INFO  [2013-05-19 22:38:42] loading end ....
-70786 INFO  [2013-05-19 22:38:42] Save file:resource/qapair/539509673.html
-70810 INFO  [2013-05-19 22:38:42] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/539509673.html'
-73873 INFO  [2013-05-19 22:38:45] loading the: http://zhidao.baidu.com/question/461046828.html
-74252 INFO  [2013-05-19 22:38:45] loading end ....
-74253 INFO  [2013-05-19 22:38:45] Save file:resource/qapair/461046828.html
-74275 INFO  [2013-05-19 22:38:45] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/461046828.html'
-77324 INFO  [2013-05-19 22:38:48] loading the: http://zhidao.baidu.com/question/521728307.html
-77674 INFO  [2013-05-19 22:38:49] loading end ....
-77675 INFO  [2013-05-19 22:38:49] Save file:resource/qapair/521728307.html
-77688 INFO  [2013-05-19 22:38:49] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/521728307.html'
-80750 INFO  [2013-05-19 22:38:52] loading the: http://zhidao.baidu.com/question/278676227.html
-81249 INFO  [2013-05-19 22:38:52] loading end ....
-81250 INFO  [2013-05-19 22:38:52] Save file:resource/qapair/278676227.html
-81273 INFO  [2013-05-19 22:38:52] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/278676227.html'
-84317 INFO  [2013-05-19 22:38:55] loading the: http://zhidao.baidu.com/question/551019306.html
-84680 INFO  [2013-05-19 22:38:56] loading end ....
-84680 INFO  [2013-05-19 22:38:56] Save file:resource/qapair/551019306.html
-84690 INFO  [2013-05-19 22:38:56] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/551019306.html'
-87727 INFO  [2013-05-19 22:38:59] loading the: http://zhidao.baidu.com/question/437550123.html
-88307 INFO  [2013-05-19 22:38:59] loading end ....
-88308 INFO  [2013-05-19 22:38:59] Save file:resource/qapair/437550123.html
-88330 INFO  [2013-05-19 22:38:59] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/437550123.html'
-91370 INFO  [2013-05-19 22:39:02] loading the: http://zhidao.baidu.com/question/404630662.html
-91962 INFO  [2013-05-19 22:39:03] loading end ....
-91963 INFO  [2013-05-19 22:39:03] Save file:resource/qapair/404630662.html
-91979 INFO  [2013-05-19 22:39:03] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/404630662.html'
-95021 INFO  [2013-05-19 22:39:06] loading the: http://zhidao.baidu.com/question/471794783.html
-95457 INFO  [2013-05-19 22:39:06] loading end ....
-95458 INFO  [2013-05-19 22:39:06] Save file:resource/qapair/471794783.html
-95478 INFO  [2013-05-19 22:39:06] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/471794783.html'
-98522 INFO  [2013-05-19 22:39:09] loading the: http://zhidao.baidu.com/question/459668594.html
-99027 INFO  [2013-05-19 22:39:10] loading end ....
-99028 INFO  [2013-05-19 22:39:10] Save file:resource/qapair/459668594.html
-99050 INFO  [2013-05-19 22:39:10] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/459668594.html'
-102089 INFO  [2013-05-19 22:39:13] loading the: http://zhidao.baidu.com/question/523130442.html
-102459 INFO  [2013-05-19 22:39:13] loading end ....
-102459 INFO  [2013-05-19 22:39:13] Save file:resource/qapair/523130442.html
-102485 INFO  [2013-05-19 22:39:13] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/523130442.html'
-105516 INFO  [2013-05-19 22:39:16] loading the: http://zhidao.baidu.com/question/351285470.html
-106195 INFO  [2013-05-19 22:39:17] loading end ....
-106196 INFO  [2013-05-19 22:39:17] Save file:resource/qapair/351285470.html
-106210 INFO  [2013-05-19 22:39:17] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/351285470.html'
-109250 INFO  [2013-05-19 22:39:20] loading the: http://zhidao.baidu.com/question/444884873.html
-109743 INFO  [2013-05-19 22:39:21] loading end ....
-109745 INFO  [2013-05-19 22:39:21] Save file:resource/qapair/444884873.html
-109754 INFO  [2013-05-19 22:39:21] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/444884873.html'
-112885 INFO  [2013-05-19 22:39:24] loading the: http://zhidao.baidu.com/question/530289215.html
-113225 INFO  [2013-05-19 22:39:24] loading end ....
-113226 INFO  [2013-05-19 22:39:24] Save file:resource/qapair/530289215.html
-113245 INFO  [2013-05-19 22:39:24] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/530289215.html'
-116303 INFO  [2013-05-19 22:39:27] loading the: http://zhidao.baidu.com/question/373004746.html
-116741 INFO  [2013-05-19 22:39:28] loading end ....
-116742 INFO  [2013-05-19 22:39:28] Save file:resource/qapair/373004746.html
-116762 INFO  [2013-05-19 22:39:28] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/373004746.html'
-119804 INFO  [2013-05-19 22:39:31] loading the: http://zhidao.baidu.com/question/447833806.html
-120384 INFO  [2013-05-19 22:39:31] loading end ....
-120385 INFO  [2013-05-19 22:39:31] Save file:resource/qapair/447833806.html
-120404 INFO  [2013-05-19 22:39:31] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/447833806.html'
-123447 INFO  [2013-05-19 22:39:34] loading the: http://zhidao.baidu.com/question/499522251.html
-123896 INFO  [2013-05-19 22:39:35] loading end ....
-123897 INFO  [2013-05-19 22:39:35] Save file:resource/qapair/499522251.html
-123916 INFO  [2013-05-19 22:39:35] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/499522251.html'
-126956 INFO  [2013-05-19 22:39:38] loading the: http://zhidao.baidu.com/question/537005066.html
-127311 INFO  [2013-05-19 22:39:38] loading end ....
-127312 INFO  [2013-05-19 22:39:38] Save file:resource/qapair/537005066.html
-127331 INFO  [2013-05-19 22:39:38] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/537005066.html'
-130383 INFO  [2013-05-19 22:39:41] loading the: http://zhidao.baidu.com/question/318406191.html
-131162 INFO  [2013-05-19 22:39:42] loading end ....
-131163 INFO  [2013-05-19 22:39:42] Save file:resource/qapair/318406191.html
-131176 INFO  [2013-05-19 22:39:42] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/318406191.html'
-134234 INFO  [2013-05-19 22:39:45] loading the: http://zhidao.baidu.com/question/472021803.html
-134673 INFO  [2013-05-19 22:39:46] loading end ....
-134674 INFO  [2013-05-19 22:39:46] Save file:resource/qapair/472021803.html
-134682 INFO  [2013-05-19 22:39:46] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/472021803.html'
-137726 INFO  [2013-05-19 22:39:49] loading the: http://zhidao.baidu.com/question/513425201.html
-138087 INFO  [2013-05-19 22:39:49] loading end ....
-138088 INFO  [2013-05-19 22:39:49] Save file:resource/qapair/513425201.html
-138109 INFO  [2013-05-19 22:39:49] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/513425201.html'
-141153 INFO  [2013-05-19 22:39:52] loading the: http://zhidao.baidu.com/question/456811458.html
-141682 INFO  [2013-05-19 22:39:53] loading end ....
-141683 INFO  [2013-05-19 22:39:53] Save file:resource/qapair/456811458.html
-141701 INFO  [2013-05-19 22:39:53] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/456811458.html'
-144753 INFO  [2013-05-19 22:39:56] loading the: http://zhidao.baidu.com/question/528116793.html
-145109 INFO  [2013-05-19 22:39:56] loading end ....
-145110 INFO  [2013-05-19 22:39:56] Save file:resource/qapair/528116793.html
-145126 INFO  [2013-05-19 22:39:56] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/528116793.html'
-148171 INFO  [2013-05-19 22:39:59] loading the: http://zhidao.baidu.com/question/494605591.html
-148546 INFO  [2013-05-19 22:39:59] loading end ....
-148547 INFO  [2013-05-19 22:39:59] Save file:resource/qapair/494605591.html
-148561 INFO  [2013-05-19 22:39:59] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/494605591.html'
-151573 INFO  [2013-05-19 22:40:02] loading the: http://zhidao.baidu.com/question/286973188.html
-152070 INFO  [2013-05-19 22:40:03] loading end ....
-152071 INFO  [2013-05-19 22:40:03] Save file:resource/qapair/286973188.html
-152085 INFO  [2013-05-19 22:40:03] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/286973188.html'
-155123 INFO  [2013-05-19 22:40:06] loading the: http://zhidao.baidu.com/question/509072563.html
-155464 INFO  [2013-05-19 22:40:06] loading end ....
-155465 INFO  [2013-05-19 22:40:06] Save file:resource/qapair/509072563.html
-155479 INFO  [2013-05-19 22:40:06] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/509072563.html'
-158533 INFO  [2013-05-19 22:40:09] loading the: http://zhidao.baidu.com/question/457107132.html
-159056 INFO  [2013-05-19 22:40:10] loading end ....
-159057 INFO  [2013-05-19 22:40:10] Save file:resource/qapair/457107132.html
-159070 INFO  [2013-05-19 22:40:10] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/457107132.html'
-162109 INFO  [2013-05-19 22:40:13] loading the: http://zhidao.baidu.com/question/474585436.html
-162497 INFO  [2013-05-19 22:40:13] loading end ....
-162498 INFO  [2013-05-19 22:40:13] Save file:resource/qapair/474585436.html
-162511 INFO  [2013-05-19 22:40:13] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/474585436.html'
-165585 INFO  [2013-05-19 22:40:16] loading the: http://zhidao.baidu.com/question/526856251.html
-165924 INFO  [2013-05-19 22:40:17] loading end ....
-165925 INFO  [2013-05-19 22:40:17] Save file:resource/qapair/526856251.html
-165936 INFO  [2013-05-19 22:40:17] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/526856251.html'
-168978 INFO  [2013-05-19 22:40:20] loading the: http://zhidao.baidu.com/question/475334761.html
-169313 INFO  [2013-05-19 22:40:20] loading end ....
-169314 INFO  [2013-05-19 22:40:20] Save file:resource/qapair/475334761.html
-169327 INFO  [2013-05-19 22:40:20] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/475334761.html'
-172370 INFO  [2013-05-19 22:40:23] loading the: http://zhidao.baidu.com/question/460456912.html
-172990 INFO  [2013-05-19 22:40:24] loading end ....
-172991 INFO  [2013-05-19 22:40:24] Save file:resource/qapair/460456912.html
-173003 INFO  [2013-05-19 22:40:24] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/460456912.html'
-176055 INFO  [2013-05-19 22:40:27] loading the: http://zhidao.baidu.com/question/217298969.html
-176641 INFO  [2013-05-19 22:40:27] loading end ....
-176642 INFO  [2013-05-19 22:40:27] Save file:resource/qapair/217298969.html
-176651 INFO  [2013-05-19 22:40:27] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/217298969.html'
-179706 INFO  [2013-05-19 22:40:31] loading the: http://zhidao.baidu.com/question/481049171.html
-180102 INFO  [2013-05-19 22:40:31] loading end ....
-180103 INFO  [2013-05-19 22:40:31] Save file:resource/qapair/481049171.html
-180113 INFO  [2013-05-19 22:40:31] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/481049171.html'
-183157 INFO  [2013-05-19 22:40:34] loading the: http://zhidao.baidu.com/question/538615783.html
-183552 INFO  [2013-05-19 22:40:34] loading end ....
-183553 INFO  [2013-05-19 22:40:34] Save file:resource/qapair/538615783.html
-183563 INFO  [2013-05-19 22:40:34] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/538615783.html'
-186608 INFO  [2013-05-19 22:40:37] loading the: http://zhidao.baidu.com/question/511476706.html
-187015 INFO  [2013-05-19 22:40:38] loading end ....
-187016 INFO  [2013-05-19 22:40:38] Save file:resource/qapair/511476706.html
-187026 INFO  [2013-05-19 22:40:38] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/511476706.html'
-190068 INFO  [2013-05-19 22:40:41] loading the: http://zhidao.baidu.com/question/467313982.html
-190612 INFO  [2013-05-19 22:40:41] loading end ....
-190612 INFO  [2013-05-19 22:40:41] Save file:resource/qapair/467313982.html
-190617 INFO  [2013-05-19 22:40:41] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/467313982.html'
-193632 INFO  [2013-05-19 22:40:44] loading the: http://zhidao.baidu.com/question/538933920.html
-194057 INFO  [2013-05-19 22:40:45] loading end ....
-194058 INFO  [2013-05-19 22:40:45] Save file:resource/qapair/538933920.html
-194065 INFO  [2013-05-19 22:40:45] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/538933920.html'
-197237 INFO  [2013-05-19 22:40:48] loading the: http://zhidao.baidu.com/question/489984012.html
-197516 INFO  [2013-05-19 22:40:48] loading end ....
-197517 INFO  [2013-05-19 22:40:48] Save file:resource/qapair/489984012.html
-197527 INFO  [2013-05-19 22:40:48] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/489984012.html'
-200630 INFO  [2013-05-19 22:40:51] loading the: http://zhidao.baidu.com/question/493586793.html
-200999 INFO  [2013-05-19 22:40:52] loading end ....
-201000 INFO  [2013-05-19 22:40:52] Save file:resource/qapair/493586793.html
-201009 INFO  [2013-05-19 22:40:52] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/493586793.html'
-204056 INFO  [2013-05-19 22:40:55] loading the: http://zhidao.baidu.com/question/458494206.html
-204550 INFO  [2013-05-19 22:40:55] loading end ....
-204551 INFO  [2013-05-19 22:40:55] Save file:resource/qapair/458494206.html
-204562 INFO  [2013-05-19 22:40:55] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/458494206.html'
-207607 INFO  [2013-05-19 22:40:58] loading the: http://zhidao.baidu.com/question/537849817.html
-207960 INFO  [2013-05-19 22:40:59] loading end ....
-207962 INFO  [2013-05-19 22:40:59] Save file:resource/qapair/537849817.html
-207980 INFO  [2013-05-19 22:40:59] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/537849817.html'
-211024 INFO  [2013-05-19 22:41:02] loading the: http://zhidao.baidu.com/question/538628196.html
-211385 INFO  [2013-05-19 22:41:02] loading end ....
-211386 INFO  [2013-05-19 22:41:02] Save file:resource/qapair/538628196.html
-211391 INFO  [2013-05-19 22:41:02] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/538628196.html'
-214426 INFO  [2013-05-19 22:41:05] loading the: http://zhidao.baidu.com/question/98520409.html
-214901 INFO  [2013-05-19 22:41:06] loading end ....
-214901 INFO  [2013-05-19 22:41:06] Save file:resource/qapair/98520409.html
-214911 INFO  [2013-05-19 22:41:06] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/98520409.html'
-217960 INFO  [2013-05-19 22:41:09] loading the: http://zhidao.baidu.com/question/439316969.html
-218481 INFO  [2013-05-19 22:41:09] loading end ....
-218482 INFO  [2013-05-19 22:41:09] Save file:resource/qapair/439316969.html
-218491 INFO  [2013-05-19 22:41:09] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/439316969.html'
-221545 INFO  [2013-05-19 22:41:12] loading the: http://zhidao.baidu.com/question/509806941.html
-221988 INFO  [2013-05-19 22:41:13] loading end ....
-221989 INFO  [2013-05-19 22:41:13] Save file:resource/qapair/509806941.html
-221997 INFO  [2013-05-19 22:41:13] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/509806941.html'
-225029 INFO  [2013-05-19 22:41:16] loading the: http://zhidao.baidu.com/question/435341718.html
-225530 INFO  [2013-05-19 22:41:16] loading end ....
-225530 INFO  [2013-05-19 22:41:16] Save file:resource/qapair/435341718.html
-225536 INFO  [2013-05-19 22:41:16] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/435341718.html'
-228597 INFO  [2013-05-19 22:41:19] loading the: http://zhidao.baidu.com/question/471906110.html
-229102 INFO  [2013-05-19 22:41:20] loading end ....
-229103 INFO  [2013-05-19 22:41:20] Save file:resource/qapair/471906110.html
-229113 INFO  [2013-05-19 22:41:20] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/471906110.html'
-232157 INFO  [2013-05-19 22:41:23] loading the: http://zhidao.baidu.com/question/544769276.html
-232439 INFO  [2013-05-19 22:41:23] loading end ....
-232444 INFO  [2013-05-19 22:41:23] Save file:resource/qapair/544769276.html
-232455 INFO  [2013-05-19 22:41:23] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/544769276.html'
-235467 INFO  [2013-05-19 22:41:26] loading the: http://zhidao.baidu.com/question/542539329.html
-235809 INFO  [2013-05-19 22:41:27] loading end ....
-235810 INFO  [2013-05-19 22:41:27] Save file:resource/qapair/542539329.html
-235820 INFO  [2013-05-19 22:41:27] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/542539329.html'
-238867 INFO  [2013-05-19 22:41:30] loading the: http://zhidao.baidu.com/question/181607001.html
-239430 INFO  [2013-05-19 22:41:30] loading end ....
-239431 INFO  [2013-05-19 22:41:30] Save file:resource/qapair/181607001.html
-239441 INFO  [2013-05-19 22:41:30] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/181607001.html'
-242484 INFO  [2013-05-19 22:41:33] loading the: http://zhidao.baidu.com/question/446377044.html
-242917 INFO  [2013-05-19 22:41:34] loading end ....
-242919 INFO  [2013-05-19 22:41:34] Save file:resource/qapair/446377044.html
-242929 INFO  [2013-05-19 22:41:34] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/446377044.html'
-245961 INFO  [2013-05-19 22:41:37] loading the: http://zhidao.baidu.com/question/538934097.html
-246289 INFO  [2013-05-19 22:41:37] loading end ....
-246290 INFO  [2013-05-19 22:41:37] Save file:resource/qapair/538934097.html
-246300 INFO  [2013-05-19 22:41:37] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/538934097.html'
-249336 INFO  [2013-05-19 22:41:40] loading the: http://zhidao.baidu.com/question/469234552.html
-249813 INFO  [2013-05-19 22:41:41] loading end ....
-249813 INFO  [2013-05-19 22:41:41] Save file:resource/qapair/469234552.html
-249821 INFO  [2013-05-19 22:41:41] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/469234552.html'
-252871 INFO  [2013-05-19 22:41:44] loading the: http://zhidao.baidu.com/question/520304912.html
-253143 INFO  [2013-05-19 22:41:44] loading end ....
-253144 INFO  [2013-05-19 22:41:44] Save file:resource/qapair/520304912.html
-253153 INFO  [2013-05-19 22:41:44] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/520304912.html'
-256189 INFO  [2013-05-19 22:41:47] loading the: http://zhidao.baidu.com/question/475448873.html
-256549 INFO  [2013-05-19 22:41:47] loading end ....
-256551 INFO  [2013-05-19 22:41:47] Save file:resource/qapair/475448873.html
-256562 INFO  [2013-05-19 22:41:47] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/475448873.html'
-259607 INFO  [2013-05-19 22:41:50] loading the: http://zhidao.baidu.com/question/521374678.html
-259977 INFO  [2013-05-19 22:41:51] loading end ....
-259979 INFO  [2013-05-19 22:41:51] Save file:resource/qapair/521374678.html
-259989 INFO  [2013-05-19 22:41:51] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/521374678.html'
-263033 INFO  [2013-05-19 22:41:54] loading the: http://zhidao.baidu.com/question/529601734.html
-263401 INFO  [2013-05-19 22:41:54] loading end ....
-263401 INFO  [2013-05-19 22:41:54] Save file:resource/qapair/529601734.html
-263406 INFO  [2013-05-19 22:41:54] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/529601734.html'
-266442 INFO  [2013-05-19 22:41:57] loading the: http://zhidao.baidu.com/question/525042142.html
-266781 INFO  [2013-05-19 22:41:58] loading end ....
-266782 INFO  [2013-05-19 22:41:58] Save file:resource/qapair/525042142.html
-266792 INFO  [2013-05-19 22:41:58] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/525042142.html'
-269835 INFO  [2013-05-19 22:42:01] loading the: http://zhidao.baidu.com/question/476944799.html
-270189 INFO  [2013-05-19 22:42:01] loading end ....
-270190 INFO  [2013-05-19 22:42:01] Save file:resource/qapair/476944799.html
-270199 INFO  [2013-05-19 22:42:01] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/476944799.html'
-273235 INFO  [2013-05-19 22:42:04] loading the: http://zhidao.baidu.com/question/466231541.html
-273723 INFO  [2013-05-19 22:42:05] loading end ....
-273724 INFO  [2013-05-19 22:42:05] Save file:resource/qapair/466231541.html
-273732 INFO  [2013-05-19 22:42:05] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/466231541.html'
-276770 INFO  [2013-05-19 22:42:08] loading the: http://zhidao.baidu.com/question/472039496.html
-277264 INFO  [2013-05-19 22:42:08] loading end ....
-277265 INFO  [2013-05-19 22:42:08] Save file:resource/qapair/472039496.html
-277273 INFO  [2013-05-19 22:42:08] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/472039496.html'
-280321 INFO  [2013-05-19 22:42:11] loading the: http://zhidao.baidu.com/question/471533583.html
-280848 INFO  [2013-05-19 22:42:12] loading end ....
-280849 INFO  [2013-05-19 22:42:12] Save file:resource/qapair/471533583.html
-280854 INFO  [2013-05-19 22:42:12] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/471533583.html'
-283889 INFO  [2013-05-19 22:42:15] loading the: http://zhidao.baidu.com/question/515961923.html
-284177 INFO  [2013-05-19 22:42:15] loading end ....
-284178 INFO  [2013-05-19 22:42:15] Save file:resource/qapair/515961923.html
-284187 INFO  [2013-05-19 22:42:15] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/515961923.html'
-287223 INFO  [2013-05-19 22:42:18] loading the: http://zhidao.baidu.com/question/459865911.html
-287736 INFO  [2013-05-19 22:42:19] loading end ....
-287737 INFO  [2013-05-19 22:42:19] Save file:resource/qapair/459865911.html
-287746 INFO  [2013-05-19 22:42:19] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/459865911.html'
-290774 INFO  [2013-05-19 22:42:22] loading the: http://zhidao.baidu.com/question/521099132.html
-291100 INFO  [2013-05-19 22:42:22] loading end ....
-291101 INFO  [2013-05-19 22:42:22] Save file:resource/qapair/521099132.html
-291106 INFO  [2013-05-19 22:42:22] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/521099132.html'
-294142 INFO  [2013-05-19 22:42:25] loading the: http://zhidao.baidu.com/question/519568083.html
-294473 INFO  [2013-05-19 22:42:25] loading end ....
-294474 INFO  [2013-05-19 22:42:25] Save file:resource/qapair/519568083.html
-294484 INFO  [2013-05-19 22:42:25] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/519568083.html'
-297489 INFO  [2013-05-19 22:42:28] loading the: http://zhidao.baidu.com/question/472638813.html
-297960 INFO  [2013-05-19 22:42:29] loading end ....
-297961 INFO  [2013-05-19 22:42:29] Save file:resource/qapair/472638813.html
-297970 INFO  [2013-05-19 22:42:29] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/472638813.html'
-301027 INFO  [2013-05-19 22:42:32] loading the: http://zhidao.baidu.com/question/434681099.html
-301436 INFO  [2013-05-19 22:42:32] loading end ....
-301436 INFO  [2013-05-19 22:42:32] Save file:resource/qapair/434681099.html
-301445 INFO  [2013-05-19 22:42:32] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/434681099.html'
-304487 INFO  [2013-05-19 22:42:35] loading the: http://zhidao.baidu.com/question/459423488.html
-304998 INFO  [2013-05-19 22:42:36] loading end ....
-304999 INFO  [2013-05-19 22:42:36] Save file:resource/qapair/459423488.html
-305009 INFO  [2013-05-19 22:42:36] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/459423488.html'
-308054 INFO  [2013-05-19 22:42:39] loading the: http://zhidao.baidu.com/question/467138762.html
-308581 INFO  [2013-05-19 22:42:39] loading end ....
-308582 INFO  [2013-05-19 22:42:39] Save file:resource/qapair/467138762.html
-308592 INFO  [2013-05-19 22:42:39] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/467138762.html'
-311639 INFO  [2013-05-19 22:42:42] loading the: http://zhidao.baidu.com/question/475413839.html
-311997 INFO  [2013-05-19 22:42:43] loading end ....
-311998 INFO  [2013-05-19 22:42:43] Save file:resource/qapair/475413839.html
-312008 INFO  [2013-05-19 22:42:43] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/475413839.html'
-315048 INFO  [2013-05-19 22:42:46] loading the: http://zhidao.baidu.com/question/468171119.html
-315529 INFO  [2013-05-19 22:42:46] loading end ....
-315530 INFO  [2013-05-19 22:42:46] Save file:resource/qapair/468171119.html
-315539 INFO  [2013-05-19 22:42:46] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/468171119.html'
-318552 INFO  [2013-05-19 22:42:49] loading the: http://zhidao.baidu.com/question/470264288.html
-319133 INFO  [2013-05-19 22:42:50] loading end ....
-319134 INFO  [2013-05-19 22:42:50] Save file:resource/qapair/470264288.html
-319143 INFO  [2013-05-19 22:42:50] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/470264288.html'
-322209 INFO  [2013-05-19 22:42:53] loading the: http://zhidao.baidu.com/question/476892538.html
-322589 INFO  [2013-05-19 22:42:53] loading end ....
-322590 INFO  [2013-05-19 22:42:53] Save file:resource/qapair/476892538.html
-322603 INFO  [2013-05-19 22:42:53] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/476892538.html'
-325636 INFO  [2013-05-19 22:42:56] loading the: http://zhidao.baidu.com/question/473737384.html
-326011 INFO  [2013-05-19 22:42:57] loading end ....
-326012 INFO  [2013-05-19 22:42:57] Save file:resource/qapair/473737384.html
-326022 INFO  [2013-05-19 22:42:57] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/473737384.html'
-329053 INFO  [2013-05-19 22:43:00] loading the: http://zhidao.baidu.com/question/514623003.html
-329434 INFO  [2013-05-19 22:43:00] loading end ....
-329435 INFO  [2013-05-19 22:43:00] Save file:resource/qapair/514623003.html
-329444 INFO  [2013-05-19 22:43:00] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/514623003.html'
-332479 INFO  [2013-05-19 22:43:03] loading the: http://zhidao.baidu.com/question/438075512.html
-333031 INFO  [2013-05-19 22:43:04] loading end ....
-333032 INFO  [2013-05-19 22:43:04] Save file:resource/qapair/438075512.html
-333042 INFO  [2013-05-19 22:43:04] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/438075512.html'
-336097 INFO  [2013-05-19 22:43:07] loading the: http://zhidao.baidu.com/question/496333723.html
-336383 INFO  [2013-05-19 22:43:07] loading end ....
-336384 INFO  [2013-05-19 22:43:07] Save file:resource/qapair/496333723.html
-336393 INFO  [2013-05-19 22:43:07] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/496333723.html'
-339440 INFO  [2013-05-19 22:43:10] loading the: http://zhidao.baidu.com/question/453379407.html
-339979 INFO  [2013-05-19 22:43:11] loading end ....
-339980 INFO  [2013-05-19 22:43:11] Save file:resource/qapair/453379407.html
-339990 INFO  [2013-05-19 22:43:11] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/453379407.html'
-343024 INFO  [2013-05-19 22:43:14] loading the: http://zhidao.baidu.com/question/455934363.html
-343531 INFO  [2013-05-19 22:43:14] loading end ....
-343532 INFO  [2013-05-19 22:43:14] Save file:resource/qapair/455934363.html
-343546 INFO  [2013-05-19 22:43:14] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/455934363.html'
-346592 INFO  [2013-05-19 22:43:17] loading the: http://zhidao.baidu.com/question/457620734.html
-347074 INFO  [2013-05-19 22:43:18] loading end ....
-347075 INFO  [2013-05-19 22:43:18] Save file:resource/qapair/457620734.html
-347085 INFO  [2013-05-19 22:43:18] execute sql:update qapair_resultlist set finished = 1 where link = 'http://zhidao.baidu.com/question/457620734.html'
+3522 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('xxg680306',13,1317,'股票 保险 电脑/网络 学习帮助 资源共享 ',52)
+3530 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'xxg680306'
+3530 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('99483175','什么是股票中的机构?','什么是股票中的机构?','股票 ','2009-05-31 11:14','kuxiaoxiao','庄家就是在某只股票上购买了足够多的筹码，并且有着雄厚的资金。它的一举一动都影响到该股在二级市场的股价的波动。 在股票市场能称为机构的一般有：基金（开放式基金，封闭式基金，QFII，LOF基金，ETF基金，私募基金，信托基金）；企业法人投资者；券商自营；社保证金、保险资金、财务公司等。 证券法是不允许操纵股价的，明目张胆的坐庄现在很少见，现在基本都是集中资金快进快出。 股票的价格到底不是是谁来控制的问题，有人买卖价格自然有变动，只是如果你的资金占优势，自然定价权就在你手中。 ','2009-05-31 12:24',1,68,'May 20, 2013 11:16:04 AM')
+3538 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '热心网友'
+3539 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('541876975','什么是股票?怎样炒股?','什么是股票?怎样炒股?','足球 ','2013-04-17 10:12','热心网友','28：亮亮亮亮X ','2013-04-17 11:27',1,8,'May 20, 2013 11:16:07 AM')
+3546 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '江天暮雪'
+3547 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('江天暮雪',8,470,'暂未制定',30)
+3555 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '江天暮雪'
+3556 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('137696','什么是股票？','什么是股票？','商业/理财 ','2005-08-09 11:50','热心网友','股票是一种有价证券，是股份公司为筹集资金发给出资人作为公司资本部分所有权的凭证，成为股东以此获得股息和红利。 春秋战国时期，国家的举贷和王侯的放债，形成了中国最早的债券。明后清前，在一些收益高的高风险行业，采用了"招商集资、合股经营"的经营方式，参与者之间签订的契约，成为中国最早的股票雏形。19世纪40年代外国在华企业发行外资证券。1872年，中国第一家股份制企业和中国人自己发行的第一张股票诞生。证券的出现促进了证券交易的发展。最早的证券交易也只是外商之间进行，后来才出现华商证券交易。1869年中国第一家从事股票买卖的证券公司成立。1882年9月上海平准股票公司成立，制定了相关章程，使证券交易无序发展变得更加规范。 1990年12月19日，上海证券交易所正式开业，1991年7月3日，深圳证券交易所正式开业。这两所交易所的成立标志着新中国证券市场的形成。1992年中国开始向境外发行股票，2月，第一支B股（上海真空电子器件股份有限公司B股）在上海证券交易所挂牌交易。1996年12月，股票交易实行涨跌停制度（跌停幅不超过前日收市价10％）。 ','2005-08-09 11:52',0,69,'May 20, 2013 11:16:10 AM')
+3571 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'hqe636'
+3572 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('hqe636',12,1331,'购物 互联网 福建 商业/理财 ',39)
+3580 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'hqe636'
+3581 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('41936172','什么是股票？说简单的比喻啊？','什么是股票？说简单的比喻啊？','股票 ','2007-12-18 17:57','794191168','就好比几个农民出资合买一头牛，每人出资的比例不同，每人都拿一张出资比例的凭证（这就是股票），如果这头牛赚了钱就按出资比例分利润，如果这头牛死了，那大家都没有了。如果有人不想要这头牛了，那就把自己的出资凭证（即股票）找个买家转让，转让价双方协商。 ','2007-12-18 17:58',1,70,'May 20, 2013 11:16:14 AM')
+3588 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '我是老表'
+3589 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('我是老表',6,104,'电脑/网络 网络游戏 游戏 ',19)
+3597 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '我是老表'
+3598 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('10006264','什么是股票','什么是股票','股票 ','2006-07-21 09:09','12龙牙草','股票 stock 股份公司发给股东的入股凭证。它是股东拥有股份资本所有权的证书，也是股东借以定期取得股息和红利的一种有价证券。股票可以依法进行买卖、转让和作为向银行申请贷款的抵押品，但股票持有者一般不能退股。 种类 主要有：①记名股票和无记名股票。这主要是根据股票是否记载股东姓名来划分的。记名股票，是在股票上记载股东的姓名，如果转让必须经公司办理过户手续。无记名股票，是在股票上不记载股东的姓名，如果转让，通过交付而生效。②有票面值股票和无票面值股票。这主要是根据股票是否记明每股金额来划分的。有票面值股票，是在股票上记载每股的金额。无票面值股票，只是记明股票和公司资本总额，或每股占公司资本总额的比例。③单一股票和复数股票。这主要是根据股票上表示的份数来划分的。单一股票是指每张股票表示一股。复数股票是指每张股票表示数股。④普通股票和特别股票。这主要是根据股票所代表的权利大小来划分的。普通股票的股息随公司利润大小而增减。特别股票一般按规定利率优先取得固定股息，但其股东的表决权有所限制，特别股票又叫优先股票。⑤表决权股票和无表决权股票。这主要是根据股票持有者有无表决权来划分的。普通股票持有者都有表决权，而那些在某些方面享有特别利益的优先股票持有者在表决权上常受到限制。无表决权的股东，不能参与公司决策。 性质 股票持有者凭股票定期从股份公司取得的收入是股息。股息表现为股份公司利润的一部分，它来源于工人所创造的价值的一部分。在资本主义社会，股息的实质就是雇佣工人所创造的剩余价值的一部分。股票只是对一个股份公司拥有的实际资本的所有权证书，只是代表取得收益的权利，是对未来收益的支取凭证，它本身不是实际资本，而只是间接地反映了实际资本运动的状况，从而表现为一种虚拟资本。 股票价格 股票本身没有价值，但它可以当作商品出卖，并且有一定的价格。股票价格又叫股票行市，它不等于股票票面的金额。股票的票面额代表投资入股的货币资本数额，它是固定不变的；而股票价格则是变动的，它经常是大于或小于股票的票面金额。股票的买卖实际上是买卖获得股息的权利，因此股票价格不是它所代表的实际资本价值的货币表现，而是一种资本化的收入。股票价格一般是由股息和利息率两个因素决定的。例如，有一张票面额为100元的股票，每年能够取得10元股息，即10％的股息，而当时的利息率只有5％，那么，这张股票的价格就是10元÷5％＝200元。计算公式是： 股息 股票价格=—————— 利息率 可见，股票价格与股息成正比例变化，而和利息率成反比例变化。如果某个股份公司的营业情况好，股息增多或是预期的股息将要增加，这个股份公司的股票价格就会上涨；反之，则会下跌。 ','2006-07-21 09:11',0,71,'May 20, 2013 11:16:17 AM')
+3613 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '十九楼窗台的花'
+3613 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('十九楼窗台的花',7,206,'股票 商业/理财 商业/理财 ',30)
+3621 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '十九楼窗台的花'
+3622 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('55976410','什么是股票?麻烦解释的通俗点','什么是股票?麻烦解释的通俗点','股票 ','2008-06-05 22:32','叶小错','怎么就算赚钱了？ 你买一只股票，股票是10元，买了1000股=10000元 买的时候要交佣金（交给证券公司）和印花税（交给国家） 举例： 你的成本价会变成10.08（加上手续费的一个成本） 超过了10.08，你就会赚钱（当然，你卖出的时候还按照卖出总额有一个手续费的） 把手续费算在内，涨过你买的价格，就是赚钱了。 你的帐号里钱就多了。 在交易系统里，赚钱显示的是红的。 怎么样看一支股票能不能赚钱，这问题很简单也很深奥。 理论上讲，“任何一只股票都能赚钱”，因为它都有价格上的波动啊。 只有多学习，多培养心态，多看看技术面，消息面，基本面，政策面，会增加你选对的几率，赚钱的几率。 ','2008-06-06 02:17',1,72,'May 20, 2013 11:16:21 AM')
+3630 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '老妖真精'
+3630 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('老妖真精',16,5967,'暂未制定',41)
+3646 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '老妖真精'
+3647 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('187438','什么是股票','什么是股票','个人理财 ','2005-08-17 10:28','热心网友','股票是一种有价证券，是股份公司为筹集资金发给出资人作为公司资本部分所有权的凭证，成为股东以此获得股息和红利。 发展历史 中国股票证券市场 春秋战国时期，国家的举贷和王侯的放债，形成了中国最早的债券。明后清前，在一些收益高的高风险行业，采用了"招商集资、合股经营"的经营方式，参与者之间签订的契约，成为中国最早的股票雏形。19世纪40年代外国在华企业发行外资证券。1872年，中国第一家股份制企业和中国人自己发行的第一张股票诞生。证券的出现促进了证券交易的发展。最早的证券交易也只是外商之间进行，后来才出现华商证券交易。1869年中国第一家从事股票买卖的证券公司成立。1882年9月上海平准股票公司成立，制定了相关章程，使证券交易无序发展变得更加规范。 1990年12月19日，上海证券交易所正式开业，1991年7月3日，深圳证券交易所正式开业。这两所交易所的成立标志着新中国证券市场的形成。1992年中国开始向境外发行股票，2月，第一支B股（上海真空电子器件股份有限公司B股）在上海证券交易所挂牌交易。1996年12月，股票交易实行涨跌停制度（跌停幅不超过前日收市价10％）。 股票的分类 按股东权力，可分为普通股、优先股和混合股。 按票面形式，可分为记名股票和无记名股票，有面额股票和无面额股票。 按持股主体，可分为国家股，单位(法人)股和个人股。 按发行对象，可分为A股、B股、H股、N股、S股 国际分类 按业绩盈利情况，可分为蓝筹股、红筹股 委托方式 填单委托 自助委托 电话委托 委托机委托 网上委托 交易费用 委托费 佣金 印花税 过户费 转托管费 竞价方式 集合竞价 连续竞价 常见股票指数 上证股价指数 深圳股价指数 道琼斯股票价格平均指数 那斯达克股价指数 标准普尔指数 恒生指数 日经指数 金融时报指数 常见股票术语 开盘价、收盘价、最高价、最低价、压力线、支撑线、牛市、熊市、多头、空头、除息、除权 技术分析 道琼斯理论 艾略特波浪理论 移动平均线 技术指标 K线分析 证券交易所 上海证券交易所 深圳证券交易所 香港联合交易所（SEHK） 香港创业板（GEM）  纳斯达克（NASDAQ） 美国纽约证券交易所（NYSE） 美国OTCBB证券市场 英国伦敦股票交易所技术板市场（techMark） 欧州新市场（EUROnext） 欧盟股票自动报价市场（EASDAQ） 新加坡交易所（SGX） 新加坡股票自动报价市场（SESDAQ） 加拿大多伦多证券交易所（TSE） 加拿大创业板（CDNX） 温哥华股票交易所（VSE） 日本东京证券交易所（TSE） 日本股票自动报价市场（JASDAQ） 巴黎证券交易所 意大利证券交易所 韩国证券交易所 澳大利亚证券交易所 莫斯科证券交易所 德意志交易所集团 斯德哥尔摩证券交易所 雅加达证券交易所 新西兰证券交易所 吉隆坡证券交易所（KLSE） 里约热内卢证券交易所 ','2005-08-17 10:32',0,73,'May 20, 2013 11:16:24 AM')
+3655 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '05dku24z'
+3655 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('05dku24z',2,7,'暂未制定',7)
+3663 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '05dku24z'
+3664 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('246985437','什么是股票市场事件窗口','什么是股票市场事件窗口','股票 ','2011-04-02 07:47','cr12gls2010','台办理，柜台营业员会帮助办理相关事宜；现在一些开通银证通的银行柜台也可以代理开户。具体流程可参考下面步骤：(一)办理深圳、上海证券账户卡；(二)证券营业部开户；(三)开通银证转账业务。 交易篇 如何进行股票买卖 股民开立了股票账户和资金账户，并了解了有关股票交易的规定和原则之后，就可以进行正常的股票买卖。要按照一定的程序，通过一定的方式进行，包括以下三方面内容： 一、股票买卖的委托程序 二、股票买卖委托的内容 三、股票买卖的委托手段和方式 A股市场交易时间 每日9：15可以开始参与交易，11：30-13：00为中午休息时间，下午13：00再开始，15：00交易结束。 深沪证交所市场交易时间为每周一至周五，上午为前市，9：15至9：25为集合竞价时间，9：30至11：30为连续竞价时间；下午为后市，13：00至15：00为连续竞价时间；周六、周日和上证所公告的休市日不交易(一般为五一、十一、春节等国家法定节假日)。 基础普及篇 一些常用的股票术语 基本面：包括宏观经济运行态势和上市公司基本情况。上市公司的基本面包括财务状况、盈利状况、市场占有率、经营管理体制、人才构成等各个方面。 政策面：指国家针对证券市场的具体政策，例如股市扩容政策、交易规则、交易成本规定等。 市场面：指市场供求状况、市场品种结构以及投资者结构等因素。市场面的情况也与上市公司的经营业绩好坏有关。 技术面：指反映股价变化的技术指标、走势形态以及K线组合等。技术分析有三个前提假设。 开盘价：指某种证券在证券交易所每个营业日的第一笔交易，第一笔交易的成交价即为当日开盘价。 收盘价：指某种证券在证券交易所一天交易活动结束前最后一笔交易的成交价格。 报价：是证券市场上交易者在某一时间内对某种证券报出的最高进价或最低出价，报价代表了买卖双方所愿意出的最高价格，进价为买者愿买进某种证券所出的价格，出价为卖者愿卖出的价格。报价的次序习惯上是报进价格在先，报出价格在后。 最高价：指某种证券当日交易中最高成交价格。 最低价：指某种证券当日交易中的最低成交价格。 涨、跌停板：为了防止证券市场上价格暴涨暴跌，避免引起过分投机现象，在公开竞价时，证券交易所依法对当天市场价格的涨跌幅度予以适当的限制，A股市场的涨、跌均在10%，一只股票的每天最大震幅为20%。即当天的市场价格涨或跌到了一定限度就不得再有涨跌，这种现象的专门术语即为停板。当天市场价格的最高限度称涨停板，当天市场价格的最低限度称为跌停板。 除权：是由于公司股本增加，每股股票所代表的企业实际价值(每股净资产)有所减少，需要在发生该事实之后从股票市场价格中剔除这部分因素，而形成的剔除行为。 除息：是由于公司股东分配红利，每股股票所代表的企业实际价值(每股净资产)有所减少，需要在发生该事实之后从股票市场价格中剔除这部分因素，而形成的剔除行为。 填权：是指在除权除息后的一段时间里，如果多数人对该股看好，该只股票交易市价高于除权(除息)基准价，即股价比除权除息前有所上涨，这种行情称为填权。 贴权：是指在除权除息后的一段时间里，如果多数人不看好该股，交易市价低于除权(除息)基准价，即股价比除权除息前有所下降。 每股税后利润：又称每股盈利，可用公司税后利润除以公司总股数来计算。 股东权益：是公司净资产代表公司本身拥有的财产，也是股东们在公司中的权益。 净资产收益率：是公司税后利润除以净资产得到的百分比率，用以衡量公司运用自有资本的效率。 市盈率：是某种股票普通股每股市价与每股盈利的比率，它也称为股价收益比率或市价盈利比率。常常被用来判定股价与企业盈利、基本面之间的背离程度，以提示买卖风险。 龙头股：是指某一时期在股票市场的炒作中对同行业板块的其他股票具有影响和号召力的股票，它的涨跌往往对其他同行业板块股票的涨跌起引导和示范作用。 大盘股、小盘股：一般是根据流通股本的大小和其对指数的影响多寡来进行划分。 T＋1交收：是指交易双方在交易次日完成与交易有关的证券、款项收付，即买方收到证券、卖方收到款项。 分红 ：是指上市公司对股东的投资回报。 送红股：是指上市公司将本年的利润留在公司里，发放股票作为红利，从而将利润转化为股本。 转增股本：是指公司将资本公积转化为股本，转增股本并没有改变股东的权股益，但却增加了股本规模，因而客观结果与送红股相似。 ST：将对财务状况或其它状况出现异常的上市公司的股票交易进行特别处理，由于“特别处理”的英文是Special Treatment(缩写是“ST”)，因此这些股票就简称为ST股。 题材板块：通常特指由于某一些突发事件或特有现象而使部分个股具有一些共同特征，例如资产重组板块、WTO板块、西部概念等。市场要炒作就必须以各种题材做支撑，这已成了市场的规律。根据有关市场人士的分析，常被利用的炒作题材大致有以下几类：1.经营业绩好转、改善；2.国家产业政策扶持，政府实行政策倾斜；3.将要或正在合资合作、股权转让；4.出现控股或收购等重大资产重组；5.增资配股或高送股分红等。 牛市：股票市场上买入者多于卖出者，股市行情看涨。 熊市：股票市场上卖出者多于买入者，股市行情看跌，与牛市相反。 多头、多头市场：多头是指投资者对股市看好，预计股价将会看涨，于是趁低价时买进股票，待股票上涨至某一价位时再卖出，以获取差额收益。一般来说，人们通常把股价长期保持上涨势头的股票市场称为多头市场。多头市场股价变化的主要特征是一连串的大涨小跌。 利多：是指刺激股价上涨的信息，如股票上市公司经营业绩好转、银行利率降低、社会资金充足、银行信贷资金放宽、市场繁荣等，以及其他政治、经济、军事、外交等方面对股价上涨有利的信息。 利空：是指能够促使股价下跌的信息，如股票上市公司经营业绩恶化、银行紧缩、银行利率调高、经济衰退、通货膨胀、天灾人祸等，以及其他政治、经济军事、外交等方面促使股价下跌的不利消息。 跳空：股价受利多或利空影响后，开盘时出现较大幅度上下跳动的现象。当股价受利多影响上涨时，交易所内当天的开盘价或最低价高于前一天收盘价两个申报单位以上。当股价下跌时，当天的开盘价或最高价低于前一天收盘价在两个申报单位以上。或在一天的交易中，上涨或下跌超过一个申报单位。以上这种股价大幅度跳动现象称之为跳空。 洗盘：投机者先把股价大幅度杀低，使大批小额股票投资者(散户)产生恐慌而抛售股票，然后再股价抬高，以便乘机渔利。 回档：在股市上，股价呈不断上涨趋势，终因股价上涨速度过快而反转回跌到某一价位，这一调整现象称为回档。一般来说，股票的回档幅度要比上涨幅度小，通常是反转回跌到前一次上涨幅度的三分之一左右时又恢复原来上涨趋势。 反弹：在股市上，股价呈不断下跌趋势，终因股价下跌速度过快而反转回升到某一价位的调整现象称为反弹。一般来说，股票的反弹幅度要比下跌幅度小，通常是反弹到前一次下跌幅度的三分之一左右时，又恢复原来的下跌趋势。 整理：股市上的股价经过大幅度迅速上涨或下跌后，遇到阻力线或支撑线，原先上涨或下跌趋势明显放慢，开始出现幅度为15%左右的上下跳动，并持续一段时间，这种现象称为整理。整理现象的出现通常表示多头和空头激烈互斗而产生了跳动价位，也是下一次股价大变动的前奏。 套牢：是指进行股票交易时所遭遇的交易风险。例如投资者预计股价将上涨，但在买进后股价却一直呈下跌趋势，这种现象称为多头套牢。相反，投资者预计股价将下跌，将所借股票放空卖出，但股价却一直上涨，这种现象称为空头套牢。 如何打新股 资金打新股的流程如下：1.申购委托前，投资者应把申购款全额存入与上证所联网的证券营业部指定的资金账户；2.在申购日(以下简称T日)，投资者通过与上证所联网的证券营业部进行申购委托，一经申报，不得撤单。申购时间为T日上午9∶30-11∶30，下午1∶00-3∶00。沪市每一申购单位为1000股，超过1000股的必须是1000股的整数倍；深市申购单位为500股，超过500股的必须是500股的整数倍；3.申购配号；4.资金冻结；5.验资及配号；6.摇号抽签；7.资金解冻，T＋4日对未中签部分的申购款予以解冻，新股认购款集中由中国结算公司划付给主承销商，再划给上市公司，发行结束。 股票什么情况下暂停交易 根据交易所的规定，公司股票挂牌交易后，为保证证券市场交易的“公开、公平、公正”，对其披露的重要信息以及证券部门对其进行的处罚，均以暂停交易方式公告。深、沪交易所暂停交易办法中均有具体说明，一般在公布年度报告、中期报告、召开股东大会、公告预分配股方案、公告重大事件、引发股价波动传言、处罚性停牌等事项时实施即时停牌和短期停牌，对此上市公司都会进行详细公告。 策略篇 对大盘走势的解析技巧 股价涨跌的演变是股市各方面因素共同作用的结果，在解盘时必须了解各种影响因素变化与盘面之间的相互关系，善于从细微的变化中找出其发展的趋势，调整操作思路，灵活地应用于股市实战。所以，对影响股市的政策面、资金面、基本面、技术面、消息面等进行综合研判是解盘的基础。 牛市主升浪的投资技巧 投资主升浪行情，关键是选股，也就是要确认个股是否有继续上涨的动力。个股的持续上涨动力，来自于各种市场客观条件的支撑。具体而言，在主升浪行情中，宜选择以下几种类型的个股。 揭秘庄家的试盘手法 从一般情况看，庄家持有的筹码占流通盘的45%—50%，在较长的吸货阶段中，庄家并不能肯定在此期间没有其他庄家介入，集中的“非盘”如果在10%—15%以上，就会给庄家造成不小的麻烦。 如何观察和解读换手率 低换手率表明多空双方意见基本一致，股价一般会由于成交低迷而出现小幅下跌或步入横盘整理。高换手率则表明多空双方的分歧较大，但只要成交活跃的状况能够维持下去，股价一般都会呈小幅上扬的走势。 纪律篇 业内人士王吉舟说“如果你从来没有买过股票，如果你开户的原因是打算赚钱而不是支援股市建设，那么你一定要恪守军规”，他建议新股民和准备入市的准股民一定要牢记15条军规： 1.永远不要相信经济学家关于股市的预测； 2.永远不要相信电视台的股评“老师们”； 3.如果你不知道每年的什么时候发布年报、什么时候召开股东大会决定分红，惟一的办法就是赶紧补课，因为那意味着行情； 4.如果你不知道权证与股票的具体区别，最明智的办法就是在真的弄明白之前不要买入权证； 5.如果你的目标是收益10%，这很容易做到，如果你的目标是让自己的股票价格翻一番，那你最好清醒一下； 6.当你开始赚到钱时，当你出手越来越彪悍时，要及时意识到“你最危险的时候到了”； 7.股市存在一天，庄家就会存在一天，千万别大意； 8.在中国股市永远不要相信长线投资，除非你确认自己的神经中枢足够粗壮，坚韧到能使你等到秋收的那一天，否则，适度节制你的欲望才是最重要的； 9.永远不要同时关注超过30只股票，1个新股民同时关注30只股票的结局与1个男人同时娶30个妻子的下场不会有任何区别； 10.无论这只股票的价格今天跌了多少，也永远不要把你全部的钱一次投入； 11.永远保持你的账户上有40%的现金，那是你应付突如其来的暴跌时惟一的弹药； 12.如果你不幸买入一只股票后，它还在继续下跌，那么，当跌幅超过10%时你要考虑的不是卖出，而是继续买入，和绝大部分人往相反的方向跑； 13.当你决心成为股民的那一刻，勇于承担责任就是你的义务，亏了不要怪社会与政府，因为你赚钱的时候从来没有想过感谢他们； 14.不要试图去抢基金经理们的饭碗，你只需要踏踏实实地研究行业排名与每股收益，从中“发现”上市公司的投资价值，远比“发掘”公司的投资价值更为实际——那是基金经理们的活儿； 15.不要去研究MACD指标理论、波浪理论、三线开花理论等等，这些书要么是美国人写的，要么就是已经亏损得退出股市的人写的，如果你已经学会了，那永远只把这些技术指标作为参考，而不是依据，K线图与成交量图，是你惟一的技术必修课。 ','2011-04-02 11:17',0,74,'May 20, 2013 11:16:28 AM')
+3680 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'ewq68'
+3680 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('152163217','什么叫股票？','什么叫股票？','股票 ','2010-05-10 12:55','゛≡錯愛〗','　　（一）股票的定义 　　股票是一种有价证券，它是股份公司公开发行的，用以证明投资者股东身份和权益，并据以获得股息和红利的凭证。 　　（二）股票与有关概念的比较 　　1、股票与股份、股份制 　　（1）股票与股份。股份是股份公司均分其资本的基本计量单位，对股东而言，则表示其在公司资本中所占的投资份额。股份包括三层含义：1）它是股份公司一定量资本额的代表；2）它是股东出资额及其股东权的体现；3）它是计算股份公司资本的最小单位，不能再继续分割。股份的表现形式是股份证书。不同类型的股份制企业，其证书的具体形式不同，只有股份公司用以表现股份的形式才是股票。股票与股份是形式与内容的关系。 　　（2）股票与股份制。股份制有无限公司，有限公司、两合公司和股份有限公司等企业组织形式，其中以股份有限公司普遍采用。只有股份有限公司才能发行股票。 　　2、股票与股单、认股权证。 　　（1）股票与股单 　　股票和股单都是表示股东出资份额和股东权的股份证书，同属于所有权证券，但二者存在根本差别： 　　1）两者的适用范围不同。股票是由股份有限公司发行的；股单则是有限责任公司发行的。 　　2）两者的性质不同。股票属于有价证券，除了可以证明股东地位和股东权利外，法律还赋予其自由流通性。可以为持有者带来股息、红利等收益，或者带来交易价差的盈利。股单则仅仅是一种证权证券，只能证明股东出资份额和股东权利，具有很强的人身依附性。股单不是有价证券，本身不具有价格，故不能在市场上流通转让，只能依照法定条件和手续转让出资。相应地，股单持有者只能根据其出资从公司获取股息和红利，不能获取交易差价。 　　3）两者的表现形式不同。股票通常体现为金额相等的股份，股东依据股票享有平等的权利。股单每份所代表的金额可以不等，每个股东以股单所确认的出资数额享有股东权，并不是按股分取得平等的权利。股单必须记名。 　　（2）股票与认股权证。股票是确认股东地位和股东权的凭证；认股权证则是购买股票的权利凭证。 　　3、股票与票据。股票和票据同为有价证券，它们具有相同的基本性质，既有区别，又有联系。 　　(1)联系。1）股票和票据都是将权利证券化；2)在股票和票据所表现的财产权实现和转让时，都要求提示和交付票卷；3）股票和票据都可流通转让；4）股票和票据都是要式证券。 　　（2）区别。1）两者的作用不同。票据时设权证券，而股票是证权证券。2）两者的内容不同。股票是资本证券，而票据是货币证券。3）两者的目的不同。发行和认购股票的目的在于实现资本信用，股票持有者可以向公司行使股东权，获得股息和红利。而持有票据是为了获得商业信用，持有人向债务人要求给负票据金额，是票据成为一种支付手段。4）证券权利的实现各不相同。 　　4、股票与公司债券。 　　（1）联系：1）两者都是投资手段，体现着资本信用。2）两者都属于流通证券，可以在证券市场上买卖和转让。 　　（2）区别。1）两者所体现的投资性质和债权债务关系不同。2）两者的收益和风险不同。3）两者的投资风险程度不同。 　　（三）股票的性质 　　股票的法律性质主要体现在以下几方面。 　　1、股票是反映财产权的有价证券。有价证券是用以证明持券人有权按期取得一定收益的证券，它体现的是持券人的财产权。行使证券所反映的财产权必须以持有该证券为条件。股票正是具有这一法律特征的有价证券。 　　2、股票是证明股东权的法律凭证。 　　3、股票是投资行为的法律凭证。 　　增加：股票是一种综合权利证券。股票即不属于债权证券，也不属于物权证权。 　　物权证券：是指证券持有者对公司的财产由直接支配处理权的政权。 　　债权证券：是指证券持有者为公司债权人的证券。 　　设权证券：是指证券所代表的权利本来不存在，而是随着证券的制作而产生，即权利的发生是以证券的制作和存在为条件的。如国库券等。 　　证权证券：是指证券是权利的一种物化的外在形式，它是权利的载体，权利是已经存在的。 　　股票所代表的是股东权利，它的发行是以股份的存在为条件的，股票只是把已存在的股东权利表现为证券的形式，它的作用不是创造股东权利，而是证明股东的权利。 　　（四）股票的特征 　　1、收益性。股票收益的大小取决于公司的经营状况和盈利水平。 　　2、风险性。股票的收益性与股票的风险性相对应。收益的大小与奉献的大小成正比。 　　3、稳定性。包含两方面含义：（1）股东与发行股票的公司之间存在稳定的经济关系；（2）通过发行股票筹集到的资金使公司有一个稳定的存续时间。 　　4、流通性。 　　除以上4个特征外，股票还有区别于其他有价证券的特征。 　　5、股份的伸缩性。是指股票所代表的股份既可拆细，又可以合并。 　　6、价格的波动。 　　7、经营决策的参与性。 ','2010-05-10 13:49',1,55,'May 20, 2013 11:16:31 AM')
+3697 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'kingtiger00she'
+3697 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('kingtiger00she',5,35,'军事 商业/理财 游戏 ',28)
+3705 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'kingtiger00she'
+3705 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('84937611','股票到底是什么？是什么形式呢？为什么叫炒股呢？','股票到底是什么？是什么形式呢？为什么叫炒股呢？','股票 ','2009-02-06 17:23','zhytiantian','股票就是一种法律凭证，上边记载了你的权利，即你对某家公司的所有权。也就是说，你拥有某家公司的股票，你就成为这家公司的股东，即你对公司拥有所有权（当然不是全部，按照你的股份）。 公司发展过程中最不可缺的是资金，公司可以选择贷款，可以发行公司债券，但是通过这些方式融资得来的钱是需要还的，而且要付利息。而发行股票也是公司融资方式的一种,通过这种方式融资，公司是不需要还的。公司通过发行股票卖给广大投资者融到了资金，而投资者们购买公司的股票而纷纷成为公司的股东，都拥有一定比例的公司所有权，因此，他们对公司拥有赢利的分配权，公司通过分红派息将公司的利润按照比例分配给各位股东。 不过公司发行的股票数量是一定的，所以买到股票的数量是一定的。有人想买没买到，他们只能向已经买到的人来买。就像奥运会门票一样，买到的人可以出高价把手中的门票卖给没买到票但又想买的人（当然股票价格的运行机制是买卖双方进行竞价，计算机撮合出来的，不是一句话那么简单）。这样，交易所诞生了，交易所实际就是一个市场，用来给人们进行交易的场所，顺带着制订下交易规则啊，管理啊什么的。就像我家楼下的菜市场，里边有商贩，有买菜的。公司在交易所上市后，人们就可以互相进行交易股票，股票就不停的被转手。价格也不停的变动。变动的原因太多了，不过归结一点，就是买卖双方力量的对比，买的人多，卖的人少，股票自然张价，和拍卖一样是一个道理，反之下跌。我们常说的炒股，就是进行股票的交易，价格低时买进，涨了后在卖出去，赚差价。至于为什么叫炒股而不叫买卖股票，这个我也不是很明白。 像不像赌博我不好说，炒股需要靠运气，但不完全靠运气，有很多分析方法，基本面啊，技术啊，技术分析又有很多技术指标，什么MA，K线，MACD，BOLL，KDJ，RSI，还有很多技术形态。其他的理论，比如江恩理论，艾略特波浪理论啊什么的，等等等等。不过仔细想想，不管是干什么，赌博也包括，都需要运气+努力，只不过赌博技术成分微乎其微，基本就是靠运气。个人认为，炒股分析因素还是很大，运气成分有，但不是很高，所以和赌博不一样。（以上纯属个人观点） ','2009-02-07 13:18',1,75,'May 20, 2013 11:16:35 AM')
+3722 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'ewq68'
+3722 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('175857147','什么是股票？怎样买股票？','什么是股票？怎样买股票？','股票 ','2010-08-17 12:41','凌华智','什么是股票？股票有什么特征？ 股票是股份有限公司在筹集资本时向出资人发行的股份凭证。股票代表着其持有者（即股东）对股份公司的所有权。这种所有权是一种综合权利，如参加股东大会、投票表决、参与公司的重大决策。收取股息或分享红利等。同一类别的每一份股票所代表的公司所有权是相等的。每个股东所拥有的公司所有权份额的大小，取决于其持有的股票数量占公司总股本的比重。股票一般可以通过买卖方式有偿转让，股东能通过股票转让收回其投资，但不能要求公司返还其出资。股东与公司之间的关系不是债权债务关系。股东是公司的所有者，以其出资额为限对公司负有限只任，承担风险，分享收益。 股票是社会化大生产的产物，已有近400年的历史。作为人类文明的成果，股份制和股票也适用于我国社会主义市场经济。企业可以通过向社会公开发行股票筹集资金用于生产经营。国家可通过控制多数股权的方式，用同样的资金控制更多的资源。目前在上海。深圳证券交易所上市的公司，绝大部分是国家控股公司。 股票具有以下基本特征： （l）不可偿还性。股票是一种无偿还期限的有价证券，投资者认购了股票后，就不能再要求退股，只能到二级市场卖给第三者。股票的转让只意味着公司股东的改变，并不减少公司资本。从期限上看，只要公司存在，它所发行的股票就存在，股票的期限等于公司存续的期限。 （2）参与性。股东有权出席股东大会，选举公司董事会，参与公司重大决策。股票持有者的投资意志和享有的经济利益，通常是通过行使股东参与权来实现的。 股东参与公司决策的权利大小，取决于其所持有的股份的多少.从实践中看，只要股东持有的股票数量达到左右决策结果所需的实际多数时，就能掌握公司的决策控制权。 （3）收益性。股东凭其持有的股票，有权从公司领取股息或红利，获取投资的收益。股息或红利的大小，主要取决于公司的盈利水平和公司的盈利分配政策。 股票的收益性，还表现在股票投资者可以获得价差收人或实现资产保值增值。通过低价买人和高价卖出股票，投资者可以赚取价差利润。以美国可口可乐公司股票为例。如果在1983年底投资1000美元买人该公司股票，到 1994年7月便能以 11 554美元的市场价格卖出，赚取10倍多的利润。在通货膨胀时，股票价格会随着公司原有资产重置价格上升而上涨，从而避免了资产贬值。股票通常被视为在高通货膨胀期间可优先选择的投资对象。 （4）流通性。股票的流通性是指股票在不同投资者之间的可交易性。流通性通常以可流通的股票数量、股票成交量以及股价对交易量的敏感程度来衡量。可流通股数越多，成交量越大，价格对成交量越不敏感（价格不会随着成交量一同变化），股票的流通性就越好，反之就越差。股票的流通，使投资者可以在市场上卖出所持有的股票，取得现金。通过股票的流通和股价的变动，可以看出人们对于相关行业和上市公司的发展前景和盈利潜力的判断。 那些在流通市场上吸引大量投资者、股价不断上涨的行业和公司，可以通过增发股票，不断吸收大量资本进人生产经营活动，收到了优化资源配置的效果。 （5）价格波动性和风险性。股票在交易市场上作为交易对象，同商品一样，有自己的市场行情和市场价格。由于股票价格要受到诸如公司经营状况、供求关系、银行利率、大众心理等多种因素的影响，其波动有很大的不确定性。正是这种不确定性，有可能使股票投资者遭受损失。价格波动的不确定性越大，投资风险也越大。因此，股票是一种高风险的金融产品。例如，称雄于世界计算机产业的国际商用机器公司（IBM），当其业绩不凡时，每股价格曾高达170美元，但在其地位遭到挑战，出现经营失策而招致亏损时，股价又下跌到40美元。如果不合时机地在高价位买进该股，就会导致严重损失。 办理深圳、上海证券账户卡 深圳证券账户卡 投资者：可以通过所在地的证券营业部或证券登记机构办理，需提供本人有效身份证及复印件， 证券投资基金、保险公司：开设账户卡则需到深圳证券交易所直接办理。 开户费用：个人50元/每个账户；机构500元/每个账户。 上海证券账户卡 投资者：可以到上海证券中央登记结算公司在各地的开户代理机构处，办理有关申请开立证券账户手续，带齐有效身份证件和复印件。 委托他人代办：须提供代办人身份证明及其复印件，和委托人的授权委托书。 开户费用：个人纸卡40元，个人磁卡本地40元/每个账户，异地70元/每个账户； （二）证券营业部开户 投资者办理深、沪证券账户卡后，到证券营业部买卖证券前，需首先在证券营业部开户，开户主要在证券公司营业部营业柜台或指定银行代开户网点，然后才可以买卖证券。 证券营业部开户程序 （1）个人开户需提供身份证原件及复印件，深、沪证券账户卡原件及复印件。 若是代理人，还需与委托人同时临柜签署《授权委托书》并提供代理人的身份证原件和复印件。 （2）填写开户资料并与证券营业部签订《证券买卖委托合同》（或《证券委托交易协议书》），同时签订有关沪市的《指定交易协议书》。 （3）证券营业部为投资者开设资金账户 （4）需开通证券营业部银证转账业务功能的投资者，注意查阅证券营业部有关此类业务功能的使用说明。 选择交易方式 投资者在开户的同时，需要对今后自己采用的交易手段、资金存取方式进行选择，并与证券营业部签订相应的开通手续及协议。例如：电话委托、网上交易、手机炒股、银证转账等。 （三）银证通开户 开通“银证通”需要到银行办理相关手续。 开户步骤如下： 1．银行网点办理开户手续：持本人有效身份证、银行同名储蓄存折（如无，可当场开立）及深沪股东代码卡到已开通“银证通”业务的银行网点办理开户手续。 2．填写表格：填写《证券委托交易协议书》和《银券委托协议书》。 3．设置密码：表格经过校验无误后，当场输入交易密码，并领取协议书客户联。即可查询和委托交易。 只要存入能买一百股的现金就行。当然，多者不限。 目前有许多证券营业部免费办理,可以到当地营业部或银行咨询 ','2010-08-17 13:07',1,55,'May 20, 2013 11:16:38 AM')
+3730 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '群113290369'
+3730 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('群113290369',6,259,'股票 个人理财 创业投资 经济研究 银行业务 ',17)
+3747 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '群113290369'
+3747 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('260015488','什么是股票，怎样才能炒股，需要具备什么条件？','什么是股票，怎样才能炒股，需要具备什么条件？','股票 ','2011-04-30 10:56','少小天','首先要说明一点，成功没有捷径！不管是哪个行业，哪个领域，要想成功，必须付出足够的努力。 股票市场的成功是可以复制的，复制牛股的形态，复制成功人士的辉煌，复制交易大师的理念！自己学，摸索十年也不一定能悟出什么东西，炒一辈子赔一辈子的人太多了，因为人的悟性是不一样的！跟成功的人学，可以少走弯路，用1年的时间学习别人摸索了20年的经验，是一种事半功倍的学习方法。 ','2011-04-30 13:07',1,76,'May 20, 2013 11:16:42 AM')
+3755 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '无锡东华期货'
+3755 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('无锡东华期货',7,148,'暂未制定',18)
+3763 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '无锡东华期货'
+3764 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('81730074','股票是什么?','股票是什么?','股票 ','2009-01-08 23:27','liyiyang0812','股票是股份有限公司在筹集资本时向出资人发行的股份凭证，代表着其持有者（即股东）对股份公司的所有权。这种所有权是一种综合权利，如参加股东大会、投票表决、参与公司的重大决策、收取股息或分享红利等。同一类别的每十股票所代表的公司所有权是相等的。每个股东所拥有的公司所有权份额的大小，取决于其持有的股票数量占公司总股本的比重。股票一般可以通过买卖方式有偿转让，股东能通过股票转让收回其投资，但不能要求公司返还其出资。股东与公司之间的关系不是债权债务关系。股东是公司的所有者，以其出资额为限对公司负有限责任，承担风险，分享收益。 看你经济状况了 ','2009-01-08 23:29',1,77,'May 20, 2013 11:16:46 AM')
+3772 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lh6988'
+3772 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('lh6988',4,32,'文学 ',46)
+3780 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lh6988'
+3781 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('233143127','什么是股票新三版','什么是股票新三版','股票 ','2011-03-06 00:40','热心网友','　　“新三板”市场特指中关村科技园区非上市股份有限公司进入代办股份系统进行转让试点，因为挂牌企业均为高科技企业而不同于原转让系统内的退市企业及原STAQ、NET系统挂牌公司，故形象地称为“新三板”。 　　新三板挂牌公司（截至2010年3月19日） 　　股票代码 股票简称 上市日期 　　430001 世纪瑞尔 2006年1月23日 　　430002 中科软 2006年1月23日 　　430003 北京时代 2006年3月31日 　　430004 绿创环保 2006年6月7日 　　430005 原子高科 2006年7月28日 　　430008 紫光华宇 2006年8月30日 　　430009 华环电子 2006年11月28日 　　430010 现代农装 2006年12月8日 　　430011 指南针 2007年1月23日 　　430012 博晖创新 2007年2月16日 　　430013 ST羊业 2007年3月21日 　　430014 恒业世纪 2007年6月15日 　　430015 盖特佳 2007年6月18日 　　430016 胜龙科技 2007年7月26日 　　430017 星昊医药 2007年8月16日 　　430018 合纵科技 2007年9月19日 　　430019 新松佳和 2007年9月28日 　　430020 建工华创 2007年9月28日 　　430021 海鑫科金 2007年9月28日 　　430022 五岳鑫 2007年10月18日 　　430023 佳讯飞鸿 2007年10月26日 　　430024 金和软件 2007年12月27日 　　430025 石晶光电 2008年1月16日 　　430026 金豪制药 2008年2月18日 　　430027 北科光大 2008年2月18日 　　430028 京鹏科技 2008年4月30日 　　430029 金泰得 2008年6月20日 　　430030 安控科技 2008年8月20日 　　430031 林克曼 2008年9月1日 　　430032 凯英信业 2008年10月28日 　　430033 彩讯科技 2008年10月28日 　　430034 大地股份 2008年10月28日 　　430035 中兴通 2008年10月28日 　　430036 鼎普科技 2008年10月28日 　　430037 联飞翔 2008年12月5日 　　430038 信维科技 2008年12月16日 　　430039 华高世纪 2008年12月10日 　　430040 康斯特 2008年12月26日 　　430041 中机非晶 2008年12月25日 　　430042 科瑞讯 2009年1月15日 　　430043 世纪东方 2009年1月19日 　　430044 东宝亿通 2009年1月12日 　　430045 东土科技 2009年2月18日 　　430046 圣博润 2009年2月18日 　　430047 诺思兰德 2009年2月18日 　　430048 建设数字 2009年2月18日 　　430049 双杰电气 2009年2月18日 　　430050 博朗环境 2009年2月18日 　　430051 九恒星 2009年2月18日 　　430052 斯福泰克 2009年3月19日 　　430053 国学时代 2009年3月31日 　　430054 超毅网络 2009年4月16日 　　430055 达通通信 2009年4月28日 　　430056 百慕新材 2009年7月1日 　　430057 清畅电力 2009年7月14日 　　430058 意诚信通 2009年8月5日 　　430059 中海纪元 2009年8月18日 　　430060 永邦科技 2009年8月26日 　　430061 富机达能 2009年11月9日 　　430062 中科国信 2010年1月12日 　　430063 工控网 2010年2月8日 　　430064 金山顶尖 2010年3月17日 　　430065 中海阳 2010年3月19日 ','2011-03-06 01:30',1,78,'May 20, 2013 11:16:49 AM')
+3797 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '煮酒江湖'
+3797 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('煮酒江湖',10,544,'暂未制定',34)
+3805 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '煮酒江湖'
+3806 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('26460276','股票————是什么意思？','股票————是什么意思？','股票 ','2007-05-16 13:01','飘∮絮','股票是股份有限公司在筹集资本时向出资人发行的股份凭证。股票代表着其持有者（即股东）对股份公司的所有权。这种所有权是一种综合权利，如参加股东大会、投票表决、参与公司的重大决策。收取股息或分享红利等。同一类别的每一份股票所代表的公司所有权是相等的。每个股东所拥有的公司所有权份额的大小，取决于其持有的股票数量占公司总股本的比重。股票一般可以通过买卖方式有偿转让，股东能通过股票转让收回其投资，但不能要求公司返还其出资。股东与公司之间的关系不是债权债务关系。股东是公司的所有者，以其出资额为限对公司负有限只任，承担风险，分享收益。 股票是社会化大生产的产物，已有近400年的历史。作为人类文明的成果，股份制和股票也适用于我国社会主义市场经济。企业可以通过向社会公开发行股票筹集资金用于生产经营。国家可通过控制多数股权的方式，用同样的资金控制更多的资源。目前在上海。深圳证券交易所上市的公司，绝大部分是国家控股公司。 股票具有以下基本特征： （l）不可偿还性。股票是一种无偿还期限的有价证券，投资者认购了股票后，就不能再要求退股，只能到二级市场卖给第三者。股票的转让只意味着公司股东的改变，并不减少公司资本。从期限上看，只要公司存在，它所发行的股票就存在，股票的期限等于公司存续的期限。 （2）参与性。股东有权出席股东大会，选举公司董事会，参与公司重大决策。股票持有者的投资意志和享有的经济利益，通常是通过行使股东参与权来实现的。 股东参与公司决策的权利大小，取决于其所持有的股份的多少.从实践中看，只要股东持有的股票数量达到左右决策结果所需的实际多数时，就能掌握公司的决策控制权。 （3）收益性。股东凭其持有的股票，有权从公司领取股息或红利，获取投资的收益。股息或红利的大小，主要取决于公司的盈利水平和公司的盈利分配政策。 股票的收益性，还表现在股票投资者可以获得价差收人或实现资产保值增值。通过低价买人和高价卖出股票，投资者可以赚取价差利润。以美国可口可乐公司股票为例。如果在1983年底投资1000美元买人该公司股票，到 1994年7月便能以 11 554美元的市场价格卖出，赚取10倍多的利润。在通货膨胀时，股票价格会随着公司原有资产重置价格上升而上涨，从而避免了资产贬值。股票通常被视为在高通货膨胀期间可优先选择的投资对象。 （4）流通性。股票的流通性是指股票在不同投资者之间的可交易性。流通性通常以可流通的股票数量、股票成交量以及股价对交易量的敏感程度来衡量。可流通股数越多，成交量越大，价格对成交量越不敏感（价格不会随着成交量一同变化），股票的流通性就越好，反之就越差。股票的流通，使投资者可以在市场上卖出所持有的股票，取得现金。通过股票的流通和股价的变动，可以看出人们对于相关行业和上市公司的发展前景和盈利潜力的判断。 那些在流通市场上吸引大量投资者、股价不断上涨的行业和公司，可以通过增发股票，不断吸收大量资本进人生产经营活动，收到了优化资源配置的效果。 （5）价格波动性和风险性。股票在交易市场上作为交易对象，同商品一样，有自己的市场行情和市场价格。由于股票价格要受到诸如公司经营状况、供求关系、银行利率、大众心理等多种因素的影响，其波动有很大的不确定性。正是这种不确定性，有可能使股票投资者遭受损失。价格波动的不确定性越大，投资风险也越大。因此，股票是一种高风险的金融产品。例如，称雄于世界计算机产业的国际商用机器公司（IBM），当其业绩不凡时，每股价格曾高达170美元，但在其地位遭到挑战，出现经营失策而招致亏损时，股价又下跌到40美元。如果不合时机地在高价位买进该股，就会导致严重损失。 ','2007-05-16 13:06',1,79,'May 20, 2013 11:16:53 AM')
+3822 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '痞子好男人'
+3823 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('痞子好男人',6,214,'商业/理财 育儿 ',33)
+3830 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '痞子好男人'
+3831 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('166469450','430014是什么股票','430014是什么股票','股票 ','2010-07-12 15:28','pqum23476576','这个是三板市场上的股票，即这个股票已经从主板退市了。 开户买卖三板市场的股票很麻烦。所以基本上散户就别想了。 三板市场的股票根据公司的情况来开市的，基本上也就是1、3、5开。 风险很大 ','2010-07-12 15:33',1,80,'May 20, 2013 11:16:56 AM')
+3847 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '香弥儿时装'
+3848 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('香弥儿时装',5,44,'服装/首饰 股票 谜语 历史话题 两性问题 ',26)
+3855 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '香弥儿时装'
+3856 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('425281460','什么是股市大盘','什么是股市大盘','股票 ','2012-05-18 17:00','眩目万众众','大盘是指所有上市股票的集合，他们的波动是以指数的形式来显现的。如上证综合指数、深圳综合指数等，指数又以算术平均价格指数和加权平均指数来表现的。 ','2012-05-18 17:14',0,81,'May 20, 2013 11:16:59 AM')
+3864 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'YUBA0202'
+3864 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('YUBA0202',9,440,'暂未制定',48)
+3872 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'YUBA0202'
+3873 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('4827426','什么是股票?什么是抄股?','什么是股票?什么是抄股?','股票 ','2006-03-12 22:06','热心网友','什么是股票？ 股票是股份有限公司在筹集资本时向出资人发行的股份凭证。股票代表着其持有者（即股东）对股份公司的所有权。这种所有权是一种综合权利，如参加股东大会、投票表决、参与公司的重大决策。收取股息或分享红利等。同一类别的每一份股票所代表的公司所有权是相等的。每个股东所拥有的公司所有权份额的大小，取决于其持有的股票数量占公司总股本的比重。股票一般可以通过买卖方式有偿转让，股东能通过股票转让收回其投资，但不能要求公司返还其出资。股东与公司之间的关系不是债权债务关系。股东是公司的所有者，以其出资额为限对公司负有限只任，承担风险，分享收益。 股票是社会化大生产的产物，已有近400年的历史。作为人类文明的成果，股份制和股票也适用于我国社会主义市场经济。企业可以通过向社会公开发行股票筹集资金用于生产经营。国家可通过控制多数股权的方式，用同样的资金控制更多的资源。目前在上海。深圳证券交易所上市的公司，绝大部分是国家控股公司。 如果是想投资股票，步骤是 1.携带身分证到证券公司开户，这样子以后你才有一个买卖下单的窗口。 2.证券公司护要求你到一家指定银行开户，这是为了方便(买股)代扣(卖股)代收股款用的。 3.在第一步骤中找一位认真一点的接单营业员。看不顺眼就当场要求换人。这个人将来必须对你提供所有的市场资讯，如果一开始找个懒散的，你将无休无止地痛苦。 4.你得有一笔小钱，至少足够买第一张股票。 5.等行情来就开始买卖。一般说来先看成交量，指数大跌且成交量降到均量一半以下时，买进风险很低，这叫九生一死，此时买股赔钱风险只有10%。反之，指数上涨且成交量降到均量一半以下时，买进风险很高，这叫九死一生，此时买股赔钱风险高达90%。大抵状况如此。细部状况可以跟营业员请教。 6.别贪。可以不停利，但一定要设停损。就是输钱到20%(或25%，自己订一个标准)，一定要砍仓。20几年来我在市场看过多少赔大钱的人，都是因为没有停损。只要有停损观念，永远能东山再起。如果没有停损观念，或订了停损点但没有认真执行，很可能一次栽跟头就把你打出股市20年，永无翻身之日。 ','2006-03-12 22:18',0,82,'May 20, 2013 11:17:03 AM')
+3888 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '蛮牛888'
+3889 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('蛮牛888',6,143,'体育/运动 股票 音乐 摄影摄像 ',43)
+3897 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '蛮牛888'
+3898 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('269414880','股票市场是什么？股票市场又有哪些种类呢？','股票市场是什么？股票市场又有哪些种类呢？','股票 ','2011-05-18 19:38','moon19850316','股票市场就是股票买卖的交易市场。 我国目前股票种类，按境内外发行上市的不同分为两大类： 1、境内按不同要求发行上市的：A股、B股； A股：既人民币普通股票。由我国境内的公司发行，供境内机构、组织或个人以人民币认购和交易的普通股股票（目前QFII已可以参与）。 B股：既人民币特种股票。是以人民币标明面值，以外币认购和买卖，在境内（上海-美元、深圳-港元）证券交易所上市交易的。 2、境外发行上市的：H股、N股、S股、T股等。 H股：境内公司在香港发行、上市的股票； N股：境内公司在美国发行、上市的股票； S股：境内公司在新加坡发行、上市的股票； T股：境内公司在日本发行、上市的股票。 ','2011-05-18 20:02',1,83,'May 20, 2013 11:17:10 AM')
+3905 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'shiguanglaoren'
+3906 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('50028853','股票是什么东西啊 ？','股票是什么东西啊 ？','股票 ','2008-04-02 14:48','xujia3333','股票，是一种有价证券，是经济水平发展到一定程度的产物，是一家公司把自己的资产、收益、风险、权益向全社会分散的结果。持有一家公司股票的人，称之为股东。股东每年开大会，股东大会，是上市公司最高权力机构。决定董事会成员组成。 股票交易的场所，叫做股市。假入中国没有股市，中国的国企不能脱困，我国现在的经济水平会退回到80年代。 如果没有中国股市，外资不会如此进入，职工工资会降低到现在的三分之一。 水，可以载舟，可以覆舟。股市是大海，善待会水者，严惩旱鸭子。 股市，是经济发展到一定水平上的必然产物。以股市为基底的各种期货，已经为企业和投资者规避风险、获取利润、享受经济发展成果起到了不可估量的作用。 只要懂经济的人掌握国家证券，股市就不会取消。 股市是天堂，你要是爱一个人，就劝他去股市；股市是地狱，如果你恨一个人，就劝他进股市。 ','2008-04-02 15:17',1,64,'May 20, 2013 11:17:13 AM')
+3914 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '蓝妹妹海伦'
+3914 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('蓝妹妹海伦',6,248,'暂未制定',29)
+3922 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = '蓝妹妹海伦'
+3923 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('27052053','什么是股市大盘?','什么是股市大盘?','股票 ','2007-05-24 16:23','jasonmelody','股票指数的计算方法 计算股票指数时，往往把股票指数和股价平均数分开计算。按定义，股票指数即股价平均数。但从两者对股市的实际作用而言，股价平均数是反映多种股票价格变动的一般水平，通常以算术平均数表示。人们通过对不同的时期股价平均数的比较，可以认识多种股票价格变动水平。而股票指数是反映不同时期的股价变动情况的相对指标，也就是将第一时期的股价平均数作为另一时期股价平均数的基准的百分数。通过股票指数，人们可以了解计算期的股价比基期的股价上升或下降的百分比率。由于股票指数是一个相对指标，因此就一个较长的时期来说，股票指数比股价平均数能更为精确地衡量股价的变动。 1. 股价平均数的计算 股票价格平均数反映一定时点上市股票价格的绝对水平，它可分为简单算术股价平均数、修正的股价平均数、加权股价平均数三类。人们通过对不同时点股价平均数的比较，可以看出股票价格的变动情况及趋势。 (1)简单算术股价平均数 简单算术股价平均数是将样本股票每日收盘价之和除以样本数得出的，即： 简单算术股价平均数＝(P1＋P2＋P3＋…＋ Pn)/n 世界上第一个股票价格平均——道·琼斯股价平均数在1928年10月1日前就是使用简单算术平均法计算的。 现假设从某一股市采样的股票为A、B、C、D四种，在某一交易日的收盘价分别为10元、16元、24元和30元，计算该市场股价平均数。将上述数置入公式中，即得： 股价平均数＝(P1＋P2＋P3＋P4)/n ＝（10＋16＋24＋30）/4 ＝20(元) 简单算术股价平均数虽然计算较简便，但它有两个缺点：一是它未考虑各种样本股票的权数， 从而不能区分重要性不同的样本股票对股价平均数的不同影响。二是当样本股票发生股票分割派发红股、增资等情况时，股价平均数会产生断层而失去连续性，使时间序列前后的比较发生困难。例如，上述D股票发生以1股分割为3股时，股价势必从30元下调为10元， 这时平均数就不是按上面计算得出的20元， 而是(10＋16＋24＋10)/4＝15(元)。这就是说，由于D股分割技术上的变化，导致股价平均数从20元下跌为15元(这还未考虑其他影响股价变动的因素)，显然不符合平均数作为反映股价变动指标的要求。 (2)修正的股份平均数 修正的股价平均数有两种： 一是除数修正法，又称道式修正法。 这是美国道·琼斯在1928年创造的一种计算股价平均数的方法。该法的核心是求出一个常数除数，以修正因股票分割、增资、发放红股等因素造成股价平均数的变化，以保持股份平均数的连续性和可比性。 具体作法是以新股价总额除以旧股价平均数，求出新的除数，再以计算期的股价总额除以新除数，这就得出修正的股介平均数。即： 新除数＝变动后的新股价总额/旧的股价平均数 修正的股价平均数＝报告期股价总额/新除数 在前面的例子除数是4，经调整后的新的除数应是： 新的除数＝(10＋16＋24＋10)/20＝3，将新的除数代入下列式中，则： 修正的股价平均数＝(10＋16＋24＋10)/3＝20(元)得出的平均数与未分割时计算的一样，股价水平也不会因股票分割而变动。 二是股价修正法。股价修正法就是将股票分割等，变动后的股价还原为变动前的股价，使股价平均数不会因此变动。美国《纽约时报》编制的500 种股价平均数就采用股价修正法来计算股价平均数。 (3)加权股价平均数 加权股价平均数是根据各种样本股票的相对重要性进行加权平均计算的股价平均数，其权数(Q) 可以是成交股数、股票总市值、股票发行量等。 2.股票指数的计算 股票指数是反映不同时点上股价变动情况的相对指标。通常是将报告期的股票价格与定的基期价格相比，并将两者的比值乘以基期的指数值，即为该报告期的股票指数。 股票指数的计算方法有三种：一是相对法，二是综合法，三是加权法。 (1)相对法 相对法又称平均法，就是先计算各样本股票指数。再加总求总的算术平均数。其计算公式为： 股票指数＝n个样本股票指数之和/n 英国的《经济学家》普通股票指数就使用这种计算法。 (2)综合法 综合法是先将样本股票的基期和报告期价格分别加总，然后相比求出股票指数。即： 股票指数＝报告期股价之和/基期股价之和 代入数字得： 股价指数＝(8＋12＋14＋18)/(5＋8＋ 10 ＋ 15) ＝ 52/38＝136.8% 即报告期的股价比基期上升了36.8%。 从平均法和综合法计算股票指数来看，两者都未考虑到由各种采样股票的发行量和交易量的不相同，而对整个股市股价的影响不一样等因素，因此，计算出来的指数亦不够准确。为使股票指数计算精确，则需要加入权数，这个权数可以是交易量，亦可以是发行量。 (3)加权法 加权股票指数是根据各期样本股票的相对重要性予以加权，其权数可以是成交股数、股票发行量等。按时间划分，权数可以是基期权数，也可以是报告期权数。以基期成交股数(或发行量)为权数的指数称为拉斯拜尔指数；以报告期成交股数(或发行量)为权数的指数称为派许指数。 拉斯拜尔指数偏重基期成交股数(或发行量)，而派许指数则偏重报告期的成交股数(或发行量)。目前世界上大多数股票指数都是派许指数。 ','2007-05-24 16:23',1,84,'May 20, 2013 11:17:17 AM')
+3939 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'daotuo'
+3939 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('daotuo',14,1839,'电脑/网络 娱乐休闲 华语流行乐 资源共享 号码类资源共享 ',43)
+3947 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'daotuo'
+3948 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('34837408','股票的定义是什么?','股票的定义是什么?','股票 ','2007-09-05 14:10','JC1987624818','股票的定义：股票是有价证券的一种主要形式，是指股份有限公司签发的证明股东所持股份的凭证。股票有三个基本要素：发行主体、股份、持有人。 股票的性质： 1、 股票是一种有价证券。 2、 股票是一种要式证券，股票应记载一定的事项，其内容应全面真实，这些事项往往通过法律形式加以规定。 3、 股票是一种证权证券，证权证券是指证券是权利的一种物化的外在形式，它是权利的载体，权利是已经存在的。 4、 股票是一种资本证券，股份公司发行股票是一种吸引认购者投资以筹措公司自有资本手段，对于认购股票的人来说，购买股票就是一种投资行为。 5、 股票是一种综合权利证券，股票持有者作为股份公司的股东享有独立的股东权利。股东权是一种综合权利，包括出席股东大会、投票表决、分配股息和红利等。 股票的特征：股票具有以下六个方面的特征： 1、 收益性，收益性是股票是最基本的特征，它是指持有股票可以为持有人带来收益的特性。 2、 风险性，风险性是指股票可能产生经济利益损失的特性。持有股票要承担一定的风险。 3、 流动性，是指股票可以自由地进行交易。 4、 永久性，是指股票所载有权利的有效性是始终不变的，因为它是一种无期限的法律凭证。 5、 参与性，是指股票持有人有权参与公司重大决策的特性。 6、 波动性，是指股票交易价格经常性变化，或者说与股票票面价值经常不一致。 ','2007-09-05 14:11',1,85,'May 20, 2013 11:17:20 AM')
+3964 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'jxj1234567'
+3964 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('jxj1234567',5,44,'电脑/网络 股票 电影 ',18)
+3972 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'jxj1234567'
+3972 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('57603140','什么股票?炒股是什么一个模式?','什么股票?炒股是什么一个模式?','股票 ','2008-06-21 05:36','wangrenlong8','低买高卖（目前）；低买高卖＋指数预测（股指期货推出后） ','2008-06-21 05:41',1,86,'May 20, 2013 11:17:24 AM')
+3980 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'zytam'
+3981 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('zytam',6,396,'暂未制定',24)
+3989 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'zytam'
+3989 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('4313743','什么叫股票啊？','什么叫股票啊？','股票 ','2006-02-27 16:47','怡韵','股票 的真正意义是 一个公司 以在公开市场发行股票的方式 来为企业集资 就是说 你买了他的股票 就等于在这家公司投资了 到了 年底 公司有了赢利 就按你买的股票的数量 占总股本的比例 给你一定的投资收益 抄股票 是指 你买股票的真正想法 不是为了 拿公司年底的红利 是为了 等这家公司的销售或其他业绩等走高时 股价也随之走高 因为业绩高就表明 年底的分红可能高 所以股家就走高了 这时 你把股票卖掉 赢得中间的差价 这就是一般意义上的 抄股票 你的明白 先在的股价低 买卖股票是按 手 买卖的 一手 100股 虽然有的地方有什么最低开户额 但是 规矩是人定的 是可以想办法变通的 具体的最底成本 就是哪天去买 在当时所有股票中 价格最底的那只股票的价格 乘以100 你的明白 基金不算 基金最少买卖10手 ','2006-02-27 19:30',1,87,'May 20, 2013 11:17:27 AM')
+3997 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lacuslbs'
+3998 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('lacuslbs',7,10,'股票 基金 个人理财 ',76)
+4005 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lacuslbs'
+4007 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('4039485','什么叫炒股，股票为什么会涨跌？','什么叫炒股，股票为什么会涨跌？','商业/理财 ','2006-02-20 12:15','一代天蕉','“炒股”这个词可以简单地理解为：通过证券（最直接的就是股票）或证券衍生物（期权等）的交易来获取差额利润的方法，最通俗的道理就是“低买高卖”。 股票价格的公式是： 股票价格=预期股息（价）/银行利率。也就是说，股票的价格与预期股息（价）成正比的增长，而与银行的利率成反比的增长。 在实际生活中，影响股票价格波动的因素非常多。 其中，不仅有基本面的因素（如：公司的价值、发行股票的数量、公司盈利状况、经济发展状况、政策法规、政治环境等等），而且还有市场（技术）面的因素（如：交易筹码的堆积、多空双方的力量对比、市场总体的人心向背等等）。 ','2006-02-20 13:33',1,88,'May 20, 2013 11:17:31 AM')
+4014 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'zny0000'
+4014 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('zny0000',7,148,'股票 ',39)
+4030 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'zny0000'
+4032 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('33661924','400010是什么股票啊？','400010是什么股票啊？','股票 ','2007-08-21 00:04','gyc11','　　这是只从A股退市的三板股票,也就是说是垃圾股,就剩一个壳有价值了. 　　三板 金矿还是垃圾堆(垃圾的魅力） 　　有人说期货市场的风险远比股市要小，肯定很多投资者都不以为然，但是听听这种观点，也许你会有新的看法。这种理论认为：“如果不考虑交易费用，期货市场是一个0和市场，你亏的每1分钱都由其他的投资者赚走，同样的，你亏1分钱所带来的风险，足以让你产生1分钱的预期收益，也就是说，期货市场的风险和收益是对等的。然而股市却并不是一个0和市场，这里有不停的IPO，增发、配股，还要交纳印花税，然而上市公司分红却少得可怜，想从股市抽血的人太多，所以最终股市投资者的投资收益总和必然为负，也就是说，当你在股市承担亏损1分钱风险的时候，你所能看到的预期收益并不到1分钱。”这也就是10多年股市运转下来广大中小投资者伤痕累累的重要原因。 　　那么，在股市里有没有接近0和游戏的板块呢？有，这就是垃圾股。因为垃圾股已经丧失了再融资的资格，投资者也不必担心外界来此抽血，这一点可能就是垃圾的魅力。根据统计可以发现，垃圾股的行情远比绩优股行情来得猛烈，涨幅也远比绩优股要高。 　　这只是说了垃圾股的炒作价值，在我国垃圾股还有很重要的壳资源价值。由于我国IPO资源相对紧张，熊市申请上市公司少，但是市场容量也小，牛市市场容量大了，但是申请发股的公司也多了。所以，如果想通过IPO上市，要先找证券公司辅导，完成不少于半年的辅导期，还要申报材料、美化业绩，这里面的费用就多了，给证券公司的辅导费，准备材料的人力、物力成本，还要多给税务局交税，开销可不小。然后就进入攻关阶段，据有关报道，想拿到发审委成员的名单，需要20万元，名单上每个人可能还需要另外攻关，要找保荐人，还要支付承销费，能不能排上队还很难说，没一年时间肯定不行，这就是IPO的流程。 　　还有没有别的办法？那就是买壳上市，买壳上市不仅迅速快捷，而且对于上市公司质量也没有要求，比如没办法满足最近3年盈利的广发证券、海通证券，都通过借壳上市的途径成功上市，而这一切的好处，都能够反映到壳资源的价格上，这也就是支撑垃圾股股价的理论基础。 　　三板市场股价更低 　　相比ST类股票，三板市场的股价更低，从目前的情况来看，来自主板退市的公司股价一般在1元到2元之间，来自原NET、STAQ系统股价相对偏高，我们将分开讨论。 　　一般来说，来自原NET、STAQ系统的股票资产质量相对较好，股价也较高，投资这类股票的投资者主要是希望于将来它们满足上市要求后到主板上市，从而获得利润，即使不能上市，也可以不用担心公司破产，这样的股票主要有大自然、长白、粤传媒等。 　　而目前1元多从主板退下来的上市公司一般已经严重资不抵债，至少连续3年亏损，如果没有外界扶持，其自身很难甩开包袱，重新回到主板。所以，投资这类股票的目的是等待其他优秀公司通过重组三板股票达到借壳上市的目的，这样的三板股票其价值仅仅是一个壳资源。 　　但是目前主板上众多的*ST类股票，最终也会走入三板的世界，然而目前主板上已经很难找到4元以下的股票，而在三板的世界，质地相似，壳资源价值也只逊一筹的众多股票却仅有1元多的身价，投资三板市场，也许比投资*ST类公司更加划算。 　　区分暂停上市和终止上市 　　但是*ST类股票相比三板股票贵还是有一定的道理，即使*ST类股票已经退市，但这也只是暂停上市，如果2007年半年报能够盈利，将可以恢复上市，而在三板驻扎已久的股票，很多都已经是终止上市，即失去了半年回来的简便通道。如果重新上市，可能需要更复杂的手续。 　　如果选择*ST公司已经说得很多，那么如何选择三板的股票呢？从主板退下来的三板股票也分为两种，一种是刚刚退下来的，这种股票往往是暂停上市，有机会不久后回到主板，这类股票的价格相对较高，另一种是终止上市的，这样的公司就需要盈利记录才能重新上市，其股价也相对偏低。 　　但是低价的优点就在于可以用更小的风险来博取更大的收益，例如龙涤股份成功完成了重组，其在三板市场的股价也从0.52元上涨到目前的4.02元，预计回归主板后股价仍将出现大幅上扬，这就是投资三板的例子。 　　可能有人说，我怎么知道哪些公司会重组成功？其实有这么一个道理，在美国，曾经出现过债券热，很多质地不佳的公司也大肆发行债券，但是利息极高，投资这样的债券风险很大，但是收益也很大，所以有很多投资者选择了买很多种债券，最终可能有一部分债券无法清偿，但是其他债券多获得的利息已经足以弥补个别债券的损失，这种债券被称为垃圾债券。 　　买三板股票也一样，不可能每个公司都能重组成功，但是也不会每个公司都不能重组成功，如果分别买入还没有重组成功的股票，长期持有，等待它们重组成功，也许只要有1家能够重组成功，你就可以收回所有的投入，这点有点像风险投资，或者你也可以把这些股票理解为股市早期的股票认购证，可能三板公司的股票价格还比认购证更便宜。 　　作者： 222.42.116.*   2007-4-27:em12: :em12: :em12: ','2007-08-21 00:16',1,89,'May 20, 2013 11:17:34 AM')
+4047 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lymengnan'
+4048 INFO  [2013-05-20 14:20:05] execute sql :insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('lymengnan',11,808,'商业/理财 个人理财 股票 ',41)
+4055 INFO  [2013-05-20 14:20:05] execute sql :select * from `baiduuser` where `userName` = 'lymengnan'
+4057 INFO  [2013-05-20 14:20:05] execute sql :INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, `answer_time`, `isBest`,`answer_id`, `querytime`)VALUES ('39601568','什么是股票？股票的价格怎么来的？股票为什么会涨跌？','什么是股票？股票的价格怎么来的？股票为什么会涨跌？','股票 ','2007-11-14 23:53','hdjlzym','看看这个比喻就知道股票是什么回事了 假设一个市场，有两个人在卖烧饼，有且只有两个人，姑且称他们为烧饼甲、烧饼乙 假设他们的烧饼价格没有物价局监管。 假设他们每个烧饼卖一元钱就可以保本（包括他们的劳动力价值） 假设他们的烧饼数量一样多。 ——经济模型都这样，假设需要很多。 再假设他们生意很不好，一个买烧饼的人都没有。这样他们很无聊地站了半天。 甲说好无聊。 乙说好无聊。 看故事的你们说：好无聊。 这个时候的市场叫做很不活跃！ 为了让大家不无聊，甲对乙说：要不我们玩个游戏？乙赞成。 于是，故事开始了。。。。。。 甲花一元钱买乙一个烧饼，乙也花一元钱买甲一个烧饼，现金交付。 甲再花两元钱买乙一个烧饼，乙也花两元钱买甲一个烧饼，现金交付。 甲再花三元钱买乙一个烧饼，乙也花三元钱买甲一个烧饼，现金交付。 。。。。。。 于是在整个市场的人看来（包括看故事的你）烧饼的价格飞涨，不一会儿就涨到了每个烧饼60元。但只要甲和乙手上的烧饼数一样，那么谁都没有赚钱，谁也没有亏钱，但是他们重估以后的资产“增值”了！甲乙拥有高出过去很多倍的“财富”，他们身价提高了很多，“市值”增加了很多。 这个时候有路人丙，一个小时前路过的时候知道烧饼是一元一个，现在发现是60元一个，他很惊讶。 一个小时以后，路人丙发现烧饼已经是100元一个，他更惊讶了。 又一个小时以后，路人丙发现烧饼已经是120元一个了，他毫不犹豫地买了一个，因为他是个投资兼投机家，他确信烧饼价格还会涨，价格上还有上升空间，并且有人给出了超过200元的“目标价”（在股票市场，他叫股民，给出目标价的人叫研究员）。 在烧饼甲、烧饼乙“赚钱”的示范效应下，甚至路人丙赚钱的示范效应下，接下来的买烧饼的路人越来越多，参与买卖的人也越来越多，烧饼价格节节攀升，所有的人都非常高兴，因为很奇怪：所有人都没有亏钱。。。。。。 这个时候，你可以想见，甲和乙谁手上的烧饼少，即谁的资产少，谁就真正的赚钱了。参与购买的人，谁手上没烧饼了，谁就真正赚钱了！而且卖了的人都很后悔——因为烧饼价格还在飞快地涨。。。。。。 那谁亏了钱呢？ 答案是：谁也没有亏钱，因为很多出高价购买烧饼的人手上持有大家公认的优质等值资产——烧饼！而烧饼显然比现金好！现金存银行能有多少一点利息啊？哪比得上价格飞涨的烧饼啊？甚至大家一致认为市场烧饼供不应求，可不可以买烧饼期货啊？于是出现了认购权证。。。。。。 有人问了：买烧饼永远不会亏钱吗？看样子是的。但这个世界就那么奇怪，突然市场上来了一个叫李子的，李子曰：有亏钱的时候！那哪一天大家会亏钱呢？ 假设一：市场上来了个物价部门，他认为烧饼的定价应该是每个一元。（监管） 假设二：市场出现了很多做烧饼的，而且价格就是每个一元。（同样题材） 假设三：市场出现了很多可供玩这种游戏的商品。（发行） 假设四：大家突然发现这不过是个烧饼！（价值发现） 假设五：没有人再愿意玩互相买卖的游戏了！（真相大白） 如果有一天，任何一个假设出现了，那么这一天，有烧饼的人就亏钱了！那谁赚了钱？就是最少占有资产——烧饼的人！ 这个卖烧饼的故事非常简单，人人都觉得高价买烧饼的人是傻瓜，但我们再回首看看我们所在的证券市场的人们吧。这个市场的有些所谓的资产重估、资产注入何尝不是这样？在ROE高企，资产有高溢价下的资产注入，和卖烧饼的原理其实一样，谁最少地占有资产，谁就是赚钱的人，谁就是获得高收益的人！ 所以作为一个投资人，要理性地看待资产重估和资产注入，忽悠别人不要忽悠自己，尤其不要忽悠自己的钱！ 在高ROE下的资产注入，尤其是券商借壳上市、增发购买大股东的资产、增发类的房地产等等资产注入，一定要把眼睛擦亮再擦亮，慎重再慎重！ 因为，你很可能成为一个持有高价烧饼的路人 ','2007-11-15 08:16',1,90,'May 20, 2013 11:17:38 AM')

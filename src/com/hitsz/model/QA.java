@@ -8,16 +8,16 @@ public class QA {
 	 * 中的39038584这串数字
 	 * 
 	 */
-	private String id;
+	private String qid;
 
 	/**
 	 * 问句标题
 	 */
-	private String title;
+	private String question;
 	/**
 	 * 问句描述
 	 */
-	private String question;
+	private String description;
 
 	/**
 	 * 问句类别
@@ -28,7 +28,14 @@ public class QA {
 	 * 提问时间
 	 */
 	private String questionDate;
-
+//
+//	/**
+//	 * 是否被采纳的标记
+//	 *  = 1 表示被采纳
+//	 *  = 0 表示未被采纳
+//	 */
+//	private int isAdopted;
+	
 	/**
 	 * 提问者ID
 	 */
@@ -45,24 +52,36 @@ public class QA {
 	private String answerDate;
 	
 	/**
+	 * 是否是最好的回答
+	 * 百度知道一般是提问者采纳了该答案，则有该标记
+	 *  = 1 表示是最好的，或者提问者已经采纳
+	 *  = 0 无此标记，没有被采纳
+	 */
+	private int isBest;
+	
+	/**
 	 * 网页下载时间
 	 */
 	private String downDate;
 	
-//	/**
-//	 * 答案者ID
-//	 * 
-//	 */
-//	private String aId;
-//	
-//	/**
-//	 * 回答者等级
-//	 */
-//	private String aLevel;
-//	/**
-//	 * 回答者的擅长
-//	 */
-//	private String aExpert;
+	/**
+	 * 回答者的一些基本信息
+	 */
+	private BaiduUser baiduUser;
+	
+	
+
+	
+	@Override
+	public String toString() {
+		return "QA [question=" + question + "\n description=" + description + "\n category="
+				+ category + "\n questionId=" + questionId + "\n questionDate=" +
+					questionDate + "\n answer="
+				+ answer + "\n answerDate=" + answerDate +"\n isBest="+isBest+
+				"\n downDate=" + downDate +"\n baiduUser=" + baiduUser
+				+ "]";
+	}
+
 	
 	public String getDownDate() {
 		return downDate;
@@ -71,89 +90,86 @@ public class QA {
 	public void setDownDate(String downDate) {
 		this.downDate = downDate;
 	}
-
-
-	private BaiduUser baiduUser;
 	
-	
-	public QA() {
-		
+	public String getQid() {
+		return qid;
 	}
 
-	public String getId() {
-		return id;
+	public void setQid(String qid) {
+		this.qid = qid;
 	}
 
-
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	public String getQuestion() {
 		return question;
 	}
+
 	public void setQuestion(String question) {
 		this.question = question;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public String getCategory() {
 		return category;
 	}
+
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
-	public String getAnswer() {
-		return answer;
-	}
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
-
-
-	public String getQuestionId() {
-		return questionId;
-	}
-
-
-	public void setQuestionId(String questionId) {
-		this.questionId = questionId;
-	}
-
 
 	public String getQuestionDate() {
 		return questionDate;
 	}
 
-
 	public void setQuestionDate(String questionDate) {
 		this.questionDate = questionDate;
 	}
 
+//	public int getIsAdopted() {
+//		return isAdopted;
+//	}
+//
+//	public void setIsAdopted(int isAdopted) {
+//		this.isAdopted = isAdopted;
+//	}
+
+	public String getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(String questionId) {
+		this.questionId = questionId;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
 
 	public String getAnswerDate() {
 		return answerDate;
 	}
 
-
 	public void setAnswerDate(String answerDate) {
 		this.answerDate = answerDate;
 	}
 
-
-	@Override
-	public String toString() {
-		return "QA [title=" + title + "\n question=" + question + "\n category="
-				+ category + "\n questionId=" + questionId + "\n questionDate=" +
-					questionDate + "\n answer="
-				+ answer + "\n answerDate=" + answerDate +"\n downDate=" + downDate +"\n baiduUser=" + baiduUser
-				+ "]";
+	public int getIsBest() {
+		return isBest;
 	}
 
+	public void setIsBest(int isBest) {
+		this.isBest = isBest;
+	}
 
 	public BaiduUser getBaiduUser() {
 		return baiduUser;

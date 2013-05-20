@@ -10,9 +10,13 @@ public class BaiduUser {
 	/**
 	 * 用户等级
 	 */
-	private String level;
+	private int gradeIndex;
 	
-	
+	/**
+	 * 用户的采纳数
+	 */
+	private int grAnswerNum;
+
 	/**
 	 * 用户的擅长领域
 	 */
@@ -21,15 +25,24 @@ public class BaiduUser {
 	/**
 	 * 用户的被采纳率
 	 */
-	private String goodRate;
+	private int goodRate;
 
 	
 	@Override
 	public String toString() {
-		return "BaiduUser [username=" + username + "\n level=" + level
-				+ "\n carefield=" + carefield + "\n goodRate=" + goodRate + "]";
+		return "BaiduUser [username=" + username + "\n gradeIndex=" + gradeIndex
+				+"\n grAnswerNum=" + grAnswerNum+ 
+				"\n carefield=" + carefield + "\n goodRate=" + goodRate + "]";
 	}
 
+	public int getGrAnswerNum() {
+		return grAnswerNum;
+	}
+
+	public void setGrAnswerNum(int grAnswerNum) {
+		this.grAnswerNum = grAnswerNum;
+	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -38,12 +51,12 @@ public class BaiduUser {
 		this.username = username;
 	}
 
-	public String getLevel() {
-		return level;
+	public int getGradeIndex() {
+		return gradeIndex;
 	}
 
-	public void setLevel(String level) {
-		this.level = level;
+	public void setGradeIndex(int gradeIndex) {
+		this.gradeIndex = gradeIndex;
 	}
 
 	public String getCarefield() {
@@ -54,11 +67,11 @@ public class BaiduUser {
 		this.carefield = carefield;
 	}
 
-	public String getGoodRate() {
+	public int getGoodRate() {
 		return goodRate;
 	}
 
-	public void setGoodRate(String goodRate) {
+	public void setGoodRate(int goodRate) {
 		this.goodRate = goodRate;
 	}
 	

@@ -180,20 +180,24 @@ public class QADBUtil {
 	}
 
 	/**
+	 * 从数据库中找出那些finished标识位为finished的qids
 	 * 
+	 * @param finished
+	 * 			= 1 表示提取出已经下载过的
+	 * 			= 0 表示还没有下载过 
 	 * @return
 	 */
-	public static List<String> getItemIDsFromDB() {
+	public static List<String> getItemIDsFromDB(int finished) {
 		
 		Connection conn = DBUtil.getDBConnection();	
 
 		String sql;
 		if(Constants.DEBUG)
-			 sql = "select qid from qapair_resultlist where id <= 5";
+			 sql = "select qid from qapair_resultlist where id <= 5 and finished = " + finished;
 		else
-			sql = "select qid from qapair_resultlist";
+			sql = "select qid from qapair_resultlist where finished = " + finished;
 		
-		System.out.println("execute sql :" + sql);
+		Log.info("execute sql :" + sql);
 		
 		ResultSet rs = DBUtil.getResultSet(conn, sql);
 		
@@ -234,6 +238,11 @@ public class QADBUtil {
 	 * 
 	 * INSERT INTO `baiduuser`(`id`, `userName`, `level`, `carefield`, `goodRate`) 
 	 * VALUES ([value-1],[value-2],[value-3],[value-4],[value-5]
+	 * 
+	 * INSERT INTO `qapair`(`id`, `qid`, `question`, `description`, `category`, `q_time`, 
+	 * 		`isAdopted`, `asker_id`, `answer`, `comment`, `asker_comment`, 
+	 * 			`answer_time`, `isBest`, `answer_id`, `querytime`) VALUES ()
+
 	 * @param qas
 	 */
 	public static void saveQAList(List<QA> qas) {
@@ -245,11 +254,11 @@ public class QADBUtil {
 			int id = saveUser(conn,user);
 		
 			String sql = "INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, " +
-					"`answer_time`, `answer_id`, `querytime`)"+
-					"VALUES ('" + qa.getId() +"','" + qa.getTitle() +"','" + qa.getQuestion()+"','" + qa.getCategory()+"','"+
+					"`answer_time`, `isBest`,`answer_id`, `querytime`)"+
+					"VALUES ('" + qa.getQid() +"','" + qa.getQuestion() +"','" + qa.getQuestion()+"','" + qa.getCategory()+"','"+
 					qa.getQuestionDate() + "','" + qa.getQuestionId() + "','" + qa.getAnswer() + "','" + qa.getAnswerDate() + 
-					"'," +id +",'" +qa.getDownDate()+"')";
-			System.out.println("execute sql :" + sql);
+					 "',"+qa.getIsBest() + "," +id +",'" +qa.getDownDate()+"')";
+			Log.info("execute sql :" + sql);
 			DBUtil.insert(conn, sql);
 		}
 		try {		
@@ -264,6 +273,8 @@ public class QADBUtil {
 
 	/**
 	 * 保存user的信息
+	 * 	INSERT INTO `baiduuser`(`id`, `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) 
+	 * 		VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	 * @param conn
 	 * @param user
 	 * @return
@@ -271,24 +282,25 @@ public class QADBUtil {
 	private static int saveUser(Connection conn, BaiduUser user) {
 		String sql = "select * from `baiduuser` where `userName` = " +"'"+user.getUsername()+"'";
 		
-		System.out.println("execute sql :" + sql);
+		Log.info("execute sql :" + sql);
 		ResultSet rs = DBUtil.getResultSet(conn, sql);
 		
 		try {
 			if(rs.next()){
 				return Integer.parseInt(rs.getString("id"));
 			}else{
-				sql = "insert into `baiduuser`( `userName`, `level`, `carefield`, `goodRate`) values ('"+
-						user.getUsername() +"','"+ user.getLevel()+"','"+user.getCarefield()+"','"+user.getGoodRate()+ "')";
+				sql = "insert into `baiduuser`( `userName`, `gradeIndex`, `grAnswerNum`, `carefield`, `goodRate`) values ('"+
+						user.getUsername() +"',"+ user.getGradeIndex()+ ","+user.getGrAnswerNum()+",'"+user.getCarefield()+"',"+user.getGoodRate()+ ")";
 				
-				System.out.println("execute sql :" + sql);
+				Log.info("execute sql :" + sql);
 				DBUtil.insert(conn, sql);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		sql = "select * from `baiduuser` where `userName` = " +"'"+user.getUsername()+"'";
-		System.out.println("execute sql :" + sql);
+		Log.info("execute sql :" + sql);
 		rs = DBUtil.getResultSet(conn, sql);
 		int id = -1;
 		try {

@@ -76,7 +76,7 @@ public class Baidu {
 	
 	/**
 	 * 从数据库中查询出所有的问题的id
-	 * 然后小哦难过qapair文件夹下读取相应的文件进行分析，返回一个QA
+	 * 然后从qapair文件夹下读取相应的文件进行分析，返回一个QA
 	 * 必须保证qapair下的id.html必须存在
 	 * 
 	 */
@@ -84,10 +84,10 @@ public class Baidu {
 		List<QA> qalist = new LinkedList<QA>();
 		
 		BaiduPairParser parser = new BaiduPairParser();
+		//获取已经下载过的qids
+		List<String> qids = QADBUtil.getItemIDsFromDB(1);
 		
-		List<String> ids = QADBUtil.getItemIDsFromDB();
-		
-		for(String id : ids){
+		for(String id : qids){
 			String fileName = getFileName(id, "html","qapair");
 			
 			File input = new File(fileName);
@@ -98,11 +98,11 @@ public class Baidu {
 			try {
 				qa = parser.getQA(input);
 			} catch (IOException e) {
-				System.err.println("The file: " + fileName +" is not found!!!");
+				 Log.info("The file: " + fileName +" is not found!!!");
 			}
 			
 			if(null != qa){
-				qa.setId(id);
+				qa.setQid(id);
 				qalist.add(qa);
 			}
 		}
@@ -117,7 +117,7 @@ public class Baidu {
 		FileWriter fw = null ;
 		int i=0;
 		for(QA qa: qalist){
-			filename = getFileName(qa.getId(),"txt","qa");
+			filename = getFileName(qa.getQid(),"txt","qa");
 			
 			try {
 				fw = new FileWriter(filename, false);
