@@ -52,12 +52,16 @@ QA系统使用说明
 	 */
 	public void testParseQAPage()
 
-3其他使用说明：
+	3其他使用说明：
 	1)为了能记录运行过程，该系统使用了Log日志文件，在log文件夹下，
-log4j.properties 是log记录文件的配置文件，但程序在运行出错时，可以查询该log下的qa.log文件，查询运行记录即可，以便做一些恢复措施。
+	log4j.properties 是log记录文件的配置文件，但程序在运行出错时，可以查询该log下的qa.log文件，
+	查询运行记录即可，以便做一些恢复措施。
+
 	2）在config文件下，有一个系统配置文件url.properties
 	里面含有各种系统配置信息，主要就是数据库的URL地址和密码等
 	还有在下载网页时的延迟配置。
+	
 	3）在sql文件夹下的qa.sql文件则是建立空的数据库的sql语句，直接当该文件导入到mysql中即可，不需要建立qa数据库。
+	
 	4)问句的搜索结果页面保存在resource/baidu文件夹下。
 	每个问答对网页保存在resource/qapair文件夹下。
