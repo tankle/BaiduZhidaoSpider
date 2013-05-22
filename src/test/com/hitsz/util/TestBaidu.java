@@ -25,6 +25,8 @@ public class TestBaidu {
 	}
 	
 	/**
+	 * 第一步运行这个函数，将每个问句的搜索页面保存到本地
+	 * 
 	 * 测试下载每个问句的baidu搜索网页
 	 */
 	@Test
@@ -45,6 +47,8 @@ public class TestBaidu {
 	}
 	
 	/**
+	 * 第二步 分析第一步下载下来的文件，将搜索的每个item存入到数据库qapair_resultlist中 
+	 * 
 	 * 
 	 * 分析每个问题的搜索网页，并将每个结果存入到数据库中
 	 * 对每个问题解析完之后，需要对TermList清空
@@ -69,7 +73,10 @@ public class TestBaidu {
 	}
 	
 	/**
-	 *  从数据库qapair_list中获取所有 还没有下载过
+	 * 第三步 在第二步后，在从数据库中的qapair_resultlist中选出出那些还没有下载过的items，保存到一个list中
+	 * 		对每个url的list遍历，逐一下载对应的问答网页，然后以问题的id命名文件，保存到本地
+	 * 
+	 *  从数据库qapair_resultlist中获取所有 还没有下载过
 	 *  的item的URL，然后进行下载
 	 */
 	@Test
@@ -99,7 +106,7 @@ public class TestBaidu {
 			 * 延迟不能大于maxdelay
 			 */
 			 while( !baidu.downLoadItem(url)){
-				 Log.info("Will sleep "+ i * oneDelay +" seconds and try download again !!!");
+				 Log.info("Will sleep "+ i * oneDelay/1000 +" seconds and try download again !!!");
 				 try {
 					 if(i * oneDelay > maxDelay)
 						 break;
@@ -138,6 +145,9 @@ public class TestBaidu {
 	}
 	
 	/**
+	 * 
+	 * 第四步，将第三步中保存下来的问答对网页逐一分析，本将每个问答对网页结果存入到数据库qapair,baiduuser中
+	 * 
 	 * 分析每个问答对的网页
 	 * 并保存到数据库中
 	 */
