@@ -221,7 +221,7 @@ public class Baidu {
 		/**
 		 * 解析出某个问题有多少回答项
 		 */
-		Element pages = doc.getElementsByAttributeValueContaining("class", "widget-pager").first();
+		Element pages = doc.getElementsByAttributeValueContaining("class", "f-lighter lh-22").first();
 		Element items = pages.getElementsByTag("span").first();
 		String regEx="[^0-9]";   
 		Pattern p = Pattern.compile(regEx);   
@@ -358,6 +358,7 @@ public class Baidu {
 		
 		String fileName = "resource" + File.separator +"baidu" + File.separator+ 
 				keyword + "---" + i +"page.html";
+		Log.info("The filename is " + fileName);
 		return fileName;
 	}
 //

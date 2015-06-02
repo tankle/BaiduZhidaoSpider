@@ -21,7 +21,7 @@ public class Item implements Serializable{
 	/**
 	 * 序号
 	 */
-	private int id;
+	private String id;
 	/**
 	 * 网址
 	 */
@@ -55,7 +55,7 @@ public class Item implements Serializable{
 				+"date=" + date + "]";
 	}
 
-	public Item(int id, String url, String title, String answer, String date) {
+	public Item(String id, String url, String title, String answer, String date) {
 		super();
 		this.id = id;
 		this.url = url;
@@ -83,11 +83,11 @@ public class Item implements Serializable{
 		this.rankid = rankid;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
