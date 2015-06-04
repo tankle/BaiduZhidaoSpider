@@ -3,9 +3,13 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry exported="true" kind="lib" path="libs/jsoup-1.7.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/mysql-connector-java-5.1.25-bin.jar"/>
 	<classpathentry kind="lib" path="libs/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="libs/json4java-lib.jar"/>
+	<classpathentry kind="lib" path="libs/fastjson-1.2.6.jar" sourcepath="libs/fastjson-1.2.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Github/BaiduZhidaoSpider/libs/fastjson-1.2.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/jsoup-1.7.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

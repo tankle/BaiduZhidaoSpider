@@ -3,14 +3,15 @@ package com.hitsz.spider;
 import java.io.File;
 import java.io.IOException;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
 import com.hitsz.model.BaiduUser;
 import com.hitsz.model.QA;
 import com.hitsz.util.Log;
@@ -25,7 +26,43 @@ import com.hitsz.util.Log;
 public class BaiduPairParser {
 
 	/**
-	 * 
+	 * <div class="wgt-ask accuse-response line mod-shadow" id="wgt-ask">
+<h1 accuse="qTitle">
+<i class="i-status-being grid mr-10"></i>
+<span class="ask-title ">什么是股票？炒股是什么意思</span>
+</h1>
+<div class="line f-aid ask-info" id="ask-info">
+<span class="grid-r ask-time"><ins class="accuse-area"></ins>2015-04-23 21:02</span>
+
+<a class="user-name" alog-action="qb-ask-uname" rel="nofollow" href="http://www.baidu.com/p/wokao205?from=zhidao" target="_blank">wokao205</a>
+
+<span class="f-pipe"></span>
+<span class="classinfo" alog-group="qb-cate-nav">
+分类：<a class="f-aid" data-log="area:ask,pos:class" alog-alias="qb-class-info" href="/browse/772">股票</a>
+</span>
+<span id="v-times" class="f-pipe" style="">|</span><span class="browse-times"> 浏览 188 次</span>
+<span class="f-pipe"></span>
+<span><a rel="nofollow" class="i-from-wap" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=qbview&amp;tab=1" alog-action="qb-phone-zd" target="_blank" title="来自手机知道"></a>来自：<a rel="nofollow" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=qbview&amp;tab=1" alog-action="qb-phone-zd" target="_blank">手机知道</a></span>
+</div>
+<div class="line f-aid ask-tags">
+<i class="i-ask-tags"></i>
+<span>股票</span></div>
+<div class="line mt-10 app-and-share">
+
+<div class="wgt-share" id="wgt-share">
+<div class="line f-aid mt-5">
+<span class="share-to grid">分享到：</span>
+<div alog-group="qb-share-btn" id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data="{&quot;text&quot;:&quot;这条提问太有意思了，小伙伴们，你们能来回答一下吗？【问：什么是股票？炒股是什么意思】（分享自@百度知道）&quot;,&quot;url&quot;:&quot;http://zhidao.baidu.com/question/938061543950918252.html&quot;,&quot;pic&quot;:&quot;http://img.baidu.com/img/logo-zhidao.gif&quot;}"><a class="bds_tsina" log="pos:tsina" title="分享到新浪微博" href="#"></a>
+<a class="bds_qzone" log="pos:qzone" title="分享到QQ空间" href="#"></a>
+<a class="bds_tieba" log="pos:tieba" title="分享到百度贴吧" href="#"></a>
+<span class="bds_more" style="height: 17px;"></span>
+</div></div>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=281447" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=398139"></script>
+
+
+</div>
+</div>
 	 * @param input
 	 * @return
 	 * @throws IOException
@@ -69,7 +106,7 @@ public class BaiduPairParser {
 			return qa;
 		}
 		//回答的时间
-		qa.setAnswerDate(getAnswerDate(answerDiv));
+		qa.setAnswerDate(getAnswerDate(article));
 		//回答的内容
 		qa.setAnswer(getAnswerContent(answerDiv));
 		
@@ -91,12 +128,16 @@ public class BaiduPairParser {
 		String info = null;
 		for(Element e : javascripts){
 			if(e.data().contains("F.context('answers')")){
-				info = e.data().substring(e.data().indexOf("=")+1).trim();
+				info = e.data().substring(e.data().indexOf("=")+1, e.data().lastIndexOf("}")+1).trim();
 				//因为有些标签中含有这样的内容，而JSONObject视为不合法的
 				//<a href=\x22http:\/\/baike.baidu.com\/view\/2085.htm\x22 target=\x22_blank\x22>
 				//	http:\/\/baike.baidu.com\/view\/2085.htm<\/a>
 				// \x22是 无法解析的
 				info = info.replaceAll("\\\\x22", "'");
+				
+//				if(info.charAt(info.length()-1) ==  ';'){
+//					info = info.substring(0, info.length()-1);
+//				}
 				break;
 			}
 		}
@@ -106,21 +147,23 @@ public class BaiduPairParser {
 		JSONObject jsonObj = null;
 		try{
 			Log.info(info.toString());
-			jsonObj = new JSONObject(info);
+			jsonObj = JSON.parseObject(info.toString());
 		}catch(JSONException e){
-			Log.info(e.getMessage());
+			Log.info("Json parse error ... "+e.getMessage());
+//			System.exit(0);
 		}
 		
-		System.out.println(jsonObj.toString());
+//		System.out.println(jsonObj.toString());
 		//是否是被提问者采纳的标记
 		qa.setIsBest(getIsBest(jsonObj));
 		
 		//回答者的基本信息
 		BaiduUser user = new BaiduUser();
 		//用户名字
-		String name = getAnswerUsernName(jsonObj);
-		user.setUsername(name);
-		if(name.equals("热心网友")){
+		String name = jsonObj.getString("userName");
+		
+		if(name == null){
+			user.setUsername("热心网友");
 			//用户等级
 			user.setGradeIndex(0);
 			 //用户的采纳数
@@ -130,6 +173,8 @@ public class BaiduPairParser {
 			//用户的擅长领域
 			user.setCarefield("暂未定制");
 		}else{
+			user.setUsername(name);
+			
 			JSONObject userInfo =  jsonObj.getJSONObject("user");
 			//用户等级
 			user.setGradeIndex(getGradeIndex(userInfo));
@@ -170,7 +215,7 @@ public class BaiduPairParser {
 		}
 		String careStr = "";
 		if(null != carefields){
-			for(int i=0; i < carefields.length(); i++){
+			for(int i=0; i < carefields.size(); i++){
 				JSONObject o = carefields.getJSONObject(i);
 				careStr += o.getString("cname")+" ";
 			}
@@ -187,7 +232,7 @@ public class BaiduPairParser {
 	private int getUserGoodRate(JSONObject userInfo) {
 		int goodRate = 0;
         try{
-        	goodRate = userInfo.getInt("goodRate");
+        	goodRate = userInfo.getIntValue("goodRate");
         }catch(JSONException e){
         	Log.info("the field 'goodRate' is not exist !");
         }       	        
@@ -202,7 +247,7 @@ public class BaiduPairParser {
 	private int getGrAnswerNum(JSONObject userInfo) {
 		int grAnswerNum = 0;
         try{
-        	grAnswerNum = userInfo.getInt("grAnswerNum");
+        	grAnswerNum = userInfo.getIntValue("grAnswerNum");
         }catch(JSONException e){
         	Log.info("the field 'grAnswerNum' is not exist !");
         }       	        
@@ -217,28 +262,24 @@ public class BaiduPairParser {
 	private int getGradeIndex(JSONObject userInfo) {
 		int gradeIndex = 0;
         try{
-        	gradeIndex = userInfo.getInt("gradeIndex");
+        	gradeIndex = userInfo.getIntValue("gradeIndex");
         }catch(JSONException e){
         	Log.info("the field 'gradeIndex' is not exist !");
         }       	        
 		return gradeIndex;
 	}
 
-	/**
-	 * 获取用户的名字
-	 * @param jsonObj
-	 * @return
-	 */
-	private String getAnswerUsernName(JSONObject jsonObj) {
-		String userName = null;
-        try{
-        	userName = jsonObj.getString("userName");
-        }catch(JSONException e){
-        	Log.info("the field 'userName' is not exist !");
-        	userName = "热心网友";
-        }
-		return userName;
-	}
+//	/**
+//	 * 获取用户的名字
+//	 * @param jsonObj
+//	 * @return
+//	 */
+//	private String getAnswerUsernName(JSONObject jsonObj) {
+//		String userName = null;
+//        userName = jsonObj.getString("userName");
+//
+//		return userName;
+//	}
 
 	/**
 	 * 获取是否采纳标识位
@@ -248,7 +289,7 @@ public class BaiduPairParser {
 	private int getIsBest(JSONObject jsonObj) {
 		int isBest = 0;
         try{
-        	isBest = jsonObj.getInt("isBest");
+        	isBest = jsonObj.getIntValue("isBest");
         }catch(JSONException e){
         	Log.info("the field 'isBest' is not exist !");
         }       	        
@@ -356,7 +397,8 @@ public class BaiduPairParser {
 	 * @return
 	 */
 	private String getAnswerContent(Element answerDiv) {
-		Element ansConDiv = answerDiv.getElementsByAttributeValue("class", "line content").first();
+//		answerDiv.getElementsByAttributeValueStarting("class", "line content")
+		Element ansConDiv = answerDiv.getElementsByAttributeValueStarting("class", "line content").first();
 		
 		Elements answerPre = ansConDiv.getElementsByAttributeValue("accuse", "aContent");
 		
@@ -369,14 +411,16 @@ public class BaiduPairParser {
 
 	/**
 	 * 
-	 * @param answerDiv
+	 * @param articleDiv
 	 * @return
 	 */
-	private String getAnswerDate(Element answerDiv) {
+	private String getAnswerDate(Element articleDiv) {
 		/**
 		 * 时间是在第一个span里
+		 * hd line 
 		 */
-		Element date = answerDiv.getElementsByTag("span").first();
+		Element aa = articleDiv.getElementsByAttributeValueStarting("class", "hd line").first();
+		Element date = aa.getElementsByTag("span").first();
 		if(null != date)
 			return date.text();
 		return "null";		
@@ -451,8 +495,10 @@ public class BaiduPairParser {
 	 * @return
 	 */
 	private String getAskTitle(Element askDiv) {
-		Element title = askDiv.getElementsByAttributeValue("class", "ask-title").first();
+		Element h1 = askDiv.getElementsByAttributeValue("accuse","qTitle").first();
+		String title = h1.text();
+//		Element title = askDiv.getElementsByAttributeValue("class", "ask-title ").first();
 		
-		return title.text();
+		return title;
 	}
 }

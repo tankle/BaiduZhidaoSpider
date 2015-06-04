@@ -14,7 +14,7 @@ public class Item implements Serializable{
 	private int rankid;
 	
 	/**
-	 * 网页下载时间
+	 * 网页下载时间，既查询的查询时间
 	 */
 	private String downdate;
 	
@@ -39,7 +39,7 @@ public class Item implements Serializable{
 	private String answer;
 	
 	/**
-	 * 问句提问时间
+	 * 问句回答时间
 	 */
 	private String date;
 	

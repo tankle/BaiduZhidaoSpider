@@ -112,7 +112,7 @@ public class QA {
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.description = description.replace("'", "") ;
 	}
 
 	public String getCategory() {
@@ -152,7 +152,7 @@ public class QA {
 	}
 
 	public void setAnswer(String answer) {
-		this.answer = answer;
+		this.answer = answer.replace("'", "") ;
 	}
 
 	public String getAnswerDate() {

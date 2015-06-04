@@ -138,7 +138,7 @@ public class BaiduItemParser {
 			item.setRankid(count++);
 			//名字
 			Element title = e.getElementsByAttributeValue("class", "ti").first();
-			//
+			//设置标题
 			item.setTitle(title.text());
 		
 			//回答得信息
@@ -153,7 +153,8 @@ public class BaiduItemParser {
 //				}
 //			}
 			//回答日期
-			Element date = e.getElementsByAttributeValue("alog-group", "result-userinfo").first();
+			Element date = e.getElementsByAttributeValue("alog-group", "result-userinfo").first()
+					.getElementsByTag("span").first();
 			item.setDate(date.ownText());
 			
 			itemList.add(item);

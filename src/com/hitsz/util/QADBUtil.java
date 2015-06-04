@@ -250,13 +250,16 @@ public class QADBUtil {
 		
 		for(QA qa : qas){
 			BaiduUser user = qa.getBaiduUser();
-			
+			if(user == null){
+				System.out.println(qa.getQid());
+				continue;
+			}
 			int id = saveUser(conn,user);
 		
 			String sql = "INSERT INTO `qapair`(`qid`, `question`, `description`, `category`, `q_time`, `asker_id`, `answer`, " +
 					"`answer_time`, `isBest`,`answer_id`, `querytime`)"+
 					"VALUES ('" + qa.getQid() +"','" + qa.getQuestion() +"','" + qa.getQuestion()+"','" + qa.getCategory()+"','"+
-					qa.getQuestionDate() + "','" + qa.getQuestionId() + "','" + qa.getAnswer() + "','" + qa.getAnswerDate() + 
+					qa.getQuestionDate() + "','" + qa.getQuestionId() + "','" + qa.getAnswer()+ "','" + qa.getAnswerDate() + 
 					 "',"+qa.getIsBest() + "," +id +",'" +qa.getDownDate()+"')";
 			Log.info("execute sql :" + sql);
 			DBUtil.insert(conn, sql);
@@ -280,6 +283,7 @@ public class QADBUtil {
 	 * @return
 	 */
 	private static int saveUser(Connection conn, BaiduUser user) {
+		System.out.println(user.getUsername());
 		String sql = "select * from `baiduuser` where `userName` = " +"'"+user.getUsername()+"'";
 		
 		Log.info("execute sql :" + sql);
@@ -299,6 +303,7 @@ public class QADBUtil {
 			e.printStackTrace();
 		}
 		
+		//插入完之后获得 user的id
 		sql = "select * from `baiduuser` where `userName` = " +"'"+user.getUsername()+"'";
 		Log.info("execute sql :" + sql);
 		rs = DBUtil.getResultSet(conn, sql);

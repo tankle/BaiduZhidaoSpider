@@ -10,11 +10,10 @@ import com.hitsz.util.config.ConfigUtil;
 import com.hitsz.util.config.PropNotConfigedException;
 
 public class Main {
-static Baidu baidu = null;
+	static Baidu baidu = null;
 	
 	
-	public static void main(String[] args){
-		baidu = new Baidu();
+	public static void downloadQuery(){
 		/**
 		 * 将每个问句的搜索页面保存到本地
 		 */
@@ -31,7 +30,9 @@ static Baidu baidu = null;
 			QADBUtil.setQueryFinished(keyword);
 			
 		}
-		
+	}
+	
+	public static void parseQueryResultList(){
 		/**
 		 *  第二步 分析第一步下载下来的文件，将搜索的每个item存入到数据库qapair_resultlist中 
 		 */
@@ -39,7 +40,7 @@ static Baidu baidu = null;
 		//获取所有已经下载过的问句列表
 		baidu.getQuerysFromDB(1);
 		
-		keywords = baidu.getKeywords();
+		List<String> keywords = baidu.getKeywords();
 		//分析下载下来的对应的问句页面，将搜索页面对应的每个item，保存到数据库中
 		for(String keyword : keywords){
 			baidu.parsePage(keyword);	
@@ -49,6 +50,9 @@ static Baidu baidu = null;
 			baidu.getBdu().getTermList().clear();
 		}
 		
+	}
+	
+	public static void downloadQAPair(){
 		/**
 		 *  第三步 在第二步后，在从数据库中的qapair_resultlist中选出出那些还没有下载过的items，保存到一个list中
 		 *  对每个url的list遍历，逐一下载对应的问答网页，然后以问题的id命名文件，保存到本地
@@ -114,7 +118,8 @@ static Baidu baidu = null;
 				e.printStackTrace();
 			}
 		}
-		
+	}
+	public static void parseQAPair(){
 		/**
 		 * 第四步，将第三步中保存下来的问答对网页逐一分析，本将每个问答对网页结果存入到数据库qapair,baiduuser中
 		 * 
@@ -122,6 +127,19 @@ static Baidu baidu = null;
 		List<QA> qas = baidu.parserQAPages();
 		
 		QADBUtil.saveQAList(qas);
+	}
+
+	
+	public static void main(String[] args){
+		baidu = new Baidu();
+		
+//		downloadQuery();
+		
+		parseQueryResultList();
+		
+//		downloadQAPair();
+
+//		parseQAPair();
 	}
 
 }
