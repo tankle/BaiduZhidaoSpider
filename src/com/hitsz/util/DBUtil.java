@@ -106,26 +106,25 @@ public class DBUtil {
 		return true;
 	}
 
-//	/**
-//	 * 获得最大的
-//	 * @return
-//	 */
-//	public static int getMaxId(){
-//		Connection	conn = getDBConnection();
-//		String sql = "select max(id) from qaset";
-//		try {
-//			Statement stmt = conn.createStatement();
-//			ResultSet rs = stmt.executeQuery(sql);
-//			if(rs.next()){
-//				return (rs.getInt("max(id)"));
-//			}
-//			conn.close();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		closeDBConnection(conn);
-//		return 0;
-//	}
+	/**
+	 * 获得query中最大的id值
+	 * @return
+	 */
+	public static int getMaxId(Connection conn){
+
+		String sql = "select max(id) from query";
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if(rs.next()){
+				return (rs.getInt("max(id)"));
+			}
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 //	/**
 //	 * 关闭链接

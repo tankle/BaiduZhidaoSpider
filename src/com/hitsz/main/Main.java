@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.hitsz.model.QA;
 import com.hitsz.spider.Baidu;
+import com.hitsz.util.FileUtil;
 import com.hitsz.util.Log;
 import com.hitsz.util.QADBUtil;
 import com.hitsz.util.config.ConfigUtil;
@@ -129,11 +130,24 @@ public class Main {
 		QADBUtil.saveQAList(qas);
 	}
 
-	
+	/**
+	 * 从文件中读取query，并将query插入到query数据库中
+	 */
+	public static void insertQuerys(){
+		String filename = "resource/query.txt";
+		List<String> names = FileUtil.readFileLines(filename);
+		for(String name: names){
+			QADBUtil.insertQuery(name);
+		}
+		
+	}
 	public static void main(String[] args){
+		
+//		insertQuerys();
+		
 		baidu = new Baidu();
 		
-//		downloadQuery();
+		downloadQuery();
 		
 		parseQueryResultList();
 		

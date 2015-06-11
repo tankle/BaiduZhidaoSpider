@@ -375,4 +375,14 @@ public class QADBUtil {
 		setFinished(con, sql);
 		
 	}
+	
+	public static void insertQuery(String query){
+		Connection con = DBUtil.getDBConnection();
+		int maxid = DBUtil.getMaxId(con);
+		String queryid = "000"+(maxid+1);
+		String sql = "INSERT INTO `query`(`queryid`, `query`, `finished`) "
+				+ "VALUES ('"+queryid+"','"+query+"',0)";
+		Log.info(sql);
+		DBUtil.insert(con, sql);
+	}
 }
